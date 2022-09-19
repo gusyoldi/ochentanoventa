@@ -1,18 +1,27 @@
 .container {
-  padding-top: 0.4rem;
+  max-width: 320px;
+  margin: auto;
+  padding: 1rem auto;
   text-align: center;
+  
+}
+
+.description {
+  margin: 2rem auto;
 }
 
 .container h2 {
   font-weight: 400;
-  font-size: 0.8rem;
-  padding: 0.5rem 0;
+  font-size: 1rem;
+  margin: 1rem auto;
 }
 
 .container p {
   font-weight: 300;
-  font-size: 0.6rem;
-  padding: 0.5rem 0;
+  font-size: 0.7rem;
+  line-height: 1rem;
+  margin: 1rem auto;
+  opacity: 0.5;
 }
 
 

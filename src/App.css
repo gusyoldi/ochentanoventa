@@ -12,7 +12,8 @@ font-family: 'Roboto', sans-serif;
 }
 
 .App {
+  min-width: 320px;
+  height: 100vh;
   background-color: var(--Black);
-  padding: 0.5rem;
   color: var(--White);
 }

@@ -1,17 +1,15 @@
 .container {
-  height: 10%;
   background-color: #000000;
   color: #FFF0B6;
   text-align: center;
   font-size: 0.4rem;
   letter-spacing: 0.1rem;
   line-height: 0.8rem;
+  border-bottom: 1px solid gold;
+  padding: 0.8rem 0;
 }
 
-.container h1{
-  height: 100%;
-  padding: 0.2rem 0;
-}
+
 
 
 

@@ -32,8 +32,8 @@ export default function Slider({ images }) {
           </div>
         );
       })}
-      <button onClick={nextImage}>
-        <img src={rightArrow} className={Styles.rightArrow} alt="rightArrow" />
+      <button className={Styles.rightArrow} onClick={nextImage}>
+        <img src={rightArrow} alt="rightArrow" />
       </button>
     </div>
   );
