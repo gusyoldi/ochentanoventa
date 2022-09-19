@@ -20,19 +20,19 @@ export default function Slider({ images }) {
 
   return (
     <div className={Styles.container}>
-      <button onClick={previousImage}>
-        <img src={leftArrow} className={Styles.leftArrow} alt="leftArrow" />
+      <button className={Styles.button} onClick={previousImage}>
+        <img src={leftArrow} alt="leftArrow" />
       </button>
       {images.map((image, index) => {
         return (
-          <div>
+          <div className={Styles.photos}>
             {currentImg === index && (
-              <img key={index} src={image} alt="pic" className={Styles.image} />
+              <img key={index} src={image} alt="pic" />
             )}
           </div>
         );
       })}
-      <button className={Styles.rightArrow} onClick={nextImage}>
+      <button className={Styles.button} onClick={nextImage}>
         <img src={rightArrow} alt="rightArrow" />
       </button>
     </div>
