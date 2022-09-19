@@ -12,10 +12,10 @@ font-family: 'Roboto', sans-serif;
 }
 
 .App {
-  height: 100vh;
   /* Remover */
-  max-width: 320px; 
-  margin: auto;
+  /* height: 100vh; */
+  /* max-width: 320px;  */
+  /* margin: auto; */
     /* Remover */
   background-color: var(--Black);
   color: var(--White);
