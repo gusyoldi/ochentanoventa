@@ -2,6 +2,7 @@
 --Cream: #FFF0B6;
 --Black: #000000;
 --White: #FFFFFF; 
+font-family: 'Roboto', sans-serif;
 }
 
 * {
@@ -12,4 +13,6 @@
 
 .App {
   background-color: var(--Black);
+  padding: 0.5rem;
+  color: var(--White);
 }

@@ -1,0 +1,19 @@
+.container {
+  padding-top: 0.4rem;
+  text-align: center;
+}
+
+.container h2 {
+  font-weight: 400;
+  font-size: 0.8rem;
+  padding: 0.5rem 0;
+}
+
+.container p {
+  font-weight: 300;
+  font-size: 0.6rem;
+  padding: 0.5rem 0;
+}
+
+
+
