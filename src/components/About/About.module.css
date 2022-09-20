@@ -9,17 +9,35 @@
 }
 
 .container h2 {
-  font-weight: 400;
+  max-width: 360px;
+  font-weight: 700;
   font-size: 1rem;
   margin: 1rem auto;
 }
 
 .container p {
+  max-width: 320px;
   font-weight: 300;
   font-size: 0.7rem;
   line-height: 1rem;
   margin: 1rem auto;
   opacity: 0.5;
+}
+
+@media (min-width: 735px) {
+  .container h2 {
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin: 1rem auto;
+  }
+  
+  .container p {
+    font-weight: 300;
+    font-size: 0.9rem;
+    line-height: 1rem;
+    margin: 1rem auto;
+    opacity: 0.6;
+  }
 }
 
 
