@@ -2,22 +2,20 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
   justify-content: flex-end;
   align-items: center;
-  padding: 0 1.5rem 1.5rem 1.5rem;
+  margin: 2rem 0 5rem 0;
 }
-.container h2 {
+.title {
   height: 10vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: 700;
-  font-size: 1.3rem; 
-  margin-top: 1.5rem;
 }
 
 .albums {
-  height: 70vh;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;

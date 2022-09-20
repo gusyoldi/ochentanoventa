@@ -7,7 +7,10 @@ import Styles from "./Albums.module.css";
 export default function Albums() {
   return (
     <div id="albums" className={Styles.container}>
+      <div className={Styles.title}>
       <h2>Nuestros Álbumes</h2>
+      </div>
+      
     <div className={Styles.albums}>
       <SingleAlbum
         title="Volumen 1"
