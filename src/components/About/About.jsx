@@ -10,7 +10,7 @@ export default function About() {
   const SliderImages = [SliderImg1, SliderImg2, SliderImg3, SliderImg4];
 
   return (
-    <div className={Styles.container}>
+    <div id="about" className={Styles.container}>
       <div className={Styles.description}>
         <h2>Clásicos del rock nacional Argentino en versiones distintas.</h2>
         <p>

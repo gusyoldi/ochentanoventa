@@ -1,23 +1,29 @@
 .container {
   max-width: 380px;
-  height: 90vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   margin: auto;
-  /* margin-top: 0.5rem; */
+  /* margin-top: 3rem; */
 }
 .container h2 {
-  height: 20vh;
-  text-align: center;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
   font-weight: 700;
   font-size: 1.3rem;
-  padding: 2rem;
 }
+
+.video {
+  height: 60vh;
+}
+
 .container iframe {
-  width: 90%;
-  height: 315px;
+  width: 95%;
+  height: 350px;
 }
 
 @media (min-width: 735px) {

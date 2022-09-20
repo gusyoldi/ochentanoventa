@@ -6,7 +6,7 @@ import Styles from "./Albums.module.css";
 
 export default function Albums() {
   return (
-    <div className={Styles.container}>
+    <div id="albums" className={Styles.container}>
       <h2>Nuestros Álbumes</h2>
     <div className={Styles.albums}>
       <SingleAlbum
