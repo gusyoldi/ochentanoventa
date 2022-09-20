@@ -1,27 +1,40 @@
-
-.container h2 {
+.container {
+  height: 90vh;
   text-align: center;
+}
+.container h2 {
+  height: 10vh;
   font-weight: 700;
-  font-size: 1.3rem;
-  padding: 1rem;
+  font-size: 1.3rem; 
+  padding: 0.5rem;
 }
 
-
 .albums {
+  height: 80vh;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: space-around;
-  max-width: 80%;
   margin: auto;
-  text-align: center;
- 
+  /* max-width: 80%; */
 }
 
 @media (min-width: 735px) {
   .albums {
+    height: 70vh;
+    max-width: 735px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
+  }
+  .container h2 {
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin: 1rem auto;
   }
 }

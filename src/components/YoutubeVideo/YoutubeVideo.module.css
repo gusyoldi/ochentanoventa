@@ -1,10 +1,15 @@
 .container {
   max-width: 380px;
-  text-align: center;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   margin: auto;
-  margin-top: 2rem;
+  /* margin-top: 0.5rem; */
 }
 .container h2 {
+  height: 20vh;
   text-align: center;
   font-weight: 700;
   font-size: 1.3rem;
@@ -13,4 +18,22 @@
 .container iframe {
   width: 90%;
   height: 315px;
+}
+
+@media (min-width: 735px) {
+  .container {
+    max-width: 600px;
+    margin-top: 2rem;
+  }
+  .container h2 {
+    height: 20vh;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding: 3rem;
+  } 
+  .container iframe {
+    width: 600px;
+    height: 70vh;
+  }
 }

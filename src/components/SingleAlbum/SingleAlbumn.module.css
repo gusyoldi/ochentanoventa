@@ -1,10 +1,26 @@
 .container {
-  padding: 1.5rem;
+  max-width: 130px;
+  margin: auto;
   text-align: center;
 }
 
+.container img {
+  width: 100%;
+}
+
 .container h3 {
-  padding: 1rem;
   font-weight: 300;
   font-size: 1rem;
+}
+
+@media (min-width: 735px) {
+  .container {
+    margin: 0;
+    padding: 0;
+    max-width: 260px;
+    width: 260px;
+  }
+  .container img {
+    width: 100%;
+  }
 }

@@ -1,5 +1,4 @@
 import React from "react";
-import ochentaNoventaImg from "../../assets/images/ochentaNoventaImg.jpg";
 import Styles from "./Navbar.module.css";
 
 export default function Navbar() {
@@ -13,4 +12,3 @@ export default function Navbar() {
   );
 }
 
-{/* <img src={ochentaNoventaImg} alt="ochentaNoventaImg" /> */}

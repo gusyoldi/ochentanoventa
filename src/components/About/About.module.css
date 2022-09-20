@@ -1,11 +1,18 @@
 .container {
-  padding: 1rem 0;
+  height: 100vh;
   text-align: center;
+  display: flex;
+  flex-direction: column;
   
 }
 
 .description {
-  margin: 2rem auto;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  padding-top: 2rem;
 }
 
 .container h2 {
