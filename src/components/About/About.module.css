@@ -1,11 +1,11 @@
 .container {
-  height: 100vh;
+  height: 90vh;
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  padding: 2rem 0;
+  /* padding: 2rem 0; */
 }
 
 .description {
@@ -17,24 +17,18 @@
   margin-bottom: 2rem;
 }
 
-.container h2 {
+.container h5 {
   max-width: 360px;
-  font-weight: 700;
-  font-size: 1rem;
   margin: 1rem auto;
 }
 
 .container p {
   max-width: 320px;
-  font-weight: 300;
-  font-size: 0.7rem;
-  line-height: 1rem;
   margin: 1rem auto;
-  opacity: 0.5;
 }
 
-@media (min-width: 735px) {
-  .container h2 {
+/* @media (min-width: 735px) {
+  .container h5 {
     font-weight: 700;
     font-size: 1.3rem;
     margin: 1rem auto;
@@ -47,7 +41,7 @@
     margin: 1rem auto;
     opacity: 0.6;
   }
-}
+} */
 
 
 

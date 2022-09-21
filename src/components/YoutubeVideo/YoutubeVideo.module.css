@@ -8,13 +8,11 @@
   margin: auto;
   /* margin-top: 3rem; */
 }
-.container h2 {
+.container h4 {
   height: 10vh;
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  font-weight: 700;
-  font-size: 1.3rem;
 }
 
 .video {
@@ -26,7 +24,7 @@
   height: 350px;
 }
 
-@media (min-width: 735px) {
+/* @media (min-width: 735px) {
   .container {
     max-width: 600px;
     margin-top: 2rem;
@@ -42,4 +40,4 @@
     width: 600px;
     height: 70vh;
   }
-}
+} */

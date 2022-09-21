@@ -2,7 +2,6 @@
 --Cream: #FFF0B6;
 --Black: #000000;
 --White: #FFFFFF; 
-font-family: 'Roboto', sans-serif;
 }
 
 * {
@@ -19,4 +18,30 @@ font-family: 'Roboto', sans-serif;
     /* Remover */
   background-color: var(--Black);
   color: var(--White);
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+h4 {
+  font-size: 1.563rem;
+  font-weight: 400;
+}
+
+h5 {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+h6 {
+  font-size: 0.8rem;
+  font-weight: 300;
 }

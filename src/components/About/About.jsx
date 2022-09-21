@@ -12,7 +12,7 @@ export default function About() {
   return (
     <div id="about" className={Styles.container}>
       <div className={Styles.description}>
-        <h2>Clásicos del rock nacional Argentino en versiones distintas.</h2>
+        <h5>Clásicos del rock nacional Argentino en versiones distintas.</h5>
         <p>
           Somos una banda de Buenos Aires que versiona canciones de rock
           nacional en formato country, blues y rock and roll para traer a la

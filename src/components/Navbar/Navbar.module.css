@@ -1,7 +1,7 @@
 .container {
   position: fixed;
   top: 0;
-  height: 10vh;
+  height: 8vh;
   width: 100vw;
   background-color: #000000;
   color: #FFF0B6;
@@ -10,16 +10,16 @@
   letter-spacing: 0.1rem;
   line-height: 0.8rem;
   border-bottom: 1px solid gold;
-  padding: 0.8rem 0;
+  padding: 0.5rem 0 0 0;
 }
 
-@media (min-width: 735px) {
+/* @media (min-width: 735px) {
   .container {
     font-size: 0.5rem;
     letter-spacing: 0.2rem;
     line-height: 1.2rem;
   }
-}
+} */
 
 
 

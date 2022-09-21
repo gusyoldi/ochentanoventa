@@ -1,13 +1,13 @@
 .container {
-  height: 100vh;
+  height: 90vh;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: flex-end;
   align-items: center;
-  margin: 2rem 0 5rem 0;
+  /* margin: 2rem 0 5rem 0; */
 }
-.title {
+.title h4 {
   height: 10vh;
   display: flex;
   justify-content: center;
@@ -15,14 +15,14 @@
 }
 
 .albums {
-  height: 80vh;
+  height: 70vh;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: space-around;
 }
 
-@media (min-width: 735px) {
+/* @media (min-width: 735px) {
   .albums {
     height: 70vh;
     max-width: 735px;
@@ -31,7 +31,7 @@
     justify-content: space-around;
     align-items: center;
   }
-  .container h2 {
+  .container h4 {
     height: 30vh;
     display: flex;
     align-items: center;
@@ -40,4 +40,4 @@
     font-size: 1.5rem;
     margin: 1rem auto;
   }
-}
+} */
