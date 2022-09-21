@@ -5,6 +5,7 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  border-bottom: 1px solid gold;
   margin: auto;
   /* margin-top: 3rem; */
 }

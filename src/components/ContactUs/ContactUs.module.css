@@ -1,0 +1,43 @@
+.container {
+  width: 90%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: stretch;
+  text-align: center;
+  margin: auto;
+
+}
+
+.container h4 {
+  height: 10vh;
+}
+
+.container form {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container label {
+  margin: 1rem 0;
+}
+
+.container input{
+  background-color: #D9D9D9 ;
+  padding: 0.3rem 0;
+}
+
+.container textarea {
+  background-color: #D9D9D9;
+  padding: 3rem 0;
+}
+
+.container button {
+  padding: 0.5rem;
+  margin: 1rem 1rem;
+}
+
+
+
