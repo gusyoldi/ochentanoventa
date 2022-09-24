@@ -4,6 +4,7 @@ import About from "./components/About/About";
 import Albums from "./components/Albums/Albums";
 import YoutubeVideo from "./components/YoutubeVideo/YoutubeVideo";
 import ContactUs from "./components/ContactUs/ContactUs";
+import FollowUs from "./components/FollowUs/FollowUs";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Albums />
       <YoutubeVideo />
       <ContactUs />
+      <FollowUs />
     </div>
   );
 }

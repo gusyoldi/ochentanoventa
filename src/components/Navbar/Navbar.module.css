@@ -13,6 +13,18 @@
   padding: 0.5rem 0 0 0;
 }
 
+.links {
+  display: flex;
+  justify-content:space-around ;
+  align-items: center;
+}
+
+.links a{
+  list-style: none;
+  color: #FFF0B6;
+  text-decoration: none;
+}
+
 /* @media (min-width: 735px) {
   .container {
     font-size: 0.5rem;

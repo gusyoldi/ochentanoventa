@@ -8,10 +8,11 @@ export default function Navbar() {
         OCHENTA<br/>
         NOVENTA
       </h1>
-      <div>
+      <div className={Styles.links}>
         <a href="#about">About</a>
         <a href="#albums">Albums</a>
         <a href="#videos">Videos</a>
+        <a href="#followus">FollowUs</a>
       </div>
     </div>
   );

@@ -35,6 +35,8 @@ p {
 h4 {
   font-size: 1.563rem;
   font-weight: 400;
+  text-transform: capitalize;
+
 }
 
 h5 {

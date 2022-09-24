@@ -8,7 +8,7 @@ export default function Albums() {
   return (
     <div id="albums" className={Styles.container}>
       <div className={Styles.title}>
-      <h4>Nuestros Álbumes</h4>
+      <h4>Nuestros álbumes</h4>
       </div>
       
     <div className={Styles.albums}>

@@ -5,8 +5,8 @@ export default function ContactUs() {
   return (
     <div className={Styles.container}>
       <h4>Pedí tu presupuesto</h4>
-      <div>
-      <form action="/action_page.php" method='POST' target="_blank">
+      
+      <form action="#" method='POST' target="_blank">
         <label for="name"><h6>Nombre</h6></label>
         <input type="text" id="name" name="name"/>
         <label for="email"><h6>E-mail</h6></label>
@@ -16,9 +16,9 @@ export default function ContactUs() {
         <label for="query"><h6>Consulta</h6></label>
         <textarea name="query" rows="10" cols="30">
         </textarea>
-        <button type='submit'>ENVIAR CONSULTA</button>
+        <button>ENVIAR CONSULTA</button>
       </form>
-      </div>
+      
     </div>
   )
 }
