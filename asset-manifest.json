@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/landing-OchentaNoventa/static/css/main.4cdba0ad.css",
-    "main.js": "/landing-OchentaNoventa/static/js/main.45dce476.js",
+    "main.css": "/landing-OchentaNoventa/static/css/main.6da70de1.css",
+    "main.js": "/landing-OchentaNoventa/static/js/main.98068dea.js",
     "static/js/787.16d88bb9.chunk.js": "/landing-OchentaNoventa/static/js/787.16d88bb9.chunk.js",
     "static/media/vol2.jpg": "/landing-OchentaNoventa/static/media/vol2.0f6078eb4d2be6eff01a.jpg",
     "static/media/img4.jpg": "/landing-OchentaNoventa/static/media/img4.fd0ee734620ea0fd708c.jpg",
@@ -13,12 +13,12 @@
     "static/media/youtubeLink.png": "/landing-OchentaNoventa/static/media/youtubeLink.0b7c86fba1fbc433f761.png",
     "static/media/spotifyLink.png": "/landing-OchentaNoventa/static/media/spotifyLink.6fe0501d71d81517f440.png",
     "index.html": "/landing-OchentaNoventa/index.html",
-    "main.4cdba0ad.css.map": "/landing-OchentaNoventa/static/css/main.4cdba0ad.css.map",
-    "main.45dce476.js.map": "/landing-OchentaNoventa/static/js/main.45dce476.js.map",
+    "main.6da70de1.css.map": "/landing-OchentaNoventa/static/css/main.6da70de1.css.map",
+    "main.98068dea.js.map": "/landing-OchentaNoventa/static/js/main.98068dea.js.map",
     "787.16d88bb9.chunk.js.map": "/landing-OchentaNoventa/static/js/787.16d88bb9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4cdba0ad.css",
-    "static/js/main.45dce476.js"
+    "static/css/main.6da70de1.css",
+    "static/js/main.98068dea.js"
   ]
 }
