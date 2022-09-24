@@ -3,7 +3,7 @@ import Styles from './ContactUs.module.css'
 
 export default function ContactUs() {
   return (
-    <div className={Styles.container}>
+    <div className={Styles.container} id="contact">
       <h4>Pedí tu presupuesto</h4>
       
       <form action="#" method='POST' target="_blank">

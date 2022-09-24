@@ -5,8 +5,12 @@
   flex-direction: column;
   justify-content: flex-end;
   align-items: stretch;
-  /* text-align: center; */
-  margin: auto;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid gold;;
+  padding: 1rem 0;
 
 }
 

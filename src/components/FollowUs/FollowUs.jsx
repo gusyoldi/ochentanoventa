@@ -13,7 +13,7 @@ export default function FollowUs() {
   const URL_YB = "https://www.youtube.com/channel/UCmoocg2jeWF5OZwGXvi5dfw";
 
   return (
-    <div className={Styles.container} id="#followus">
+    <div className={Styles.container}>
       <h4>Seguinos en nuestras redes</h4>
       <div className={Styles.icons}>
         <SocialLink url={URL_IG} icon={igIcon} />

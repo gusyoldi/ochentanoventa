@@ -12,7 +12,7 @@ export default function Navbar() {
         <a href="#about">About</a>
         <a href="#albums">Albums</a>
         <a href="#videos">Videos</a>
-        <a href="#followus">FollowUs</a>
+        <a href="#contact">Contacto</a>
       </div>
     </div>
   );

@@ -3,6 +3,15 @@
   flex-direction: column;
   justify-content: flex-end;
   text-align: center;
+  padding: 1rem 0;
+}
+
+.container h4 {
+  padding: 2rem 0;
+}
+
+.container p {
+  padding: 2rem 0;
 }
 
 .icons {
