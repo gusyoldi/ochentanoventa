@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Styles from "./Slider.module.css";
-import leftArrow from "../../assets/images/sliderImages/leftArrow.png";
-import rightArrow from "../../assets/images/sliderImages/rightArrow.png";
+import leftArrow from "../../assets/images/sliderImages/leftArrow.svg";
+import rightArrow from "../../assets/images/sliderImages/rightArrow.svg";
 
 export default function Slider({ images }) {
   const [currentImg, setImg] = useState(0);

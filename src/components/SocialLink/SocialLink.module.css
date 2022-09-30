@@ -1,10 +1,12 @@
 .container {
-  background-color: white;
-  width: 20px;
-  height: 20px;
+  /* width: 20px;
+  height: 20px; */
 }
 
-img {
+
+
+.container img {
+  color: red;
   width: 20px;
   height: 20px;
 }

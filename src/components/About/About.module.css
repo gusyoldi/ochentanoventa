@@ -3,7 +3,7 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: space-evenly;
   align-items: center;
   /* padding: 2rem 0; */
 }
