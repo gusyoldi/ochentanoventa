@@ -3,11 +3,15 @@
   top: 0;
   left: 0;
   width: 100%;
-  display: flex;
-  justify-content: center;
+  text-align: center;
   background-color: #000000;
   border-bottom: 1px solid var(--Cream);
   z-index: 1;
+}
+
+.container img {
+position:relative;
+/* right: 0rem; */
 }
 
 /* @media (min-width: 735px) {

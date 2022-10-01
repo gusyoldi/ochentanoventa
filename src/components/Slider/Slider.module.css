@@ -1,29 +1,45 @@
 .container {
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-items: center; */
-  /* position: relative; */
+ position: relative;
   
 }
 
 .photos {
   margin: 0 1.75rem;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.photos.active {
+  opacity: 1;
 }
 
 .photos img {
+  min-width: 300px;
+  /* min-width: 100%; */
+  max-width: 300px;
   height: 350px;
+  /* height: auto; */
 }
 
 .leftArrow {
-  width: fit-content;
- height: fit-content; 
- /* position: absolute; */
+ position: relative;
+ right: 33.2%;
+ top: 13rem;
  
 }
+
 .rightArrow {
-  width: fit-content;
- height: fit-content; 
- /* position: absolute; */
- /* right: 0px; */
+ position: relative;
+ left: 33.2%;
+ bottom: 13.36rem;
 }
 
+.leftArrow img {
+  width:60px;
+  height:60px ;
+}
+
+.rightArrow img {
+  width:60px ;
+  height:60px ;
+}

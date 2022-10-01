@@ -19,10 +19,10 @@ export default function About() {
           actualidad canciones que nos marcaron en los años achenta y noventa.
         </p>
       </div>
-      {/* <div className={Styles.slider}>
+      <div className={Styles.slider}>
         <h4>Galeria de imágenes</h4>
       <Slider images={SliderImages} />
-      </div> */}
+      </div>
     </div>
   );
 }

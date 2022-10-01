@@ -25,7 +25,12 @@ export default function Slider({ images }) {
       </button>
       {images.map((image, index) => {
         return (
-          <div className={Styles.photos}>
+          <div 
+          className={
+            currentImg === index
+              ? `${Styles.photos} ${Styles.active}`
+              : Styles.photos
+          }>
             {currentImg === index && (
               <img key={index} src={image} alt="pic" />
             )}
