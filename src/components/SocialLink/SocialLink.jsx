@@ -1,10 +1,10 @@
 import React from "react";
-import Styles from "./SocialLink.module.css";
+
 
 
 export default function SocialLink({ url, icon }) {
   return (
-    <div className={Styles.container}>
+    <div>
       <a target="_blank" rel="noreferrer" href={url}>
         <img src={icon} alt="icon" />
       </a>

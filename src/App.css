@@ -2,6 +2,7 @@
 --Cream: #FFF0B6;
 --Black: #000000;
 --White: #FFFFFF; 
+--WhiteForm: #FAFAFA;
 }
 
 * {
@@ -18,7 +19,13 @@
     /* Remover */
   background-color: var(--Black);
   color: var(--White);
+  padding: 0 0.75rem;
 }
+
+html {
+  /* font-size: 17px;  Revisar font-size */
+  background-color: var(--Black);
+} 
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -33,15 +40,16 @@ p {
 }
 
 h4 {
-  font-size: 1.563rem;
-  font-weight: 400;
+  font-size: 1.25rem;
+  /* font-size: 1.563rem; */
+  font-weight: 700;
   text-transform: capitalize;
 
 }
 
 h5 {
   font-size: 1.25rem;
-  font-weight: 700;
+  font-weight: 300;
 }
 
 h6 {

@@ -1,22 +1,29 @@
 .container {
-  /* height: 40vh; */
-  display: flex;
-  justify-items: flex-end;
-  align-items: center;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* position: relative; */
   
 }
 
+.photos {
+  margin: 0 1.75rem;
+}
+
 .photos img {
-  width: 100%;
-  height: 210px;
+  height: 350px;
 }
 
-.button {
-  width: 2.5rem;
-  height: 2.2rem;
+.leftArrow {
+  width: fit-content;
+ height: fit-content; 
+ /* position: absolute; */
+ 
+}
+.rightArrow {
+  width: fit-content;
+ height: fit-content; 
+ /* position: absolute; */
+ /* right: 0px; */
 }
 
-.button img {
-  width: 100%;
-  height: 100%;
-}

@@ -1,47 +1,54 @@
 .container {
-  width: 90%;
-  height: 90vh;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  align-items: stretch;
-  text-align: center;
-  margin: 0 auto;
-  margin-top: 1rem;
-  margin-bottom: 3rem;
-  border-bottom: 1px solid gold;;
-  padding: 1rem 0;
-
+  border-bottom: 1px solid var(--Cream);
+  padding-bottom: 1.25rem;
 }
 
 .container h4 {
-  height: 10vh;
+  text-align: center;
+  margin-bottom: 1.25rem;
 }
 
 .container form {
-  height: 70vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
 }
 
-.container label {
-  margin: 1rem 0;
+.container h6 {
+  margin-bottom: 0.25rem;
 }
 
-.container input{
-  background-color: #D9D9D9 ;
-  padding: 0.3rem 0;
+.container span {
+  color: #DD0F0F;
+}
+
+.container input {
+  height: 2rem;
+  border-radius: 4px;
+  background-color: var(--WhiteForm);
+  margin-bottom: 0.75rem;
 }
 
 .container textarea {
-  background-color: #D9D9D9;
-  padding: 3rem 0;
+  height: 8.75rem;
+  border-radius: 4px;
+  background-color: var(--WhiteForm);
+  margin-bottom: 0.75rem;
 }
 
-.container form button {
-  padding: 0.5rem;
-  margin: 1rem 1rem;
+.container button {
+  height: 3rem;
+  background-color: #252525;
+  color: var(--Cream);
+  border-radius: 4px;
+}
+
+.container button:active {
+  background-color: #8a7442;
+  color: #F2D388;
+  cursor: pointer;
 }
 
 
