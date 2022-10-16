@@ -21,3 +21,9 @@ margin-bottom: 1.25rem;
   margin-left: 0.4rem;
 }
 
+@media (min-width: 1200px) {
+  .container img {
+   width: 200px;
+   height: 200px;
+  }
+}

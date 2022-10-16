@@ -13,11 +13,21 @@
 
 
  
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .albums {
     display: flex;
     gap: 224px;
   }
+
+  p {
+    font-size: 1.5rem;
+  }
+
+  li {
+    font-size: 1.05rem;
+  }
   
 } 
+
+
  
