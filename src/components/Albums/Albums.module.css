@@ -12,6 +12,12 @@
 } 
 
 
-/* @media (min-width: 735px) {
+ 
+@media (min-width: 992px) {
+  .albums {
+    display: flex;
+    gap: 224px;
+  }
   
-} */
+} 
+ 
