@@ -1,45 +1,51 @@
 .container {
- position: relative;
   
 }
 
 .photos {
-  margin: 0 1.75rem;
+  display: flex;
+  align-items: center;
+  
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
+  
 }
 
 .photos.active {
   opacity: 1;
 }
 
-.photos img {
-  min-width: 300px;
-  /* min-width: 100%; */
-  max-width: 300px;
-  height: 350px;
-  /* height: auto; */
+.singlePhoto {
+  border: 1px solid #FAFAFA;
+  height: 300px;
+  margin: 1.25rem 1.25rem;
 }
 
 .leftArrow {
- position: relative;
- right: 33.2%;
- top: 13rem;
- 
+  position: relative;
+  left: 11.3%;
+  width: 45px;
+  height: 45px;
+}
+
+.leftArrow:hover {
+  /* width: 200px; */
 }
 
 .rightArrow {
- position: relative;
- left: 33.2%;
- bottom: 13.36rem;
+  position: relative;
+  right: 11.3%;
+  width: 45px;
+  height: 45px;
 }
 
-.leftArrow img {
-  width:60px;
-  height:60px ;
-}
+
+/* .leftArrow img {
+  width: fit-content;
+  height: fit-content;
+} 
 
 .rightArrow img {
-  width:60px ;
-  height:60px ;
-}
+  width: fit-content;
+  height: fit-content;
+}  */

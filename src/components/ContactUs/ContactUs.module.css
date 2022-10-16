@@ -26,16 +26,19 @@
 
 .container input {
   height: 2rem;
-  border-radius: 4px;
   background-color: var(--WhiteForm);
   margin-bottom: 0.75rem;
+  border: 1px solid var(--Black);
+  border-radius: 0%;
+  /* -webkit-appearance: none; */
 }
 
 .container textarea {
   height: 8.75rem;
-  border-radius: 4px;
   background-color: var(--WhiteForm);
   margin-bottom: 0.75rem;
+  padding:0.5rem;
+  border-radius: 0%;
 }
 
 .container button {

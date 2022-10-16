@@ -16,11 +16,11 @@ export default function About() {
         <p>
           Somos una banda de Buenos Aires que versiona canciones de rock
           nacional en formato country, blues y rock and roll para traer a la
-          actualidad canciones que nos marcaron en los años achenta y noventa.
+          actualidad canciones que nos marcaron en los años ochenta y noventa.
         </p>
       </div>
       <div className={Styles.slider}>
-        <h4>Galeria de imágenes</h4>
+        <h4>Galería de imágenes</h4>
       <Slider images={SliderImages} />
       </div>
     </div>

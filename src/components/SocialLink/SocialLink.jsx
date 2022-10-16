@@ -12,9 +12,4 @@ export default function SocialLink({ url, icon }) {
   );
 }
 
-{
-  /* <div>
-<a target="_blank" rel="noreferrer" href={url.ig}><span className="visually-hidden"></span><img src={icon.ig} alt="icon" /></a>
-</div>
-) */
-}
+
