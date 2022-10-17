@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/landing-OchentaNoventa/static/css/main.8e9bc903.css",
+    "main.css": "/landing-OchentaNoventa/static/css/main.e0dd44dd.css",
     "main.js": "/landing-OchentaNoventa/static/js/main.56708d83.js",
     "static/js/787.16d88bb9.chunk.js": "/landing-OchentaNoventa/static/js/787.16d88bb9.chunk.js",
     "static/media/img1.jpg": "/landing-OchentaNoventa/static/media/img1.bfc1ac991e4793e45964.jpg",
@@ -12,12 +12,12 @@
     "index.html": "/landing-OchentaNoventa/index.html",
     "static/media/rightArrow.svg": "/landing-OchentaNoventa/static/media/rightArrow.d0b9a692e2628355730b630ef740cdb5.svg",
     "static/media/leftArrow.svg": "/landing-OchentaNoventa/static/media/leftArrow.a56e236e16e25bae55345c2c854fc7a3.svg",
-    "main.8e9bc903.css.map": "/landing-OchentaNoventa/static/css/main.8e9bc903.css.map",
+    "main.e0dd44dd.css.map": "/landing-OchentaNoventa/static/css/main.e0dd44dd.css.map",
     "main.56708d83.js.map": "/landing-OchentaNoventa/static/js/main.56708d83.js.map",
     "787.16d88bb9.chunk.js.map": "/landing-OchentaNoventa/static/js/787.16d88bb9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8e9bc903.css",
+    "static/css/main.e0dd44dd.css",
     "static/js/main.56708d83.js"
   ]
 }
