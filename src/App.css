@@ -1,8 +1,8 @@
-:root{
---Cream: #FFF0B6;
---Black: #000000;
---White: #FFFFFF; 
---WhiteForm: #FAFAFA;
+:root {
+  --Cream: #fff0b6;
+  --Black: #000000;
+  --White: #ffffff;
+  --WhiteForm: #fafafa;
 }
 
 * {
@@ -11,31 +11,26 @@
   box-sizing: border-box;
 }
 
-.App {
-  /* Remover */
-  /* height: 100vh; */
-  /* max-width: 320px;  */
-  /* margin: auto; */
-    /* Remover */
-  background-color: var(--Black);
-  color: var(--White);
-  padding: 0 0.75rem;
-}
 
 html {
   background-color: var(--Black);
-  overflow-x: hidden;
-  max-width: 100%;
-  
-} 
+  max-width: 1200px;
+  margin: auto;
+}
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 300;
   color: var(--White);
-  max-width: 1200px;
-  margin: auto;
+}
+
+.App {
+  overflow-x: hidden;
+  max-width: 100%;
+  background-color: var(--Black);
+  color: var(--White);
+  padding: 0 0.75rem;
 }
 
 p {
@@ -47,7 +42,6 @@ h4 {
   font-size: 1.25rem;
   /* font-size: 1.563rem; */
   font-weight: 700;
-
 }
 
 h5 {
@@ -60,11 +54,8 @@ h6 {
   font-weight: 300;
 }
 
-
 @media (min-width: 1200px) {
   html {
     font-size: 20px;
   }
-
- 
 }

@@ -41,10 +41,10 @@ export default function ContactUs() {
         <input type="email" id="user_email" name="user_email" {...register("user_email", {required: true})}  />
         <label>
           <h6>
-            Teléfono <span>*</span> {errors.user_phone && <span>Es necesario un número</span>}
+            Teléfono <span>*</span> {errors.phone && <span>Es necesario un número</span>}
           </h6>
         </label>
-        <input type="number" id="phone" name="phone" {...register("user_phone", {required: true})}  />
+        <input type="number" id="phone" name="phone" {...register("phone", {required: true})}  />
         <label>
           <h6>
             Consulta <span>*</span> {errors.message && <span>Es necesario un mensaje</span>}

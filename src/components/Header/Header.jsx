@@ -1,8 +1,8 @@
 import React from "react";
-import Styles from "./Navbar.module.css";
+import Styles from "./Header.module.css";
 import LOGO from "../../assets/images/logo/ochentaNoventaLogo.png";
 
-export default function Navbar() {
+export default function Header() {
   return (
     <div className={Styles.container}>
       
