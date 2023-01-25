@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/landing-OchentaNoventa/static/css/main.e0dd44dd.css",
-    "main.js": "/landing-OchentaNoventa/static/js/main.56708d83.js",
-    "static/js/787.16d88bb9.chunk.js": "/landing-OchentaNoventa/static/js/787.16d88bb9.chunk.js",
-    "static/media/img1.jpg": "/landing-OchentaNoventa/static/media/img1.bfc1ac991e4793e45964.jpg",
-    "static/media/img2.jpg": "/landing-OchentaNoventa/static/media/img2.80a86d5180aeb3d48683.jpg",
-    "static/media/img4.jpg": "/landing-OchentaNoventa/static/media/img4.0a7bdf6027e9af8cea11.jpg",
-    "static/media/img3.jpg": "/landing-OchentaNoventa/static/media/img3.9705f1910b5d107a8493.jpg",
-    "static/media/vol2.jpg": "/landing-OchentaNoventa/static/media/vol2.0f6078eb4d2be6eff01a.jpg",
-    "static/media/vol1.jpg": "/landing-OchentaNoventa/static/media/vol1.fd0ee734620ea0fd708c.jpg",
-    "index.html": "/landing-OchentaNoventa/index.html",
-    "static/media/rightArrow.svg": "/landing-OchentaNoventa/static/media/rightArrow.d0b9a692e2628355730b630ef740cdb5.svg",
-    "static/media/leftArrow.svg": "/landing-OchentaNoventa/static/media/leftArrow.a56e236e16e25bae55345c2c854fc7a3.svg",
-    "main.e0dd44dd.css.map": "/landing-OchentaNoventa/static/css/main.e0dd44dd.css.map",
-    "main.56708d83.js.map": "/landing-OchentaNoventa/static/js/main.56708d83.js.map",
-    "787.16d88bb9.chunk.js.map": "/landing-OchentaNoventa/static/js/787.16d88bb9.chunk.js.map"
+    "main.css": "/ochentanoventa/static/css/main.050b6f5d.css",
+    "main.js": "/ochentanoventa/static/js/main.a9c32258.js",
+    "static/js/787.16d88bb9.chunk.js": "/ochentanoventa/static/js/787.16d88bb9.chunk.js",
+    "static/media/img1.jpg": "/ochentanoventa/static/media/img1.bfc1ac991e4793e45964.jpg",
+    "static/media/img2.jpg": "/ochentanoventa/static/media/img2.80a86d5180aeb3d48683.jpg",
+    "static/media/img4.jpg": "/ochentanoventa/static/media/img4.0a7bdf6027e9af8cea11.jpg",
+    "static/media/img3.jpg": "/ochentanoventa/static/media/img3.9705f1910b5d107a8493.jpg",
+    "static/media/vol2.jpg": "/ochentanoventa/static/media/vol2.0f6078eb4d2be6eff01a.jpg",
+    "static/media/vol1.jpg": "/ochentanoventa/static/media/vol1.fd0ee734620ea0fd708c.jpg",
+    "index.html": "/ochentanoventa/index.html",
+    "static/media/rightArrow.svg": "/ochentanoventa/static/media/rightArrow.012d084dbc8bd07e721dc76ecd21ebe3.svg",
+    "static/media/leftArrow.svg": "/ochentanoventa/static/media/leftArrow.62069b7c0407263eb94d57e01e287306.svg",
+    "main.050b6f5d.css.map": "/ochentanoventa/static/css/main.050b6f5d.css.map",
+    "main.a9c32258.js.map": "/ochentanoventa/static/js/main.a9c32258.js.map",
+    "787.16d88bb9.chunk.js.map": "/ochentanoventa/static/js/787.16d88bb9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e0dd44dd.css",
-    "static/js/main.56708d83.js"
+    "static/css/main.050b6f5d.css",
+    "static/js/main.a9c32258.js"
   ]
 }
