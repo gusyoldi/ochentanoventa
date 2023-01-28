@@ -5,8 +5,7 @@ import Styles from './SingleAlbumn.module.css'
 export default function SingleAlbumn({image, url, songs ,title}) {
   return (
     <div className={Styles.container}>
-      {/* <a href={url} target="_blank" rel="noreferrer"></a> */}
-      <img src={image} alt="albumn"/>
+      <a href={url} target="_blank" rel="noreferrer"><img src={image} alt="albumn"/></a>
       <div className={Styles.albumData}>
       <p>{title}</p>
       {songs.map((song, index) => {

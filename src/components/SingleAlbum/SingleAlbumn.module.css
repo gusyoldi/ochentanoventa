@@ -3,9 +3,19 @@ display:flex;
 margin-bottom: 1.25rem;
 }
 
+.container a{
+  background-color: #FAFAFA;
+  height: 120px;
+}
+
 .container img {
   width: 120px;
   height: 120px;
+  transition: .5s ease;
+}
+
+.container img:hover {
+  opacity: 0.8;
 }
 
 .albumData {
@@ -25,5 +35,8 @@ margin-bottom: 1.25rem;
   .container img {
    width: 200px;
    height: 200px;
+  }
+  .container a {
+    height: 200px;
   }
 }
