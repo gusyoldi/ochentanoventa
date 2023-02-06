@@ -10,8 +10,8 @@ export default function SingleAlbumn({image, url, songs ,title}) {
       <p>{title}</p>
       {songs.map((song, index) => {
         return (
-          <ul>
-            <li key={index}>{index+1}. {song}</li>
+          <ul key={index}>
+            <li>{index+1}. {song}</li>
           </ul> 
         )
       })}

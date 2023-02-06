@@ -1,10 +1,14 @@
 import React from "react";
 import Styles from "./About.module.css";
 import Slider from "../Slider/Slider";
-import IMG_1 from "../../assets/images/sliderImages/img1.jpg";
-import IMG_2 from "../../assets/images/sliderImages/img2.jpg";
-import IMG_3 from "../../assets/images/sliderImages/img3.jpg";
-import IMG_4 from "../../assets/images/sliderImages/img4.jpg";
+// import IMG_1 from "../../assets/images/sliderImages/img1.jpg";
+// import IMG_2 from "../../assets/images/sliderImages/img2.jpg";
+// import IMG_3 from "../../assets/images/sliderImages/img3.jpg";
+// import IMG_4 from "../../assets/images/sliderImages/img4.jpg";
+import IMG_1 from "../../assets/images/sliderImages2/img1.jpg";
+import IMG_2 from "../../assets/images/sliderImages2/img2.jpg";
+import IMG_3 from "../../assets/images/sliderImages2/img3.jpg";
+import IMG_4 from "../../assets/images/sliderImages2/img4.jpg";
 
 export default function About() {
   const SliderImages = [IMG_1, IMG_2, IMG_3, IMG_4];

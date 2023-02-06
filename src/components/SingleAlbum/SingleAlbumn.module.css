@@ -6,6 +6,7 @@ margin-bottom: 1.25rem;
 .container a{
   background-color: #FAFAFA;
   height: 120px;
+  cursor: pointer;
 }
 
 .container img {
@@ -28,15 +29,19 @@ margin-bottom: 1.25rem;
 
 .albumData li {
   list-style: none;
+  font-size: small;
   margin-left: 0.4rem;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 769px) {
   .container img {
-   width: 200px;
-   height: 200px;
+   width: 180px;
+   height: 180px;
   }
   .container a {
-    height: 200px;
+    height: 180px;
+  }
+  .albumData li {
+    font-size: large;
   }
 }

@@ -7,6 +7,7 @@ import Styles from "./Albums.module.css";
 export default function Albums() {
   const Vol1Songs = ["Fabricante de mentiras", "Dame una señal", "En la ciudad de la furia"] 
   const Vol2Songs = ["Lunes por la madrugada", "Seminare", "Lamento boliviano"]
+  
   return (
     <div className={Styles.container}>
       <h4>Nuestros álbumes</h4>  

@@ -3,9 +3,11 @@ import Styles from "./ContactUs.module.css";
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { useForm } from "react-hook-form";
+import FormModal from "./FormModal";
 
 export default function ContactUs() {
   const form = useRef();
+  
 
   const { register, handleSubmit, formState: { errors } } = useForm();
   // const onSubmit = data => console.log(data);
@@ -19,8 +21,7 @@ export default function ContactUs() {
         console.log(result.text);
     }, (error) => {
         console.log(error.text);
-    alert("Mensaje enviado!")
-    })
+      })
   }
 
   return (
@@ -56,12 +57,15 @@ export default function ContactUs() {
           cols="30"
           placeholder="Contanos un poco mas de tu evento..."
           {...register("message", {required: true})}
-        ></textarea>
-        
-        <button type="submit" value="Send" >
-          ENVIAR CONSULTA
-        </button>
+          ></textarea>
+                <FormModal />
+
+      
       </form>
     </div>
+        
   );
 }
+
+
+

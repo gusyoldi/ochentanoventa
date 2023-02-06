@@ -11,12 +11,10 @@
   margin-bottom: 1.25rem;
 } 
 
-
- 
-@media (min-width: 1200px) {
+@media (min-width: 769px) {
   .albums {
     display: flex;
-    gap: 224px;
+    gap: 48px;
   }
 
   p {
