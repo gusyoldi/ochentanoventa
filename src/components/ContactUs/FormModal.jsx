@@ -1,21 +1,17 @@
-import React, { useState, useEffect} from 'react';
+import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-function FormModal() {
-  const [show, setShow] = useState(false);
-  const handleShow = () => setShow(true);
+function FormModal({show, setShow}) {
+  
   const handleClose = () => setShow(false);
 
-  // useEffect (() => {
-  //   sendEmail()
-  // }, [isValidated])
-  
+
   return (
     <>
       
-      <button type="submit" value="Send" onClick={handleShow}>
+      <button type="submit" value="Send" >
       ENVIAR CONSULTA
       </button>
 

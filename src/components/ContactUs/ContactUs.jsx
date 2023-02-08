@@ -7,37 +7,39 @@ import FormModal from "./FormModal";
 
 export default function ContactUs() {
   const form = useRef();
-  const [isValidated, setIsValidated] = useState(false)
-  const useHandle = () => useState(true)
+  // const [isValidated, setIsValidated] = useState(false)
+  const [show, setShow] = useState(false);
+  const handleShow = () => setShow(true);
   
 
-  const { register, handleSubmit, formState: { errors } } = useForm();
-  // const onSubmit = data => console.log(data);
+  const { register, handleSubmit, reset , formState: { errors } } = useForm();
+  const onSubmit = data => sendEmail(data)
  
 
   const sendEmail = () => {
-    // e.preventDefault()
-
-    // emailjs.sendForm('service_mtdmr5r', 'template_ntmq6rx', form.current, 'm4-E800NJXGTBTwxH')
-    // .then((result) => {
-    //     console.log(result.text);
-    // }, (error) => {
-    //     console.log(error.text);
-    //   })
    
+    emailjs.sendForm('service_mtdmr5r', 'template_ntmq6rx', form.current, 'm4-E800NJXGTBTwxH')
+    .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+            console.log(error.text);
+          })
+          
+        handleShow()
+        reset()
  
   }
 
   return (
     <div className={Styles.container}>
       <h4>Pedí tu presupuesto</h4>
-      <form ref={form}  onSubmit={handleSubmit(sendEmail)} >
+      <form ref={form}  onSubmit={handleSubmit(onSubmit)} >
         <label>
           <h6>
             Nombre Completo <span>*</span> {errors.user_name && <span>Es necesario un nombre</span>}
           </h6>
         </label>
-        <input type="text" id="user_name" name="user_name" {...register("user_name", {required: true})} />
+        <input type="text" id="user_name" name="user_name" {...register("user_name", {required: true})}  />
         <label>
           <h6>
             Email <span>*</span> {errors.user_email && <span>Es necesario un email</span>}
@@ -62,9 +64,9 @@ export default function ContactUs() {
           placeholder="Contanos un poco mas de tu evento..."
           {...register("message", {required: true})}
           ></textarea>
-                <FormModal />
+          
+                <FormModal show={show} setShow={setShow}/>
 
-      
       </form>
     </div>
         
