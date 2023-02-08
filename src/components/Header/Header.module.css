@@ -1,26 +1,16 @@
 .container {
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
+  max-width: 1200px;
   text-align: center;
   background-color: #000000;
   border-bottom: 1px solid var(--Cream);
   z-index: 1;
 }
 
-.container img {
-position:relative;
-/* right: 0rem; */
-}
 
-/* @media (min-width: 735px) {
-  .container {
-    font-size: 0.5rem;
-    letter-spacing: 0.2rem;
-    line-height: 1.2rem;
-  }
-} */
+
 
 
 

@@ -1,17 +1,9 @@
 import React from "react";
 import Styles from "./About.module.css";
-import Slider from "../Slider/Slider";
-// import IMG_1 from "../../assets/images/sliderImages/img1.jpg";
-// import IMG_2 from "../../assets/images/sliderImages/img2.jpg";
-// import IMG_3 from "../../assets/images/sliderImages/img3.jpg";
-// import IMG_4 from "../../assets/images/sliderImages/img4.jpg";
-import IMG_1 from "../../assets/images/sliderImages2/img1.jpg";
-import IMG_2 from "../../assets/images/sliderImages2/img2.jpg";
-import IMG_3 from "../../assets/images/sliderImages2/img3.jpg";
-import IMG_4 from "../../assets/images/sliderImages2/img4.jpg";
+
+import ControlledCarousel from "../Slider/ControlledCarousel";
 
 export default function About() {
-  const SliderImages = [IMG_1, IMG_2, IMG_3, IMG_4];
 
   return (
     <div id="home" className={Styles.container}>
@@ -25,7 +17,8 @@ export default function About() {
       </div>
       <div className={Styles.slider}>
         <h4>Galería de imágenes</h4>
-      <Slider images={SliderImages} />
+      
+      <ControlledCarousel />
       </div>
     </div>
   );

@@ -22,7 +22,6 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 300;
-  color: var(--White);
 }
 
 .App {
@@ -30,7 +29,7 @@ body {
   max-width: 100%;
   background-color: var(--Black);
   color: var(--White);
-  padding: 0 0.75rem;
+  
 }
 
 p {

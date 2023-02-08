@@ -1,12 +1,14 @@
 // import React from 'react'
 import Styles from "./ContactUs.module.css";
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { useForm } from "react-hook-form";
 import FormModal from "./FormModal";
 
 export default function ContactUs() {
   const form = useRef();
+  const [isValidated, setIsValidated] = useState(false)
+  const useHandle = () => useState(true)
   
 
   const { register, handleSubmit, formState: { errors } } = useForm();
@@ -16,18 +18,20 @@ export default function ContactUs() {
   const sendEmail = () => {
     // e.preventDefault()
 
-    emailjs.sendForm('service_mtdmr5r', 'template_ntmq6rx', form.current, 'm4-E800NJXGTBTwxH')
-    .then((result) => {
-        console.log(result.text);
-    }, (error) => {
-        console.log(error.text);
-      })
+    // emailjs.sendForm('service_mtdmr5r', 'template_ntmq6rx', form.current, 'm4-E800NJXGTBTwxH')
+    // .then((result) => {
+    //     console.log(result.text);
+    // }, (error) => {
+    //     console.log(error.text);
+    //   })
+   
+ 
   }
 
   return (
     <div className={Styles.container}>
       <h4>Pedí tu presupuesto</h4>
-      <form ref={form} onSubmit={handleSubmit(sendEmail)} /* onSubmit={sendEmail} */>
+      <form ref={form}  onSubmit={handleSubmit(sendEmail)} >
         <label>
           <h6>
             Nombre Completo <span>*</span> {errors.user_name && <span>Es necesario un nombre</span>}

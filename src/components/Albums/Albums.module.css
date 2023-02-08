@@ -4,6 +4,7 @@
   align-items: center;
   border-bottom: 1px solid var(--Cream);
   margin-bottom: 1.25rem;
+  /* padding: 0 0.75rem; */
 }
 
 .container h4 {
