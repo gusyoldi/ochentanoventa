@@ -1,0 +1,89 @@
+/* Albumn Component */
+
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-bottom: 1px solid var(--Cream);
+	margin-bottom: 1.25rem;
+	padding: 0 0.75rem;
+}
+
+.container h4 {
+	text-align: center;
+	margin-bottom: 1.25rem;
+}
+
+@media (min-width: 769px) {
+	.albumns {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		/* gap: 48px; */
+	}
+	.container h4 {
+		margin-bottom: 2.5rem;
+		margin-top: 1.25rem;
+	}
+}
+
+/* Single Albumn Component */
+
+.albumn {
+	display: flex;
+	margin-bottom: 1.25rem;
+}
+
+.albumn a {
+	background-color: #fafafa;
+	width: 120px;
+	height: 120px;
+	cursor: pointer;
+}
+
+.albumn img {
+	width: 120px;
+	height: 120px;
+	transition: 0.5s ease;
+}
+
+.albumn img:hover {
+	opacity: 0.8;
+}
+
+.albumnData {
+	margin-left: 1.25rem;
+}
+
+.albumnData p {
+	margin-bottom: 0.25rem;
+	font-size: 1rem;
+	font-weight: 400;
+}
+
+.albumnData ul {
+	padding: 0;
+	margin: 0;
+}
+
+.albumnData li {
+	list-style: none;
+	font-size: 1rem;
+	font-weight: 300;
+	margin-left: 0.4rem;
+}
+
+@media (min-width: 769px) {
+	.albumn {
+		align-items: center;
+	}
+
+	.albumn img {
+		width: 240px;
+		height: 240px;
+	}
+	.albumn a {
+		width: 240px;
+		height: 240px;
+	}
+}

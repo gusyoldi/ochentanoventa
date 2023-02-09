@@ -1,18 +1,10 @@
 .container {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  max-width: 1200px;
-  text-align: center;
-  background-color: #000000;
-  border-bottom: 1px solid var(--Cream);
-  z-index: 1;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	max-width: 1200px;
+	text-align: center;
+	background-color: #000000;
+	border-bottom: 1px solid var(--Cream);
+	z-index: 1;
 }
-
-
-
-
-
-
-
-

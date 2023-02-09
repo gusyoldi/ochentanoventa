@@ -1,60 +1,56 @@
-
 .container {
-  display: flex;
-  flex-direction: column;
-  border-bottom: 1px solid var(--Cream);
-  padding: 0 0.75rem;
-  padding-bottom: 1.25rem;
+	display: flex;
+	flex-direction: column;
+	border-bottom: 1px solid var(--Cream);
+	padding: 0 0.75rem;
+	padding-bottom: 1.25rem;
 }
 
 .container h4 {
-  text-align: center;
-  margin-bottom: 1.25rem;
+	text-align: center;
+	margin-bottom: 1.25rem;
 }
 
 .container form {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
 }
 
 .container h6 {
-  margin-bottom: 0.25rem;
+	margin-bottom: 0.25rem;
 }
 
 .container span {
-  color: #DD0F0F;
+	color: #dd0f0f;
 }
 
 .container input {
-  height: 2rem;
-  background-color: var(--WhiteForm);
-  margin-bottom: 0.75rem;
-  border: 1px solid var(--Black);
-  border-radius: 0%;
-  /* -webkit-appearance: none; */
+	height: 2rem;
+	background-color: var(--WhiteForm);
+	margin-bottom: 0.75rem;
+	border: 1px solid var(--Black);
+	border-radius: 0%;
 }
 
 .container textarea {
-  height: 8.75rem;
-  background-color: var(--WhiteForm);
-  margin-bottom: 0.75rem;
-  padding:0.5rem;
-  border-radius: 0%;
+	height: 8.75rem;
+	background-color: var(--WhiteForm);
+	margin-bottom: 0.75rem;
+	padding: 0.5rem;
+	border-radius: 0%;
 }
 
 .container button {
-  height: 3rem;
-  background-color: #252525;
-  color: var(--Cream);
-  border-radius: 4px;
+	height: 3rem;
+	background-color: #252525;
+	color: var(--Cream);
+	border-radius: 4px;
+	border-color: #fff0b6;
 }
 
 .container button:active {
-  background-color: #8a7442;
-  color: #F2D388;
-  cursor: pointer;
+	background-color: #8a7442;
+	color: #f2d388;
+	cursor: pointer;
 }
-
-
-

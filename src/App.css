@@ -1,60 +1,51 @@
 :root {
-  --Cream: #fff0b6;
-  --Black: #000000;
-  --White: #ffffff;
-  --WhiteForm: #fafafa;
+	--Cream: #FFF1BB;
+	--Black: #000000;
+	--White: #ffffff;
+	--WhiteForm: #fafafa;
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-
 html {
-  background-color: var(--Black);
-  max-width: 1200px;
-  margin: auto;
+	background-color: var(--Black);
+	max-width: 1200px;
+	margin: auto;
 }
 
 body {
-  font-family: "Roboto", sans-serif;
-  font-size: 16px;
-  font-weight: 300;
+	font-family: "Roboto", sans-serif;
+	font-size: 16px;
+	font-weight: 300;
 }
 
 .App {
-  overflow-x: hidden;
-  max-width: 100%;
-  background-color: var(--Black);
-  color: var(--White);
-  
+	overflow-x: hidden;
+	max-width: 100%;
+	background-color: var(--Black);
+	color: var(--White);
 }
 
 p {
-  font-size: 1rem;
-  font-weight: 300;
+	font-size: 1rem;
+	font-weight: 300;
 }
 
 h4 {
-  font-size: 1.25rem;
-  /* font-size: 1.563rem; */
-  font-weight: 700;
+	font-size: 1.25rem;
+	font-weight: 700;
 }
 
 h5 {
-  font-size: 1.25rem;
-  font-weight: 300;
+	font-size: 1.25rem;
+	font-weight: 300;
 }
 
 h6 {
-  font-size: 0.8rem;
-  font-weight: 300;
-}
-
-@media (min-width: 1200px) {
-  html {
-    font-size: 20px;
-  }
+	font-size: 0.8rem;
+	font-weight: 300;
 }

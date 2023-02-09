@@ -1,7 +1,7 @@
 import React from "react";
 import Styles from "./About.module.css";
 
-import ControlledCarousel from "../Slider/ControlledCarousel";
+import ControlledCarousel from "./ControlledCarousel";
 
 export default function About() {
 
@@ -15,7 +15,7 @@ export default function About() {
           actualidad canciones que nos marcaron en los años ochenta y noventa.
         </p>
       </div>
-      <div className={Styles.slider}>
+      <div className={Styles.carousel}>
         <h4>Galería de imágenes</h4>
       
       <ControlledCarousel />
