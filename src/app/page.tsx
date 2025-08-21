@@ -1,3 +1,3 @@
-export default function Home() {
-  return <h1>Probando deploy en Vercel</h1>;
+export default function HomePage() {
+  return <main></main>;
 }
