@@ -1,21 +1,28 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: #000000;
-  /* --foreground: #171717; */
+  --white: #ffffff;
+  --gold: #fff0ba;
+}
+
+body {
+  background-color: black;
 }
 
 @theme {
   --font-roboto: var(--font-roboto);
   --spacing-12: 0.75rem;
   --spacing-16: 1rem;
-
-  --color-divider: #ffffff;
-  --color-gray-800: #000000, opacity(0.8);
-}
-
-body {
-  background: var(--background);
-  /* color: var(--foreground);
-  font-family: Roboto, sans-serif; */
+  --spacing-16: 1rem;
+  --spacing-80: 5rem;
+  --spacing-128: 8rem;
+  --text-body-sm: 12px;
+  --text-body-md: 16px;
+  --text-heading-lg: 40px;
+  --text-heading-xl: 60px;
+  --color-divider: var(--white);
+  --color-gold: var(--gold);
 }
