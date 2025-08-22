@@ -26,3 +26,7 @@ body {
   --color-divider: var(--white);
   --color-gold: var(--gold);
 }
+
+.bg-footer {
+  background-color: rgba(229, 229, 229, 0.1);
+}
