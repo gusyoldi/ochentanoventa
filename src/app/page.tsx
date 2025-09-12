@@ -6,20 +6,20 @@ const images = [
 
 export default function HomePage() {
   return (
-    <main className="mx-auto max-w-[350px] overflow-y-scroll">
-      <section className="border-divider flex flex-col items-center border-b py-10 text-white">
-        <div className="font-montserrat text-center uppercase">
-          <h2 className="text-heading-md leading-8 font-extrabold">
+    <main className="mx-auto max-w-[350px] xl:max-w-7xl">
+      <section className="border-divider flex flex-col items-center border-b py-10 text-white xl:grid xl:grid-flow-col xl:grid-rows-5 xl:items-start xl:gap-x-3.5">
+        <div className="font-montserrat text-center leading-8 uppercase xl:col-span-1 xl:row-start-2 xl:text-start xl:leading-14">
+          <h2 className="text-heading-md xl:text-heading-xl font-extrabold text-nowrap">
             Rock argentino
           </h2>
-          <h3 className="text-gold text-heading-sm mb-5 font-bold">
+          <h3 className="text-gold text-heading-sm xl:text-heading-lg mb-5 font-bold xl:mb-10">
             En versiones distintas
           </h3>
         </div>
-        <div className="mb-5 h-[350px] w-[350px] bg-stone-400">
+        <div className="mb-5 h-[350px] w-[350px] bg-stone-400 xl:order-first xl:row-span-6 xl:h-[590px] xl:w-[590px]">
           {/* <ImageCarousel images={images} /> */}
         </div>
-        <div className="text-body-sm font-roboto flex flex-col gap-6 leading-5 tracking-wide">
+        <div className="text-body-sm font-roboto xl:text-body-md flex flex-col gap-6 leading-5 tracking-wide xl:col-span-2 xl:row-span-2">
           <p>
             <span className="font-bold">Ochenta Noventa</span> es una banda de
             Buenos Aires que elige clásicos del{' '}
