@@ -18,10 +18,11 @@ const ImageCarousel = ({ images, ...props }: ImageCarouselProps) => {
         {images.map((img) => (
           <CarouselItem key={img.src}>
             <Image
-              src="/images/carousel1/patu1.svg"
-              alt="image1"
-              height={800}
-              width={1800}
+              src="images/carousel1/patu1.svg"
+              alt="carousel-image"
+              height={350}
+              width={350}
+              // sizes="( max-width: 768px) 100vw, (max-width: 1200px) 50vw"
             />
             {/* <div className="p-4 bg-gray-200 rounded-lg h-full">{img.alt}</div> */}
           </CarouselItem>
