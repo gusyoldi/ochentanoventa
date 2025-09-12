@@ -1,17 +1,19 @@
-import Image from "next/image";
-import SocialLinks from "./SocialLinks";
+import Image from 'next/image';
+import SocialLinks from './SocialLinks';
 
 const Footer = () => {
   return (
-    <footer className="bg-footer w-dvw h-[83px] text-white flex items-center justify-evenly">
+    <footer className="font-roboto bg-footer flex h-[83px] items-center justify-between px-3 py-5 text-white">
       <Image
         src="/images/footer/logo.svg"
         alt="logo"
         width={100}
         height={100}
       />
-      <SocialLinks />
-      <span>© Copyright 2025</span>
+      <div className="flex flex-col gap-1">
+        <SocialLinks />
+        <span className="ml-auto text-[10px]">© Copyright 2025</span>
+      </div>
     </footer>
   );
 };

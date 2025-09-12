@@ -14,13 +14,16 @@ body {
 
 @theme {
   --font-roboto: var(--font-roboto);
+  --font-montserrat: var(--font-montserrat);
   --spacing-12: 0.75rem;
   --spacing-16: 1rem;
   --spacing-16: 1rem;
   --spacing-80: 5rem;
   --spacing-128: 8rem;
-  --text-body-sm: 12px;
+  --text-body-sm: 14px;
   --text-body-md: 16px;
+  --text-heading-sm: 20px;
+  --text-heading-md: 32px;
   --text-heading-lg: 40px;
   --text-heading-xl: 60px;
   --color-divider: var(--white);
