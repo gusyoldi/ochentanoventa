@@ -1,5 +1,5 @@
-@import "tailwindcss";
-@import "tw-animate-css";
+@import 'tailwindcss';
+@import 'tw-animate-css';
 
 @custom-variant dark (&:is(.dark *));
 
@@ -30,6 +30,6 @@ body {
   --color-gold: var(--gold);
 }
 
-.bg-footer {
+.bg-secondary {
   background-color: rgba(229, 229, 229, 0.1);
 }

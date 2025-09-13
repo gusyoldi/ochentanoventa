@@ -55,7 +55,7 @@ export default function HomePage() {
             </h3>
           </div>
 
-          <div className="mb-5 h-[176px] w-[350px] bg-slate-900 xl:order-last xl:row-span-2 xl:h-[296px] xl:w-[590px]"></div>
+          <div className="bg-secondary mb-5 h-[176px] w-[350px] xl:order-last xl:row-span-2 xl:h-[296px] xl:w-[590px]"></div>
 
           <div className="text-body-sm font-roboto xl:text-body-md flex flex-col gap-6 leading-5 tracking-wide">
             <p>
@@ -121,6 +121,12 @@ export default function HomePage() {
             <span className="font-bold">Mixto</span> para un evento súper
             climático y completo.
           </p>
+        </div>
+      </section>
+      <section className="pb-10 xl:pb-20">
+        <div className="bg-secondary mx-auto mb-10 h-[480px] rounded-md xl:mb-20 xl:max-w-[874px]"></div>
+        <div className="mx-auto h-[350px] w-[350px] bg-stone-400 xl:order-first xl:row-span-6 xl:h-[590px] xl:w-[590px]">
+          {/* <ImageCarousel images={images} /> */}
         </div>
       </section>
     </main>

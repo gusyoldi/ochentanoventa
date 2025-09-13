@@ -3,7 +3,7 @@ import SocialLinks from './SocialLinks';
 
 const Footer = () => {
   return (
-    <footer className="font-roboto bg-footer flex h-[83px] items-center justify-between px-3 py-5 text-white">
+    <footer className="font-roboto bg-secondary flex h-[83px] items-center justify-between px-3 py-5 text-white">
       <Image
         src="/images/footer/logo.svg"
         alt="logo"
