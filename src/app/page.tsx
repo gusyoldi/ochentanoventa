@@ -1,3 +1,4 @@
+import Form from '@/lib/components/Form';
 import Image from 'next/image';
 
 const images = [
@@ -124,7 +125,9 @@ export default function HomePage() {
         </div>
       </section>
       <section className="pb-10 xl:pb-20">
-        <div className="bg-secondary mx-auto mb-10 h-[480px] rounded-md xl:mb-20 xl:max-w-[874px]"></div>
+        <div className="bg-secondary mx-auto mb-10 rounded-md xl:mb-20 xl:max-w-[874px]">
+          <Form />
+        </div>
         <div className="mx-auto h-[350px] w-[350px] bg-stone-400 xl:order-first xl:row-span-6 xl:h-[590px] xl:w-[590px]">
           {/* <ImageCarousel images={images} /> */}
         </div>
