@@ -56,7 +56,30 @@ export default function HomePage() {
             </h3>
           </div>
 
-          <div className="bg-secondary mb-5 h-[176px] w-[350px] xl:order-last xl:row-span-2 xl:h-[296px] xl:w-[590px]"></div>
+          <div className="bg-secondary mb-5 flex h-[176px] w-[350px] items-center justify-between gap-x-4 rounded-md p-4 xl:order-last xl:row-span-2 xl:h-[296px] xl:w-[590px] xl:justify-center xl:gap-x-10 xl:p-7">
+            <div className="relative h-[142px] w-[142px] xl:h-[240px] xl:w-[240px]">
+              <Image
+                src="/images/volumes/last-volume.svg"
+                alt="last-volume"
+                // width={142}
+                // height={142}
+                fill
+                className="object-contain"
+              />
+            </div>
+            <div className="font-roboto text-white">
+              <h3 className="text-body-md font-bold xl:text-2xl">
+                Último Lanzamiento!
+              </h3>
+              <h4 className="text-sm font-bold xl:text-xl">Volumen 3 (2025)</h4>
+              <ul className="xl:text-body-md list-inside list-decimal pl-1 text-xs">
+                <li>Fue amor</li>
+                <li>Madre Escúchame</li>
+                <li>El Loco ft Chelo Zimbabwe</li>
+                <li>Bajan</li>
+              </ul>
+            </div>
+          </div>
 
           <div className="text-body-sm font-roboto xl:text-body-md flex flex-col gap-6 leading-5 tracking-wide">
             <p>
