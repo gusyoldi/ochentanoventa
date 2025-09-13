@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 const images = [
   { src: '/images/slide1.jpg', alt: 'Slide 1' },
   { src: '/images/slide2.jpg', alt: 'Slide 2' },
@@ -67,9 +69,23 @@ export default function HomePage() {
             </p>
           </div>
         </div>
-        <div className="mt-10 mb-5 h-[180px] grid-cols-2 bg-stone-400 xl:mt-20">
+        <div className="mt-10 h-[180px] grid-cols-2 bg-stone-400 xl:mt-20">
           {/* <ImageCarousel images={images} /> */}
         </div>
+
+        <a
+          className="font-roboto mx-auto mt-10 flex items-center justify-center gap-2 py-1 text-white uppercase"
+          href="https://open.spotify.com/artist/1t7L3htJvTcz93Fa9aMiI6?si=UOBAljXzSP-pWnYKDBEL5Q"
+        >
+          <Image
+            src="/images/footer/spotify.svg"
+            alt="spotify-link"
+            width={22}
+            height={22}
+            className="opacity-40"
+          />
+          <span>Escuchar ahora</span>
+        </a>
       </section>
     </main>
   );
