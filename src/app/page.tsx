@@ -61,8 +61,6 @@ export default function HomePage() {
               <Image
                 src="/images/volumes/last-volume.svg"
                 alt="last-volume"
-                // width={142}
-                // height={142}
                 fill
                 className="object-contain"
               />
