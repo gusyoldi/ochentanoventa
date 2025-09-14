@@ -44,14 +44,14 @@ const Form = () => {
     <form
       ref={form}
       onSubmit={handleSubmit(onSubmit)}
-      className="font-roboto flex flex-col gap-3 px-3 py-5"
+      className="font-roboto flex flex-col gap-3 px-3 py-5 xl:grid xl:grid-cols-4 xl:grid-rows-2"
     >
-      <h3 className="mb-[6px] text-center text-[18px] font-bold xl:text-xl">
+      <h3 className="mb-[6px] text-center text-[18px] font-bold xl:col-span-full xl:text-xl">
         Pedinos un presupuesto para tu evento
       </h3>
-      <div className="flex flex-col gap-1">
+      <div className="flex flex-col gap-1 xl:col-span-2">
         <label className="text-xs">
-          Nombre Completo <span className="text-red-700">*</span>{' '}
+          Nombre completo <span className="text-red-700">*</span>{' '}
         </label>
         <input
           type="text"
@@ -64,7 +64,7 @@ const Form = () => {
         )}
       </div>
 
-      <div className="flex flex-col gap-1">
+      <div className="flex flex-col gap-1 xl:col-span-2">
         <label className="text-xs">
           Email <span className="text-red-700">*</span>{' '}
         </label>
@@ -79,7 +79,7 @@ const Form = () => {
         )}
       </div>
 
-      <div className="flex flex-col gap-1">
+      <div className="flex flex-col gap-1 xl:col-span-2">
         <label className="text-xs">
           Celular <span className="text-red-700">*</span>{' '}
         </label>
@@ -94,7 +94,7 @@ const Form = () => {
         )}
       </div>
 
-      <div className="flex flex-col gap-1">
+      <div className="flex flex-col gap-1 xl:col-span-2">
         <label className="text-xs">
           Localidad del evento <span className="text-red-700">*</span>{' '}
         </label>
@@ -111,8 +111,8 @@ const Form = () => {
         )}
       </div>
 
-      <div className="flex flex-col gap-1">
-        <label className="text-xs">Consulta</label>
+      <div className="flex flex-col gap-1 xl:col-span-full">
+        <label className="text-xs">Mensaje</label>
         <textarea
           name="message"
           rows={10}
@@ -122,7 +122,7 @@ const Form = () => {
         ></textarea>
       </div>
 
-      <button className="mt-2 cursor-pointer text-sm uppercase">
+      <button className="mt-2 cursor-pointer text-sm uppercase xl:col-span-full">
         Enviar consulta
       </button>
     </form>
