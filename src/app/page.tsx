@@ -1,10 +1,12 @@
+import ImageCarousel from '@/lib/components/Carousel';
 import Form from '@/lib/components/Form';
 import Image from 'next/image';
 
 const images = [
-  { src: '/images/slide1.jpg', alt: 'Slide 1' },
-  { src: '/images/slide2.jpg', alt: 'Slide 2' },
-  { src: '/images/slide3.jpg', alt: 'Slide 3' },
+  { src: '/images/carousel1/foto1.webp', alt: 'Slide 1' },
+  { src: '/images/carousel1/foto2.webp', alt: 'Slide 2' },
+  { src: '/images/carousel1/foto3.webp', alt: 'Slide 3' },
+  { src: '/images/carousel1/foto4.webp', alt: 'Slide 4' },
 ];
 
 export default function HomePage() {
@@ -20,7 +22,7 @@ export default function HomePage() {
           </h3>
         </div>
         <div className="mb-5 h-[350px] w-[350px] bg-stone-400 xl:order-first xl:row-span-6 xl:h-[590px] xl:w-[590px]">
-          {/* <ImageCarousel images={images} /> */}
+          <ImageCarousel images={images} />
         </div>
         <div className="text-body-sm font-roboto xl:text-body-md flex flex-col gap-6 leading-5 tracking-wide xl:col-span-1 xl:row-span-2">
           <p>
@@ -62,14 +64,16 @@ export default function HomePage() {
                 src="/images/volumes/last-volume.svg"
                 alt="last-volume"
                 fill
-                className="object-contain"
+                className="object-cover"
               />
             </div>
             <div className="font-roboto text-white">
-              <h3 className="text-body-md font-bold xl:text-2xl">
+              <h3 className="text-body-md mb-1.5 font-bold xl:mb-5 xl:text-2xl">
                 Último Lanzamiento!
               </h3>
-              <h4 className="text-sm font-bold xl:text-xl">Volumen 3 (2025)</h4>
+              <h4 className="mb-1 text-sm font-bold xl:mb-3 xl:text-xl">
+                Volumen 3 (2025)
+              </h4>
               <ul className="xl:text-body-md list-inside list-decimal pl-1 text-xs">
                 <li>Fue amor</li>
                 <li>Madre Escúchame</li>
@@ -97,7 +101,7 @@ export default function HomePage() {
         </div>
 
         <a
-          className="font-roboto mx-auto mt-10 flex items-center justify-center gap-2 py-1 text-white uppercase"
+          className="font-roboto mx-auto mt-10 flex items-center justify-center gap-2 py-1 text-white uppercase opacity-40 hover:opacity-100"
           href="https://open.spotify.com/artist/1t7L3htJvTcz93Fa9aMiI6?si=UOBAljXzSP-pWnYKDBEL5Q"
         >
           <Image
@@ -105,9 +109,9 @@ export default function HomePage() {
             alt="spotify-link"
             width={22}
             height={22}
-            className="opacity-40"
+            className=""
           />
-          <span>Escuchar ahora</span>
+          <span className="hover:font-bold">Escuchar ahora</span>
         </a>
       </section>
       <section className="flex flex-col items-center py-10 xl:grid xl:grid-flow-col xl:grid-rows-4 xl:items-start xl:gap-x-3.5 xl:py-20">

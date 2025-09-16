@@ -122,7 +122,7 @@ const Form = () => {
         ></textarea>
       </div>
 
-      <button className="mt-2 cursor-pointer text-sm uppercase xl:col-span-full">
+      <button className="mt-2 cursor-pointer text-sm uppercase hover:font-bold xl:col-span-full">
         Enviar consulta
       </button>
     </form>

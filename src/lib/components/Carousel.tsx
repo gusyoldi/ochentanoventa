@@ -17,17 +17,20 @@ const ImageCarousel = ({ images, ...props }: ImageCarouselProps) => {
       <CarouselContent>
         {images.map((img) => (
           <CarouselItem key={img.src}>
-            <Image
-              src="images/carousel1/patu1.svg"
-              alt="carousel-image"
-              height={350}
-              width={350}
-            />
+            <div className="relative h-[350px] w-[350px] xl:h-[590px] xl:w-[590px]">
+              <Image
+                src={img.src}
+                alt={img.alt}
+                className="object-cover"
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 33vw"
+              />
+            </div>
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
+      <CarouselPrevious className="left-2" />
+      <CarouselNext className="right-2" />
     </Carousel>
   );
 };
