@@ -7,23 +7,46 @@ import {
 } from '@/components/ui/carousel';
 import Image from 'next/image';
 
+import { cva } from 'class-variance-authority';
+import { cn } from '../utils';
+
+const imageContainerVariants = cva(
+  'relative', // clases base
+  {
+    variants: {
+      size: {
+        sm: 'h-[350px] w-[350px] xl:h-[590px] xl:w-[590px]',
+        lg: 'h-[350px] w-[230px] xl:h-[800px] xl:w-[1200px]',
+      },
+    },
+    defaultVariants: {
+      size: 'sm',
+    },
+  },
+);
+
 type ImageCarouselProps = React.ComponentProps<typeof Carousel> & {
   images: { src: string; alt: string }[];
+  size?: 'sm' | 'lg';
 };
 
-const ImageCarousel = ({ images, ...props }: ImageCarouselProps) => {
+const ImageCarousel = ({
+  images,
+  size = 'sm',
+  ...props
+}: ImageCarouselProps) => {
   return (
     <Carousel {...props}>
       <CarouselContent>
         {images.map((img) => (
           <CarouselItem key={img.src}>
-            <div className="relative h-[350px] w-[350px] xl:h-[590px] xl:w-[590px]">
+            <div className={cn(imageContainerVariants({ size }))}>
               <Image
                 src={img.src}
                 alt={img.alt}
                 className="object-cover"
                 fill
-                sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 33vw"
+                sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw"
               />
             </div>
           </CarouselItem>

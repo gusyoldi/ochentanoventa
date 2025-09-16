@@ -17,10 +17,10 @@ const CAROUSEL_2_IMG = [
 ];
 
 const CAROUSEL_3_IMG = [
-  { src: '/images/carousel2/foto1.webp', alt: 'Slide 1' },
-  { src: '/images/carousel2/foto2.webp', alt: 'Slide 2' },
-  { src: '/images/carousel2/foto3.webp', alt: 'Slide 3' },
-  { src: '/images/carousel2/foto4.webp', alt: 'Slide 4' },
+  { src: '/images/carousel3/foto1.webp', alt: 'Slide 1' },
+  { src: '/images/carousel3/foto2.webp', alt: 'Slide 2' },
+  { src: '/images/carousel3/foto3.webp', alt: 'Slide 3' },
+  { src: '/images/carousel3/foto4.webp', alt: 'Slide 4' },
 ];
 
 export default function HomePage() {
@@ -167,8 +167,8 @@ export default function HomePage() {
         <div className="bg-secondary mx-auto mb-10 rounded-md xl:mb-20 xl:max-w-[874px]">
           <Form />
         </div>
-        <div className="mx-auto h-[350px] w-[350px] bg-stone-400 xl:order-first xl:row-span-6 xl:h-[590px] xl:w-[590px]">
-          <ImageCarousel images={CAROUSEL_3_IMG} />
+        <div className="mx-auto h-[350px] w-[350px] xl:order-first xl:row-span-6 xl:h-[800px] xl:w-[1200px]">
+          <ImageCarousel images={CAROUSEL_3_IMG} size="lg" />
         </div>
       </section>
     </main>
