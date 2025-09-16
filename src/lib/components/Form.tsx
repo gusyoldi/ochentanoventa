@@ -44,7 +44,7 @@ const Form = () => {
     <form
       ref={form}
       onSubmit={handleSubmit(onSubmit)}
-      className="font-roboto flex flex-col gap-3 px-3 py-5 xl:grid xl:grid-cols-4 xl:grid-rows-2"
+      className="font-roboto flex flex-col gap-3 px-3 py-5 xl:grid xl:grid-cols-4 xl:grid-rows-2 xl:px-10"
     >
       <h3 className="mb-[6px] text-center text-[18px] font-bold xl:col-span-full xl:text-xl">
         Pedinos un presupuesto para tu evento
@@ -117,7 +117,7 @@ const Form = () => {
           name="message"
           rows={10}
           cols={30}
-          placeholder="Contanos un poco mas acerca de tu evento..."
+          placeholder="Contanos un poco más acerca de tu evento..."
           className="placeholder:font-roboto max-h-28 rounded-sm bg-white p-2 text-xs text-black placeholder:p-0.5 placeholder:text-xs placeholder:text-black"
         ></textarea>
       </div>

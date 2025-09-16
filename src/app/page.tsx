@@ -2,11 +2,25 @@ import ImageCarousel from '@/lib/components/Carousel';
 import Form from '@/lib/components/Form';
 import Image from 'next/image';
 
-const images = [
+const CAROUSEL_1_IMG = [
   { src: '/images/carousel1/foto1.webp', alt: 'Slide 1' },
   { src: '/images/carousel1/foto2.webp', alt: 'Slide 2' },
   { src: '/images/carousel1/foto3.webp', alt: 'Slide 3' },
   { src: '/images/carousel1/foto4.webp', alt: 'Slide 4' },
+];
+
+const CAROUSEL_2_IMG = [
+  { src: '/images/carousel2/foto1.webp', alt: 'Slide 1' },
+  { src: '/images/carousel2/foto2.webp', alt: 'Slide 2' },
+  { src: '/images/carousel2/foto3.webp', alt: 'Slide 3' },
+  { src: '/images/carousel2/foto4.webp', alt: 'Slide 4' },
+];
+
+const CAROUSEL_3_IMG = [
+  { src: '/images/carousel2/foto1.webp', alt: 'Slide 1' },
+  { src: '/images/carousel2/foto2.webp', alt: 'Slide 2' },
+  { src: '/images/carousel2/foto3.webp', alt: 'Slide 3' },
+  { src: '/images/carousel2/foto4.webp', alt: 'Slide 4' },
 ];
 
 export default function HomePage() {
@@ -21,8 +35,8 @@ export default function HomePage() {
             En versiones distintas
           </h3>
         </div>
-        <div className="mb-5 h-[350px] w-[350px] bg-stone-400 xl:order-first xl:row-span-6 xl:h-[590px] xl:w-[590px]">
-          <ImageCarousel images={images} />
+        <div className="mb-5 h-[350px] w-[350px] xl:order-first xl:row-span-6 xl:h-[590px] xl:w-[590px]">
+          <ImageCarousel images={CAROUSEL_1_IMG} />
         </div>
         <div className="text-body-sm font-roboto xl:text-body-md flex flex-col gap-6 leading-5 tracking-wide xl:col-span-1 xl:row-span-2">
           <p>
@@ -97,7 +111,7 @@ export default function HomePage() {
           </div>
         </div>
         <div className="mt-10 h-[180px] grid-cols-2 bg-stone-400 xl:mt-20">
-          {/* <ImageCarousel images={images} /> */}
+          {/* <ImageCarousel images={CAROUSEL_2_IMG} /> */}
         </div>
 
         <a
@@ -123,8 +137,8 @@ export default function HomePage() {
             Privados
           </h3>
         </div>
-        <div className="mb-5 h-[350px] w-[350px] bg-stone-400 xl:order-first xl:row-span-6 xl:h-[590px] xl:w-[590px]">
-          {/* <ImageCarousel images={images} /> */}
+        <div className="mb-5 h-[350px] w-[350px] xl:order-first xl:row-span-6 xl:h-[590px] xl:w-[590px]">
+          <ImageCarousel images={CAROUSEL_2_IMG} />
         </div>
         <div className="text-body-sm font-roboto xl:text-body-md flex max-w-96 flex-col gap-6 leading-5 tracking-wide xl:col-span-1 xl:row-span-2">
           <p>
@@ -154,7 +168,7 @@ export default function HomePage() {
           <Form />
         </div>
         <div className="mx-auto h-[350px] w-[350px] bg-stone-400 xl:order-first xl:row-span-6 xl:h-[590px] xl:w-[590px]">
-          {/* <ImageCarousel images={images} /> */}
+          <ImageCarousel images={CAROUSEL_3_IMG} />
         </div>
       </section>
     </main>

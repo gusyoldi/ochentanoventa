@@ -4,8 +4,9 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --white: #ffffff;
+  --white: #f6f6f6;
   --gold: #fff0ba;
+  --grey: #e5e5e5;
 }
 
 body {
@@ -28,6 +29,8 @@ body {
   --text-heading-xl: 60px;
   --color-divider: var(--white);
   --color-gold: var(--gold);
+  --color-grey: var(--grey);
+  --color-white: var(--white);
 }
 
 .bg-secondary {
