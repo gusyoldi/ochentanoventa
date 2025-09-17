@@ -98,7 +98,7 @@ export default function HomePage() {
         </div>
 
         <div className="mt-10 grid-cols-2 xl:mt-20">
-          <div className="flex justify-between gap-5">
+          <div className="hidden justify-between gap-5 xl:flex">
             {WIDE_CAROUSEL.map((vol) => (
               <Volume
                 key={vol.src}
@@ -112,7 +112,7 @@ export default function HomePage() {
               />
             ))}
           </div>
-          {/* <ImageCarousel images={CAROUSEL_2_IMG} /> */}
+          <ImageCarousel images={WIDE_CAROUSEL} className="xl:hidden" />
         </div>
 
         <a

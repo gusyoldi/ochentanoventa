@@ -10,20 +10,17 @@ import Image from 'next/image';
 import { cva } from 'class-variance-authority';
 import { cn } from '../utils';
 
-const imageContainerVariants = cva(
-  'relative', // clases base
-  {
-    variants: {
-      size: {
-        sm: 'h-[350px] w-[350px] xl:h-[590px] xl:w-[590px]',
-        lg: 'h-[350px] w-full xl:h-[800px] xl:w-[1280px]',
-      },
-    },
-    defaultVariants: {
-      size: 'sm',
+const imageContainerVariants = cva('relative', {
+  variants: {
+    size: {
+      sm: 'h-[350px] w-[350px] xl:h-[590px] xl:w-[590px]',
+      lg: 'h-[350px] w-full xl:h-[800px] xl:w-[1280px]',
     },
   },
-);
+  defaultVariants: {
+    size: 'sm',
+  },
+});
 
 type ImageCarouselProps = React.ComponentProps<typeof Carousel> & {
   images: { src: string; alt: string }[];
