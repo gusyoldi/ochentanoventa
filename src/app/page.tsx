@@ -1,27 +1,13 @@
 import ImageCarousel from '@/lib/components/Carousel';
 import Form from '@/lib/components/Form';
+import Volume from '@/lib/components/Volume';
 import Image from 'next/image';
-
-const CAROUSEL_1_IMG = [
-  { src: '/images/carousel1/foto1.webp', alt: 'Slide 1' },
-  { src: '/images/carousel1/foto2.webp', alt: 'Slide 2' },
-  { src: '/images/carousel1/foto3.webp', alt: 'Slide 3' },
-  { src: '/images/carousel1/foto4.webp', alt: 'Slide 4' },
-];
-
-const CAROUSEL_2_IMG = [
-  { src: '/images/carousel2/foto1.webp', alt: 'Slide 1' },
-  { src: '/images/carousel2/foto2.webp', alt: 'Slide 2' },
-  { src: '/images/carousel2/foto3.webp', alt: 'Slide 3' },
-  { src: '/images/carousel2/foto4.webp', alt: 'Slide 4' },
-];
-
-const CAROUSEL_3_IMG = [
-  { src: '/images/carousel3/foto1.webp', alt: 'Slide 1' },
-  { src: '/images/carousel3/foto2.webp', alt: 'Slide 2' },
-  { src: '/images/carousel3/foto3.webp', alt: 'Slide 3' },
-  { src: '/images/carousel3/foto4.webp', alt: 'Slide 4' },
-];
+import {
+  CAROUSEL_1_IMG,
+  CAROUSEL_2_IMG,
+  CAROUSEL_3_IMG,
+  WIDE_CAROUSEL,
+} from './constants';
 
 export default function HomePage() {
   return (
@@ -61,7 +47,7 @@ export default function HomePage() {
           </p>
         </div>
       </section>
-      <section className="border-divider border-b py-10 xl:py-20">
+      <section className="border-divider border-b pt-10 pb-10 xl:pt-20">
         <div className="flex flex-col items-center xl:grid xl:grid-flow-col xl:grid-rows-2 xl:items-start xl:gap-x-3.5">
           <div className="font-montserrat text-center leading-8 uppercase xl:col-span-1 xl:text-start xl:leading-14">
             <h2 className="text-heading-md xl:text-heading-xl font-extrabold text-nowrap">
@@ -110,19 +96,27 @@ export default function HomePage() {
             </p>
           </div>
         </div>
-        <div className="mt-10 h-[180px] grid-cols-2 xl:mt-20">
-          <Image
-            src="/images/volumes/que-ves.webp"
-            alt="spotify-link"
-            width={180}
-            height={180}
-            className=""
-          />
+
+        <div className="mt-10 grid-cols-2 xl:mt-20">
+          <div className="flex justify-between gap-5">
+            {WIDE_CAROUSEL.map((vol) => (
+              <Volume
+                key={vol.src}
+                src={vol.src}
+                alt={vol.alt}
+                title={vol.title}
+                year={vol.year}
+                aditional={vol.aditional}
+                format={vol.format}
+                songs={vol.songs}
+              />
+            ))}
+          </div>
           {/* <ImageCarousel images={CAROUSEL_2_IMG} /> */}
         </div>
 
         <a
-          className="font-roboto mx-auto mt-10 flex items-center justify-center gap-2 py-1 text-white uppercase opacity-40 hover:opacity-100"
+          className="font-roboto mx-auto mt-10 flex items-center justify-center gap-2 py-1 text-white uppercase opacity-60 hover:opacity-100"
           href="https://open.spotify.com/artist/1t7L3htJvTcz93Fa9aMiI6?si=UOBAljXzSP-pWnYKDBEL5Q"
         >
           <Image
@@ -130,7 +124,6 @@ export default function HomePage() {
             alt="spotify-link"
             width={22}
             height={22}
-            className=""
           />
           <span className="hover:font-bold">Escuchar ahora</span>
         </a>
