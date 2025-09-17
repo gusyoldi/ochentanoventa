@@ -75,7 +75,7 @@ export default function HomePage() {
           <div className="bg-secondary mb-5 flex h-[176px] w-[350px] items-center justify-between gap-x-4 rounded-md p-4 xl:order-last xl:row-span-2 xl:h-[296px] xl:w-[590px] xl:justify-center xl:gap-x-10 xl:p-7">
             <div className="relative h-[142px] w-[142px] xl:h-[240px] xl:w-[240px]">
               <Image
-                src="/images/volumes/last-volume.svg"
+                src="/images/volumes/last-volume.webp"
                 alt="last-volume"
                 fill
                 className="object-cover"
@@ -110,7 +110,14 @@ export default function HomePage() {
             </p>
           </div>
         </div>
-        <div className="mt-10 h-[180px] grid-cols-2 bg-stone-400 xl:mt-20">
+        <div className="mt-10 h-[180px] grid-cols-2 xl:mt-20">
+          <Image
+            src="/images/volumes/que-ves.webp"
+            alt="spotify-link"
+            width={180}
+            height={180}
+            className=""
+          />
           {/* <ImageCarousel images={CAROUSEL_2_IMG} /> */}
         </div>
 
@@ -167,7 +174,7 @@ export default function HomePage() {
         <div className="bg-secondary mx-auto mb-10 rounded-md xl:mb-20 xl:max-w-[874px]">
           <Form />
         </div>
-        <div className="mx-auto h-[350px] w-[350px] xl:order-first xl:row-span-6 xl:h-[800px] xl:w-[1200px]">
+        <div className="mx-auto h-[350px] w-[350px] xl:order-first xl:row-span-6 xl:h-[800px] xl:w-[1280px]">
           <ImageCarousel images={CAROUSEL_3_IMG} size="lg" />
         </div>
       </section>

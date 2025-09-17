@@ -16,7 +16,7 @@ const imageContainerVariants = cva(
     variants: {
       size: {
         sm: 'h-[350px] w-[350px] xl:h-[590px] xl:w-[590px]',
-        lg: 'h-[350px] w-[230px] xl:h-[800px] xl:w-[1200px]',
+        lg: 'h-[350px] w-full xl:h-[800px] xl:w-[1280px]',
       },
     },
     defaultVariants: {

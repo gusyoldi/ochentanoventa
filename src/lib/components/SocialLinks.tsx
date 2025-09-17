@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import Link from 'next/link';
 
 const socialLinks = [
   {
@@ -28,7 +27,8 @@ export default function SocialLinks() {
   return (
     <div className="flex items-center space-x-4">
       {socialLinks.map((social) => (
-        <Link
+        <a
+          title={social.name}
           key={social.name}
           href={social.href}
           target="_blank"
@@ -36,7 +36,7 @@ export default function SocialLinks() {
           className="hover:opacity-80"
         >
           <Image src={social.logo} alt={social.name} width={25} height={28} />
-        </Link>
+        </a>
       ))}
     </div>
   );
