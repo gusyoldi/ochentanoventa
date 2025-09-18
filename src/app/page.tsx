@@ -124,7 +124,7 @@ export default function HomePage() {
           href="https://open.spotify.com/artist/1t7L3htJvTcz93Fa9aMiI6?si=UOBAljXzSP-pWnYKDBEL5Q"
         >
           <Image
-            src="/images/footer/spotify.svg"
+            src="/images/footer/spotify.png"
             alt="spotify-link"
             width={22}
             height={22}

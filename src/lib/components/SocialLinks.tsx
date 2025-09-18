@@ -4,22 +4,22 @@ const socialLinks = [
   {
     name: 'Instagram',
     href: 'https://www.instagram.com/ochenta.90',
-    logo: '/images/footer/instagram.svg',
+    logo: '/images/footer/instagram.png',
   },
   {
     name: 'Youtube',
     href: 'https://www.youtube.com/channel/UCmoocg2jeWF5OZwGXvi5dfw',
-    logo: '/images/footer/youtube.svg',
+    logo: '/images/footer/youtube.png',
   },
   {
     name: 'TikTok',
     href: 'https://www.tiktok.com/@ochenta.90',
-    logo: '/images/footer/tiktok.svg',
+    logo: '/images/footer/tiktok.png',
   },
   {
     name: 'Spotify',
     href: 'https://open.spotify.com/artist/1t7L3htJvTcz93Fa9aMiI6?si=UOBAljXzSP-pWnYKDBEL5Q',
-    logo: '/images/footer/spotify.svg',
+    logo: '/images/footer/spotify.png',
   },
 ];
 

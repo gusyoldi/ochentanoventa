@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="font-roboto bg-secondary h-20 px-3 py-5 text-white xl:py-6">
       <div className="mx-auto flex max-w-[350px] items-center justify-between xl:max-w-7xl">
         <Image
-          src="/images/footer/logo.svg"
+          src="/images/footer/logo.png"
           alt="logo"
           width={100}
           height={100}
