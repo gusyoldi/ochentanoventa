@@ -11,7 +11,7 @@ import {
 
 export default function HomePage() {
   return (
-    <main className="mx-auto max-w-[350px] overflow-y-auto text-white xl:max-w-7xl">
+    <main className="mx-auto max-w-[350px] text-white xl:max-w-7xl">
       <section className="border-divider flex flex-col items-center border-b py-10 xl:grid xl:grid-flow-col xl:grid-rows-4 xl:items-start xl:gap-x-3.5 xl:py-20">
         <div className="font-montserrat text-center leading-8 uppercase xl:col-span-1 xl:row-start-2 xl:text-start xl:leading-14">
           <h1 className="sr-only">
@@ -64,7 +64,7 @@ export default function HomePage() {
           <div className="bg-secondary mb-5 flex h-[176px] w-[350px] items-center justify-between gap-x-4 rounded-md p-4 xl:order-last xl:row-span-2 xl:h-[296px] xl:w-[590px] xl:justify-center xl:gap-x-10 xl:p-7">
             <div className="relative h-[142px] w-[142px] xl:h-[240px] xl:w-[240px]">
               <Image
-                src="/images/volumes/last-volume.webp"
+                src="/images/volumes/last.webp"
                 alt="last-volume"
                 fill
                 className="object-cover"
@@ -120,7 +120,7 @@ export default function HomePage() {
         </div>
 
         <a
-          className="font-roboto mx-auto mt-10 flex items-center justify-center gap-2 py-1 text-white uppercase opacity-60 hover:opacity-100"
+          className="font-roboto mx-auto mt-10 flex items-center justify-center gap-2 py-1 text-white uppercase hover:opacity-60"
           href="https://open.spotify.com/artist/1t7L3htJvTcz93Fa9aMiI6?si=UOBAljXzSP-pWnYKDBEL5Q"
         >
           <Image
@@ -129,7 +129,7 @@ export default function HomePage() {
             width={22}
             height={22}
           />
-          <span className="hover:font-bold">Escuchar ahora</span>
+          <span>Escuchar ahora</span>
         </a>
       </section>
       <section className="flex flex-col items-center py-10 xl:grid xl:grid-flow-col xl:grid-rows-4 xl:items-start xl:gap-x-3.5 xl:py-20">
