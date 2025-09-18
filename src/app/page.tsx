@@ -11,7 +11,7 @@ import {
 
 export default function HomePage() {
   return (
-    <main className="mx-auto max-w-[350px] text-white xl:max-w-7xl">
+    <main className="mx-auto max-w-[350px] overflow-y-auto text-white xl:max-w-7xl">
       <section className="border-divider flex flex-col items-center border-b py-10 xl:grid xl:grid-flow-col xl:grid-rows-4 xl:items-start xl:gap-x-3.5 xl:py-20">
         <div className="font-montserrat text-center leading-8 uppercase xl:col-span-1 xl:row-start-2 xl:text-start xl:leading-14">
           <h2 className="text-heading-md xl:text-heading-xl font-extrabold text-nowrap">
@@ -98,21 +98,22 @@ export default function HomePage() {
         </div>
 
         <div className="mt-10 grid-cols-2 xl:mt-20">
-          <div className="hidden justify-between gap-5 xl:flex">
-            {WIDE_CAROUSEL.map((vol) => (
-              <Volume
-                key={vol.src}
-                src={vol.src}
-                alt={vol.alt}
-                title={vol.title}
-                year={vol.year}
-                aditional={vol.aditional}
-                format={vol.format}
-                songs={vol.songs}
-              />
-            ))}
+          <div className="flex max-w-[350px] justify-between gap-5 overflow-x-auto xl:max-w-full">
+            {WIDE_CAROUSEL.map(
+              ({ src, alt, title, year, aditional, format, songs }) => (
+                <Volume
+                  key={src}
+                  src={src}
+                  alt={alt}
+                  title={title}
+                  year={year}
+                  aditional={aditional}
+                  format={format}
+                  songs={songs}
+                />
+              ),
+            )}
           </div>
-          <ImageCarousel images={WIDE_CAROUSEL} className="xl:hidden" />
         </div>
 
         <a

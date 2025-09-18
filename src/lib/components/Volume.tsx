@@ -20,7 +20,7 @@ const Volume = ({
   songs,
 }: VolumeProps) => {
   return (
-    <div className="max-w-[180px]">
+    <div className="max-w-[180px] shrink-0">
       <Image src={src} alt={alt} width={180} height={180} />
 
       <div className="mt-3 leading-5">
