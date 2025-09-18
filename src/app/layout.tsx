@@ -16,8 +16,9 @@ const montserratSans = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: 'Ochenta Noventa',
-  description: 'Banda para eventos',
+  title: 'Ochenta Noventa - Banda de Rock Argentino para eventos',
+  description:
+    'Banda Ochenta Noventa ofrece versiones únicas de clásicos del Rock Argentino para casamientos, cumpleaños y eventos corporativos en Buenos Aires.',
 };
 
 export default function RootLayout({

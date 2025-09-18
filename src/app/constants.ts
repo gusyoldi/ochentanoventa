@@ -9,10 +9,22 @@ type VolumeType = {
 };
 
 export const CAROUSEL_1_IMG = [
-  { src: '/images/carousel1/foto1.webp', alt: 'Slide 1' },
-  { src: '/images/carousel1/foto2.webp', alt: 'Slide 2' },
-  { src: '/images/carousel1/foto3.webp', alt: 'Slide 3' },
-  { src: '/images/carousel1/foto4.webp', alt: 'Slide 4' },
+  {
+    src: '/images/carousel1/foto1.webp',
+    alt: 'Banda Ochenta Noventa tocando en evento privado - 1',
+  },
+  {
+    src: '/images/carousel1/foto2.webp',
+    alt: 'Banda Ochenta Noventa tocando en evento privado - 2',
+  },
+  {
+    src: '/images/carousel1/foto3.webp',
+    alt: 'Banda Ochenta Noventa tocando en evento privado - 3',
+  },
+  {
+    src: '/images/carousel1/foto4.webp',
+    alt: 'Banda Ochenta Noventa tocando en evento privado - 4',
+  },
 ];
 
 export const CAROUSEL_2_IMG = [
@@ -23,10 +35,22 @@ export const CAROUSEL_2_IMG = [
 ];
 
 export const CAROUSEL_3_IMG = [
-  { src: '/images/carousel3/foto1.webp', alt: 'Slide 1' },
-  { src: '/images/carousel3/foto2.webp', alt: 'Slide 2' },
-  { src: '/images/carousel3/foto3.webp', alt: 'Slide 3' },
-  { src: '/images/carousel3/foto4.webp', alt: 'Slide 4' },
+  {
+    src: '/images/carousel3/foto1.webp',
+    alt: 'Banda Ochenta Noventa tocando en evento de tipo festival - 1',
+  },
+  {
+    src: '/images/carousel3/foto2.webp',
+    alt: 'Banda Ochenta Noventa tocando en evento de tipo festival - 2',
+  },
+  {
+    src: '/images/carousel3/foto3.webp',
+    alt: 'Banda Ochenta Noventa tocando en evento de tipo festival - 3',
+  },
+  {
+    src: '/images/carousel3/foto4.webp',
+    alt: 'Banda Ochenta Noventa tocando en evento de tipo festival - 4',
+  },
 ];
 
 export const WIDE_CAROUSEL: VolumeType[] = [

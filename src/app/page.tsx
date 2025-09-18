@@ -14,6 +14,9 @@ export default function HomePage() {
     <main className="mx-auto max-w-[350px] overflow-y-auto text-white xl:max-w-7xl">
       <section className="border-divider flex flex-col items-center border-b py-10 xl:grid xl:grid-flow-col xl:grid-rows-4 xl:items-start xl:gap-x-3.5 xl:py-20">
         <div className="font-montserrat text-center leading-8 uppercase xl:col-span-1 xl:row-start-2 xl:text-start xl:leading-14">
+          <h1 className="sr-only">
+            Ochenta Noventa - Banda de Rock Argentino para tu evento
+          </h1>
           <h2 className="text-heading-md xl:text-heading-xl font-extrabold text-nowrap">
             Rock argentino
           </h2>
