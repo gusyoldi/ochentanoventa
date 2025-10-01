@@ -3,6 +3,7 @@
 import emailjs from '@emailjs/browser';
 import { useRef } from 'react';
 import { useForm } from 'react-hook-form';
+import toast from 'react-hot-toast';
 
 interface FormData {
   user_name: string;
@@ -33,8 +34,8 @@ const Form = () => {
         'm4-E800NJXGTBTwxH',
       )
       .then(
-        (result) => console.log(result.text),
-        (error) => console.log(error.text),
+        () => toast.success('Su consulta se envió correctamente!'),
+        () => toast.error('No se pudo enviar su consulta, intente nuevamente.'),
       );
 
     reset();
