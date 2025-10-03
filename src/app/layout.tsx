@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Montserrat, Roboto } from 'next/font/google';
+import Script from 'next/script';
 import { Toaster } from 'react-hot-toast';
 import Footer from '../lib/components/Footer';
 import Navbar from '../lib/components/Navbar';
@@ -17,9 +18,15 @@ const montserratSans = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: 'Ochenta Noventa - Banda de Rock Argentino para eventos',
+  title:
+    'Ochenta Noventa - Clásicos del Rock Argentino para eventos en versiones propias',
   description:
-    'Banda Ochenta Noventa ofrece versiones únicas de clásicos del Rock Argentino para casamientos, cumpleaños y eventos corporativos en Buenos Aires.',
+    'La banda ofrece versiones únicas de clásicos del Rock Argentino para casamientos, cumpleaños y eventos corporativos en Buenos Aires.',
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/logo.png',
+  },
 };
 
 export default function RootLayout({
@@ -29,6 +36,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <Script
+          id="ld-json"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Organization',
+              name: 'Ochenta Noventa (Sitio Oficial)',
+              url: 'https://www.ochentanoventa.com.ar',
+              logo: 'https://www.ochentanoventa.com.ar/logo.png',
+            }),
+          }}
+        />
+      </head>
       <body
         className={`${robotoSans.variable} ${montserratSans.variable} antialiased`}
       >
