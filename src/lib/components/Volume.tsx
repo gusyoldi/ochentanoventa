@@ -1,24 +1,20 @@
 import Image from 'next/image';
 
 interface VolumeProps {
-  src: string;
-  alt: string;
-  title: string;
-  year: string;
-  aditional?: string;
-  format?: string;
-  songs?: string[];
+  volume: {
+    src: string;
+    alt: string;
+    title: string;
+    year: string;
+    aditional?: string;
+    format?: string;
+    songs?: string[];
+  };
 }
 
-const Volume = ({
-  src,
-  alt,
-  title,
-  aditional,
-  format,
-  year,
-  songs,
-}: VolumeProps) => {
+const Volume = ({ volume }: VolumeProps) => {
+  const { src, alt, title, year, aditional, format, songs } = volume;
+
   return (
     <div className="max-w-[180px] shrink-0">
       <Image src={src} alt={alt} width={180} height={180} />
