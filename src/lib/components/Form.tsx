@@ -13,37 +13,42 @@ interface FormData {
   message: string;
 }
 
-const Form = () => {
-  const form = useRef<HTMLFormElement>(null);
+interface FormProps {
+  onCloseModal?: () => void;
+}
+
+const Form = ({ onCloseModal }: FormProps) => {
+  const formRef = useRef<HTMLFormElement>(null);
   const {
     register,
     handleSubmit,
     reset,
     formState: { errors },
   } = useForm<FormData>();
-  const onSubmit = () => sendEmail();
 
-  const sendEmail = () => {
-    if (!form.current) return;
+  const onSubmit = async () => {
+    if (!formRef.current) return;
 
-    emailjs
-      .sendForm(
+    try {
+      await emailjs.sendForm(
         'service_mtdmr5r',
         'template_ntmq6rx',
-        form.current,
+        formRef.current,
         'm4-E800NJXGTBTwxH',
-      )
-      .then(
-        () => toast.success('Su consulta se envió correctamente!'),
-        () => toast.error('No se pudo enviar su consulta, intente nuevamente.'),
       );
 
-    reset();
+      toast.success('Su consulta se envió correctamente!');
+      reset();
+      onCloseModal?.();
+    } catch (error) {
+      console.log('Error al enviar el correo:', error);
+      toast.error('No se pudo enviar su consulta, intente nuevamente.');
+    }
   };
 
   return (
     <form
-      ref={form}
+      ref={formRef}
       onSubmit={handleSubmit(onSubmit)}
       className="font-roboto flex flex-col gap-3 px-3 py-5 xl:grid xl:grid-cols-4 xl:grid-rows-2 xl:px-10"
     >
@@ -123,7 +128,7 @@ const Form = () => {
         ></textarea>
       </div>
 
-      <button className="mt-2 cursor-pointer text-sm uppercase hover:font-bold xl:col-span-full">
+      <button className="hover:text-gold mt-2 cursor-pointer text-sm uppercase transition-colors duration-100 ease-in-out hover:font-bold xl:col-span-full">
         Enviar consulta
       </button>
     </form>
