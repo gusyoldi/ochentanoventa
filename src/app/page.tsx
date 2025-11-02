@@ -1,15 +1,35 @@
 import ImageCarousel from '@/lib/components/Carousel';
 import Form from '@/lib/components/Form';
+import NewVolume from '@/lib/components/NewVolume';
 import Volume from '@/lib/components/Volume';
-import Image from 'next/image';
-import {
-  CAROUSEL_1_IMG,
-  CAROUSEL_2_IMG,
-  CAROUSEL_3_IMG,
-  WIDE_CAROUSEL,
-} from './constants';
 
-export default function HomePage() {
+import getResourceFromStrapi from '@/lib/services/strapi/getResourceFromStrapi';
+import {
+  StrapiCarousel,
+  StrapiImage,
+  StrapiNew,
+} from '@/lib/services/strapi/types';
+import Image from 'next/image';
+import { VOLUMES_LIST } from './constants';
+
+export default async function HomePage() {
+  const { title, volume, songs, image }: StrapiNew =
+    await getResourceFromStrapi('new', true);
+
+  const carouselData = await getResourceFromStrapi<StrapiCarousel>(
+    'carousel',
+    true,
+  );
+
+  const mapImages = (images: StrapiImage[]) =>
+    images.map(({ url, name }) => ({ src: url, alt: name }));
+
+  const carousels = {
+    first: mapImages(carouselData.first),
+    second: mapImages(carouselData.second),
+    third: mapImages(carouselData.third),
+  };
+
   return (
     <main className="mx-auto max-w-[350px] text-white xl:max-w-7xl">
       <section className="border-divider flex flex-col items-center border-b py-10 xl:grid xl:grid-flow-col xl:grid-rows-4 xl:items-start xl:gap-x-3.5 xl:py-20">
@@ -25,7 +45,7 @@ export default function HomePage() {
           </h3>
         </div>
         <div className="mb-5 h-[350px] w-[350px] xl:order-first xl:row-span-6 xl:h-[590px] xl:w-[590px]">
-          <ImageCarousel images={CAROUSEL_1_IMG} />
+          <ImageCarousel images={carousels.first} />
         </div>
         <div className="text-body-sm font-roboto xl:text-body-md flex flex-col gap-6 leading-5 tracking-wide xl:col-span-1 xl:row-span-2">
           <p>
@@ -61,30 +81,13 @@ export default function HomePage() {
             </h3>
           </div>
 
-          <div className="bg-secondary mb-5 flex h-[176px] w-[350px] items-center justify-between gap-x-4 rounded-md p-4 xl:order-last xl:row-span-2 xl:h-[296px] xl:w-[590px] xl:justify-center xl:gap-x-10 xl:p-7">
-            <div className="relative h-[142px] w-[142px] xl:h-[240px] xl:w-[240px]">
-              <Image
-                src="/images/volumes/last.webp"
-                alt="last-volume"
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="font-roboto text-white">
-              <h3 className="text-body-md mb-1.5 font-bold xl:mb-5 xl:text-2xl">
-                Último Lanzamiento!
-              </h3>
-              <h4 className="mb-1 text-sm font-bold xl:mb-3 xl:text-xl">
-                Volumen 3 (2025)
-              </h4>
-              <ul className="xl:text-body-md list-inside list-decimal pl-1 text-xs">
-                <li>Fue amor</li>
-                <li>Madre Escúchame</li>
-                <li>El Loco ft Chelo Zimbabwe</li>
-                <li>Bajan</li>
-              </ul>
-            </div>
-          </div>
+          <NewVolume
+            title={title}
+            volume={volume}
+            songs={songs}
+            image={image.url}
+            link="https://open.spotify.com/album/7bzp0pZEHxEo1LpcnZfLv5"
+          />
 
           <div className="text-body-sm font-roboto xl:text-body-md flex flex-col gap-6 leading-5 tracking-wide">
             <p>
@@ -102,20 +105,9 @@ export default function HomePage() {
 
         <div className="mt-10 grid-cols-2 xl:mt-20">
           <div className="flex max-w-[350px] justify-between gap-5 overflow-x-auto xl:max-w-full">
-            {WIDE_CAROUSEL.map(
-              ({ src, alt, title, year, aditional, format, songs }) => (
-                <Volume
-                  key={src}
-                  src={src}
-                  alt={alt}
-                  title={title}
-                  year={year}
-                  aditional={aditional}
-                  format={format}
-                  songs={songs}
-                />
-              ),
-            )}
+            {VOLUMES_LIST.map((volume) => (
+              <Volume key={volume.title} volume={volume} />
+            ))}
           </div>
         </div>
 
@@ -142,7 +134,7 @@ export default function HomePage() {
           </h3>
         </div>
         <div className="mb-5 h-[350px] w-[350px] xl:order-first xl:row-span-6 xl:h-[590px] xl:w-[590px]">
-          <ImageCarousel images={CAROUSEL_2_IMG} />
+          <ImageCarousel images={carousels.second} />
         </div>
         <div className="text-body-sm font-roboto xl:text-body-md flex max-w-96 flex-col gap-6 leading-5 tracking-wide xl:col-span-1 xl:row-span-2">
           <p>
@@ -168,11 +160,11 @@ export default function HomePage() {
         </div>
       </section>
       <section className="pb-10 xl:pb-20">
-        <div className="bg-secondary mx-auto mb-10 rounded-md xl:mb-20 xl:max-w-[874px]">
+        <div className="bg-secondary mx-auto mb-10 rounded-md sm:hidden xl:mb-20 xl:max-w-[874px]">
           <Form />
         </div>
         <div className="mx-auto h-[350px] w-[350px] xl:order-first xl:row-span-6 xl:h-[800px] xl:w-[1280px]">
-          <ImageCarousel images={CAROUSEL_3_IMG} size="lg" />
+          <ImageCarousel images={carousels.third} size="lg" />
         </div>
       </section>
     </main>

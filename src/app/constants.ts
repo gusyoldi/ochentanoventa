@@ -1,4 +1,4 @@
-type VolumeType = {
+export type VolumeType = {
   src: string;
   alt: string;
   title: string;
@@ -7,25 +7,6 @@ type VolumeType = {
   format?: string;
   songs?: string[];
 };
-
-export const CAROUSEL_1_IMG = [
-  {
-    src: '/images/carousel1/foto1.webp',
-    alt: 'Banda Ochenta Noventa tocando en evento privado - 1',
-  },
-  {
-    src: '/images/carousel1/foto2.webp',
-    alt: 'Banda Ochenta Noventa tocando en evento privado - 2',
-  },
-  {
-    src: '/images/carousel1/foto3.webp',
-    alt: 'Banda Ochenta Noventa tocando en evento privado - 3',
-  },
-  {
-    src: '/images/carousel1/foto4.webp',
-    alt: 'Banda Ochenta Noventa tocando en evento privado - 4',
-  },
-];
 
 export const CAROUSEL_2_IMG = [
   { src: '/images/carousel2/foto1.webp', alt: 'Slide 1' },
@@ -53,7 +34,7 @@ export const CAROUSEL_3_IMG = [
   },
 ];
 
-export const WIDE_CAROUSEL: VolumeType[] = [
+export const VOLUMES_LIST: VolumeType[] = [
   {
     src: '/images/volumes/foto1.webp',
     alt: 'Slide 1',
