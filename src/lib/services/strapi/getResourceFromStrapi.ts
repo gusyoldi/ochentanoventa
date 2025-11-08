@@ -1,16 +1,20 @@
 export default async function getResourceFromStrapi<T>(
   resourceName: string,
-  hasImage: boolean,
+  hasImage = false,
 ): Promise<T> {
-  const { data, error } = await fetch(
-    `https://rational-prize-6776b6794b.strapiapp.com/api/${resourceName}${hasImage ? '?populate=*' : ''}`,
-  ).then((res) => res.json());
+  const res = await fetch(
+    `https://rational-prize-6776b6794b.strapiapp.com/api/${resourceName}${
+      hasImage ? '?populate=*' : ''
+    }`,
+    {
+      next: { revalidate: 60 },
+    },
+  );
 
-  if (error) {
-    throw new Error(
-      `Error fetching ${resourceName}: ${error.message || error}`,
-    );
+  if (!res.ok) {
+    throw new Error(`Error fetching ${resourceName}: ${res.statusText}`);
   }
 
+  const { data } = await res.json();
   return data;
 }
