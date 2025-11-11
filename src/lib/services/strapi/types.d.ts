@@ -12,6 +12,10 @@ export type StrapiCarousel = {
   second: StrapiImage[];
   third: StrapiImage[];
 };
+export type StrapiBanner = {
+  mobile: StrapiImage;
+  desktop: StrapiImage;
+};
 
 export type StrapiImage = {
   id: number;

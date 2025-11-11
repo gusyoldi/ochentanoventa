@@ -3,8 +3,10 @@ import Form from '@/lib/components/Form';
 import NewVolume from '@/lib/components/NewVolume';
 import Volume from '@/lib/components/Volume';
 
+import Banner from '@/lib/components/Banner';
 import getResourceFromStrapi from '@/lib/services/strapi/getResourceFromStrapi';
 import {
+  StrapiBanner,
   StrapiCarousel,
   StrapiImage,
   StrapiNew,
@@ -21,6 +23,8 @@ export default async function HomePage() {
     true,
   );
 
+  const bannerData = await getResourceFromStrapi<StrapiBanner>('banner', true);
+
   const mapImages = (images: StrapiImage[]) =>
     images.map(({ url, name }) => ({ src: url, alt: name }));
 
@@ -30,8 +34,16 @@ export default async function HomePage() {
     third: mapImages(carouselData.third),
   };
 
+  const banner = {
+    desktop: { src: bannerData.desktop.url, alt: bannerData.desktop.name },
+    mobile: { src: bannerData.mobile.url, alt: bannerData.mobile.name },
+  };
+
   return (
     <main className="mx-auto max-w-[350px] text-white xl:max-w-7xl">
+      <section className="pt-5 pb-10 xl:py-20">
+        <Banner img={banner} />
+      </section>
       <section className="border-divider flex flex-col items-center border-b py-10 xl:grid xl:grid-flow-col xl:grid-rows-4 xl:items-start xl:gap-x-3.5 xl:py-20">
         <div className="font-montserrat text-center leading-8 uppercase xl:col-span-1 xl:row-start-2 xl:text-start xl:leading-14">
           <h1 className="sr-only">
