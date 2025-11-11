@@ -41,7 +41,7 @@ export default async function HomePage() {
 
   return (
     <main className="mx-auto max-w-[350px] text-white xl:max-w-7xl">
-      <section className="pt-5 pb-10 xl:py-20">
+      <section className="pt-5 pb-0 xl:pt-20">
         <Banner img={banner} />
       </section>
       <section className="border-divider flex flex-col items-center border-b py-10 xl:grid xl:grid-flow-col xl:grid-rows-4 xl:items-start xl:gap-x-3.5 xl:py-20">
