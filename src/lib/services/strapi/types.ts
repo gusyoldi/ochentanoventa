@@ -1,4 +1,4 @@
-export type StrapiNew = {
+export type StrapiLastVolume = {
   songs: string[];
   volume: string;
   title: string;
@@ -7,11 +7,12 @@ export type StrapiNew = {
   };
 };
 
-export type StrapiCarousel = {
+export type StrapiCarouselResponse = {
   first: StrapiImage[];
   second: StrapiImage[];
   third: StrapiImage[];
 };
+
 export type StrapiBanner = {
   mobile: StrapiImage;
   desktop: StrapiImage;
@@ -36,4 +37,21 @@ export type StrapiFormat = {
   url: string;
   width: number;
   height: number;
+};
+
+//DTO
+export type CarouselDTO = {
+  first: Image[];
+  second: Image[];
+  third: Image[];
+};
+
+export type BannerDTO = {
+  mobile: Image;
+  desktop: Image;
+};
+
+export type Image = {
+  src: string;
+  alt: string;
 };

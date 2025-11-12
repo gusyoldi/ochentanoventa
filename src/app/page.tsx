@@ -1,48 +1,21 @@
+import Image from 'next/image';
+
+import Banner from '@/lib/components/Banner';
 import ImageCarousel from '@/lib/components/Carousel';
 import Form from '@/lib/components/Form';
 import NewVolume from '@/lib/components/NewVolume';
 import Volume from '@/lib/components/Volume';
 
-import Banner from '@/lib/components/Banner';
-import getResourceFromStrapi from '@/lib/services/strapi/getResourceFromStrapi';
-import {
-  StrapiBanner,
-  StrapiCarousel,
-  StrapiImage,
-  StrapiNew,
-} from '@/lib/services/strapi/types';
-import Image from 'next/image';
+import getCarousel from '@/lib/services/strapi/getCarousel';
 import { VOLUMES_LIST } from './constants';
 
 export default async function HomePage() {
-  const { title, volume, songs, image }: StrapiNew =
-    await getResourceFromStrapi('new', true);
-
-  const carouselData = await getResourceFromStrapi<StrapiCarousel>(
-    'carousel',
-    true,
-  );
-
-  const bannerData = await getResourceFromStrapi<StrapiBanner>('banner', true);
-
-  const mapImages = (images: StrapiImage[]) =>
-    images.map(({ url, name }) => ({ src: url, alt: name }));
-
-  const carousels = {
-    first: mapImages(carouselData.first),
-    second: mapImages(carouselData.second),
-    third: mapImages(carouselData.third),
-  };
-
-  const banner = {
-    desktop: { src: bannerData.desktop.url, alt: bannerData.desktop.name },
-    mobile: { src: bannerData.mobile.url, alt: bannerData.mobile.name },
-  };
+  const carousel = await getCarousel();
 
   return (
     <main className="mx-auto max-w-[350px] text-white xl:max-w-7xl">
       <section className="pt-5 pb-0 xl:pt-20">
-        <Banner img={banner} />
+        <Banner />
       </section>
       <section className="border-divider flex flex-col items-center border-b py-10 xl:grid xl:grid-flow-col xl:grid-rows-4 xl:items-start xl:gap-x-3.5 xl:py-20">
         <div className="font-montserrat text-center leading-8 uppercase xl:col-span-1 xl:row-start-2 xl:text-start xl:leading-14">
@@ -57,7 +30,7 @@ export default async function HomePage() {
           </h3>
         </div>
         <div className="mb-5 h-[350px] w-[350px] xl:order-first xl:row-span-6 xl:h-[590px] xl:w-[590px]">
-          <ImageCarousel images={carousels.first} />
+          <ImageCarousel images={carousel.first} />
         </div>
         <div className="text-body-sm font-roboto xl:text-body-md flex flex-col gap-6 leading-5 tracking-wide xl:col-span-1 xl:row-span-2">
           <p>
@@ -93,13 +66,7 @@ export default async function HomePage() {
             </h3>
           </div>
 
-          <NewVolume
-            title={title}
-            volume={volume}
-            songs={songs}
-            image={image.url}
-            link="https://open.spotify.com/album/7bzp0pZEHxEo1LpcnZfLv5"
-          />
+          <NewVolume link="https://open.spotify.com/album/7bzp0pZEHxEo1LpcnZfLv5" />
 
           <div className="text-body-sm font-roboto xl:text-body-md flex flex-col gap-6 leading-5 tracking-wide">
             <p>
@@ -146,7 +113,7 @@ export default async function HomePage() {
           </h3>
         </div>
         <div className="mb-5 h-[350px] w-[350px] xl:order-first xl:row-span-6 xl:h-[590px] xl:w-[590px]">
-          <ImageCarousel images={carousels.second} />
+          <ImageCarousel images={carousel.second} />
         </div>
         <div className="text-body-sm font-roboto xl:text-body-md flex max-w-96 flex-col gap-6 leading-5 tracking-wide xl:col-span-1 xl:row-span-2">
           <p>
@@ -176,7 +143,7 @@ export default async function HomePage() {
           <Form />
         </div>
         <div className="mx-auto h-[350px] w-[350px] xl:order-first xl:row-span-6 xl:h-[800px] xl:w-[1280px]">
-          <ImageCarousel images={carousels.third} size="lg" />
+          <ImageCarousel images={carousel.third} size="lg" />
         </div>
       </section>
     </main>
