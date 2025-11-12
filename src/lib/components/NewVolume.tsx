@@ -25,7 +25,13 @@ const NewVolume = ({
       <div className="absolute inset-0 -z-10 animate-[gradientShift_6s_ease-in-out_infinite] bg-[linear-gradient(135deg,#ffecb3_0%,#4b5563_50%,#1e1e1e_100%)] bg-[length:200%_200%] opacity-20 blur-3xl"></div>
 
       <div className="relative h-[142px] w-[142px] overflow-hidden rounded-lg transition-transform duration-700 xl:h-[240px] xl:w-[240px]">
-        <Image src={image} alt="last-volume" fill className="object-cover" />
+        <Image
+          src={image}
+          alt="last-volume"
+          fill
+          className="object-cover"
+          sizes="(max-width: 768px) 142px, 240px"
+        />
       </div>
 
       <div className="font-roboto z-10">
