@@ -4,7 +4,7 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from '@/components/ui/carousel';
+} from '@/lib/components/ui/carousel';
 import Image from 'next/image';
 
 import { cva } from 'class-variance-authority';
