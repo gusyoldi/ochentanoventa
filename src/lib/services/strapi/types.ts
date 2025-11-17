@@ -5,6 +5,7 @@ export type StrapiLastVolume = {
   image: {
     url: string;
   };
+  link: string;
 };
 
 export type StrapiCarouselResponse = {

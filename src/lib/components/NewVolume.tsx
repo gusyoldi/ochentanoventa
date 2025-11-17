@@ -1,10 +1,6 @@
 import Image from 'next/image';
 import getLastVolume from '../services/strapi/getLastVolume';
 
-interface NewVolumeProps {
-  link: string;
-}
-
 const SONGS = [
   'Fué amor',
   'Madre escúchame',
@@ -12,13 +8,15 @@ const SONGS = [
   'Bajan',
 ];
 
-const NewVolume = async ({ link }: NewVolumeProps) => {
-  const { title, volume, songs, image } = await getLastVolume();
+const LINK = 'https://open.spotify.com/album/7bzp0pZEHxEo1LpcnZfLv5';
+
+const NewVolume = async () => {
+  const { title, volume, songs, image, link } = await getLastVolume();
   const displayedSongs = songs || SONGS;
 
   return (
     <a
-      href={link}
+      href={link ? link : LINK}
       target="_blank"
       rel="noopener noreferrer"
       className="relative mb-5 flex h-[176px] w-[350px] items-center justify-between gap-x-4 overflow-hidden rounded-2xl bg-gradient-to-br from-zinc-800/80 via-zinc-700/70 to-zinc-900/90 p-4 text-white shadow-lg ring-1 ring-white/10 transition-all duration-500 hover:scale-[1.02] hover:shadow-yellow-400/10 xl:order-last xl:row-span-2 xl:h-[296px] xl:w-[590px] xl:justify-center xl:gap-x-10 xl:p-8"

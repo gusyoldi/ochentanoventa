@@ -66,7 +66,7 @@ export default async function HomePage() {
             </h3>
           </div>
 
-          <NewVolume link="https://open.spotify.com/album/7bzp0pZEHxEo1LpcnZfLv5" />
+          <NewVolume />
 
           <div className="text-body-sm font-roboto xl:text-body-md flex flex-col gap-6 leading-5 tracking-wide">
             <p>
