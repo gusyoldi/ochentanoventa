@@ -17,7 +17,6 @@ export default async function getLastVolume(): Promise<StrapiLastVolume> {
   const parsed = LastVolumeSchema.safeParse(data);
 
   if (!parsed.success) {
-    // eslint-disable-next-line no-console
     console.warn('LastVolume schema validation failed', parsed.error.issues);
     throw new Error(`Error validating last volume response: ${res.statusText}`);
   }

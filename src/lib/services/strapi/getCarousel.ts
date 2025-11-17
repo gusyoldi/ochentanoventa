@@ -14,8 +14,6 @@ export default async function getCarousel(): Promise<CarouselDTO> {
   const parsed = CarouselSchema.safeParse(data);
 
   if (!parsed.success) {
-    // Log details for debugging and throw a readable error
-    // eslint-disable-next-line no-console
     console.warn('Carousel schema validation failed', parsed.error.issues);
     throw new Error(`Error validating carousel response: ${res.statusText}`);
   }
