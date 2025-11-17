@@ -1,3 +1,4 @@
+import { CarouselSchema } from './schemas';
 import { CarouselDTO } from './types';
 import mapCarouselResponseToDTO from './utils';
 
@@ -10,11 +11,16 @@ export default async function getCarousel(): Promise<CarouselDTO> {
 
   const { data } = await res.json();
 
-  if (!data.first || !data.second || !data.third) {
-    throw new Error(`Error fetching carousel images: ${res.statusText}`);
+  const parsed = CarouselSchema.safeParse(data);
+
+  if (!parsed.success) {
+    // Log details for debugging and throw a readable error
+    // eslint-disable-next-line no-console
+    console.warn('Carousel schema validation failed', parsed.error.issues);
+    throw new Error(`Error validating carousel response: ${res.statusText}`);
   }
 
-  const carousel = mapCarouselResponseToDTO(data);
+  const carousel = mapCarouselResponseToDTO(parsed.data);
 
   return carousel;
 }

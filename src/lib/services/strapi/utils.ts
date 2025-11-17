@@ -1,15 +1,11 @@
-import {
-  CarouselDTO,
-  Image,
-  StrapiCarouselResponse,
-  StrapiImage,
-} from './types';
+import { StrapiCarousel } from './schemas';
+import { CarouselDTO, Image } from './types';
 
 const formatImages = (images: StrapiImage[]) =>
   images.map(({ url, name }): Image => ({ src: url, alt: name }));
 
 export default function mapCarouselResponseToDTO(
-  response: StrapiCarouselResponse,
+  response: StrapiCarousel,
 ): CarouselDTO {
   const { first, second, third } = response;
 
