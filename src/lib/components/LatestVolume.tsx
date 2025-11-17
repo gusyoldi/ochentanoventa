@@ -10,7 +10,7 @@ const SONGS = [
 
 const LINK = 'https://open.spotify.com/album/7bzp0pZEHxEo1LpcnZfLv5';
 
-const NewVolume = async () => {
+const LatestVolume = async () => {
   const { title, volume, songs, image, link } = await getLastVolume();
   const displayedSongs = songs || SONGS;
 
@@ -52,4 +52,4 @@ const NewVolume = async () => {
   );
 };
 
-export default NewVolume;
+export default LatestVolume;

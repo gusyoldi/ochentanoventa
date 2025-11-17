@@ -70,6 +70,22 @@ export const HERO_SECTION_CONTENT = {
   ],
 };
 
+export const SPOTIFY_LINKS = {
+  ALBUM: 'https://open.spotify.com/album/7bzp0pZEHxEo1LpcnZfLv5',
+  ARTIST:
+    'https://open.spotify.com/artist/1t7L3htJvTcz93Fa9aMiI6?si=UOBAljXzSP-pWnYKDBEL5Q',
+};
+
+export const VERSIONS_SECTION_CONTENT = {
+  title: 'Versiones',
+  subtitle: 'Estudio',
+  paragraphs: [
+    'Ochenta Noventa disfruta de re-versionar sus canciones preferidas, dándole una nueva vida a clásicos de nuestro queridísimo rock argentino.',
+    'Contamos con varias versiones grabadas en estudio subidas a todas las plataformas digitales para que ustedes también puedan disfrutarlas.',
+  ],
+  spotifyText: 'Escuchar ahora',
+};
+
 export const VOLUMES_LIST: VolumeType[] = [
   {
     src: '/images/volumes/foto1.webp',
