@@ -1,4 +1,4 @@
-import { StrapiCarousel } from './schemas';
+import { StrapiCarousel, StrapiImage } from './schemas';
 import { CarouselDTO, Image } from './types';
 
 const formatImages = (images: StrapiImage[]) =>
