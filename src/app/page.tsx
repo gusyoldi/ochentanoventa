@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Banner from '@/lib/components/Banner';
 import ImageCarousel from '@/lib/components/Carousel';
 import Form from '@/lib/components/Form';
+import HeroSection from '@/lib/components/HeroSection';
 import NewVolume from '@/lib/components/NewVolume';
 import Volume from '@/lib/components/Volume';
 
@@ -17,44 +18,7 @@ export default async function HomePage() {
       <section className="pt-5 pb-0 xl:pt-20">
         <Banner />
       </section>
-      <section className="border-divider flex flex-col items-center border-b py-10 xl:grid xl:grid-flow-col xl:grid-rows-4 xl:items-start xl:gap-x-3.5 xl:py-20">
-        <div className="font-montserrat text-center leading-8 uppercase xl:col-span-1 xl:row-start-2 xl:text-start xl:leading-14">
-          <h1 className="sr-only">
-            Ochenta Noventa - Banda de Rock Argentino para tu evento
-          </h1>
-          <h2 className="text-heading-md xl:text-heading-xl font-extrabold text-nowrap">
-            Rock argentino
-          </h2>
-          <h3 className="text-gold text-heading-sm xl:text-heading-lg mb-5 font-bold xl:mb-10">
-            En versiones distintas
-          </h3>
-        </div>
-        <div className="mb-5 h-[350px] w-[350px] xl:order-first xl:row-span-6 xl:h-[590px] xl:w-[590px]">
-          <ImageCarousel images={carousel.first} />
-        </div>
-        <div className="text-body-sm font-roboto xl:text-body-md flex flex-col gap-6 leading-5 tracking-wide xl:col-span-1 xl:row-span-2">
-          <p>
-            <span className="font-bold">Ochenta Noventa</span> es una banda de
-            Buenos Aires que elige clásicos del{' '}
-            <span className="font-bold">Rock Argentino</span> para hacer sus
-            propias versiones, combinando estilos como{' '}
-            <span className="font-bold">
-              Country, Folk, Rock & Roll y Blues
-            </span>
-            .
-          </p>
-          <p>
-            Es un <span className="font-bold">proyecto artístico</span> con un
-            formato ideal para sonar en{' '}
-            <span className="font-bold">eventos</span>.
-          </p>
-          <p>
-            Instrumentos acústicos como el Banjo, la Mandolina, el Washboard y
-            las cucharas le dan el toque country y folk que destaca la
-            propuesta.
-          </p>
-        </div>
-      </section>
+      <HeroSection carouselImages={carousel.first} />
       <section className="border-divider border-b pt-10 pb-10 xl:pt-20">
         <div className="flex flex-col items-center xl:grid xl:grid-flow-col xl:grid-rows-2 xl:items-start xl:gap-x-3.5">
           <div className="font-montserrat text-center leading-8 uppercase xl:col-span-1 xl:text-start xl:leading-14">
