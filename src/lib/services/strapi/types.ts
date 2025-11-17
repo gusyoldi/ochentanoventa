@@ -1,44 +1,15 @@
-export type StrapiLastVolume = {
-  songs: string[];
-  volume: string;
-  title: string;
-  image: {
-    url: string;
-  };
-  link: string;
-};
+import type {
+  StrapiBanner as SchemaStrapiBanner,
+  StrapiCarousel as SchemaStrapiCarousel,
+  StrapiImage as SchemaStrapiImage,
+  StrapiLastVolume as SchemaStrapiLastVolume,
+} from './schemas';
 
-export type StrapiCarouselResponse = {
-  first: StrapiImage[];
-  second: StrapiImage[];
-  third: StrapiImage[];
-};
-
-export type StrapiBanner = {
-  mobile: StrapiImage;
-  desktop: StrapiImage;
-};
-
-export type StrapiImage = {
-  id: number;
-  name: string;
-  url: string;
-  alternativeText?: string;
-  width?: number;
-  height?: number;
-  formats?: {
-    large?: StrapiFormat;
-    medium?: StrapiFormat;
-    small?: StrapiFormat;
-    thumbnail?: StrapiFormat;
-  };
-};
-
-export type StrapiFormat = {
-  url: string;
-  width: number;
-  height: number;
-};
+//Infered Types
+export type StrapiImage = SchemaStrapiImage;
+export type StrapiCarouselResponse = SchemaStrapiCarousel;
+export type StrapiBanner = SchemaStrapiBanner;
+export type StrapiLastVolume = SchemaStrapiLastVolume;
 
 //DTO
 export type CarouselDTO = {
