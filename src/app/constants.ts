@@ -86,6 +86,22 @@ export const VERSIONS_SECTION_CONTENT = {
   spotifyText: 'Escuchar ahora',
 };
 
+export const EVENTS_SECTION_CONTENT = {
+  title: 'Eventos',
+  subtitle: 'Privados',
+  paragraphs: [
+    'Con más de 40 shows en vivo, Ochenta Noventa continúa programando recepciones de Casamientos, Cumpleaños y eventos corporativos.',
+    {
+      text: 'Formatos:',
+      subItems: [
+        'Acústico para disfrutar de los sonidos de instrumentos característicos del Country.',
+        'Eléctrico para festejar bien arriba.',
+        'Mixto para un evento súper climático y completo.',
+      ],
+    },
+  ],
+};
+
 export const VOLUMES_LIST: VolumeType[] = [
   {
     src: '/images/volumes/foto1.webp',

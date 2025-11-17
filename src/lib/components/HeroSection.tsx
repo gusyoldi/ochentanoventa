@@ -1,5 +1,6 @@
 import { HERO_SECTION_CONTENT } from '@/app/constants';
 import ImageCarousel from './Carousel';
+import HeroDescription from './HeroDescription';
 import TitleSection from './TitleSection';
 
 type HeroSectionProps = {
@@ -7,7 +8,7 @@ type HeroSectionProps = {
 };
 
 export default function HeroSection({ carouselImages }: HeroSectionProps) {
-  const { title, subtitle, seoTitle, paragraphs } = HERO_SECTION_CONTENT;
+  const { title, subtitle, seoTitle } = HERO_SECTION_CONTENT;
 
   return (
     <section className="border-divider flex flex-col items-center border-b py-10 xl:grid xl:grid-flow-col xl:grid-rows-4 xl:items-start xl:gap-x-3.5 xl:py-20">
@@ -21,11 +22,7 @@ export default function HeroSection({ carouselImages }: HeroSectionProps) {
         <ImageCarousel images={carouselImages} />
       </div>
 
-      <div className="text-body-sm font-roboto xl:text-body-md flex flex-col gap-6 leading-5 tracking-wide xl:col-span-1 xl:row-span-2">
-        {paragraphs.map((paragraph, index) => (
-          <p key={index}>{paragraph.fullText}</p>
-        ))}
-      </div>
+      <HeroDescription />
     </section>
   );
 }
