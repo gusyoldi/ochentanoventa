@@ -3,7 +3,7 @@ import {
   VERSIONS_SECTION_CONTENT,
   VolumeType,
 } from '@/app/constants';
-import LatestVolume from './LatestVolume';
+import LatestVolume from './LatestVolume/LatestVolume';
 import SpotifyLink from './SpotifyLink';
 import TitleSection from './TitleSection';
 import VersionsDescription from './VersionsDescription';

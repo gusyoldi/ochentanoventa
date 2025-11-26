@@ -8,18 +8,19 @@ export default async function getLastVolume(): Promise<StrapiLastVolume> {
     next: { revalidate: 60 },
   });
 
-  const { data } = await res.json();
-
-  if (!data) {
-    throw new Error(`Error fetching last volume: ${res.statusText}`);
+  if (!res.ok) {
+    throw new Error(
+      `Error fetching last volume: ${res.status} ${res.statusText}`,
+    );
   }
 
-  const parsed = LastVolumeSchema.safeParse(data);
+  const json = await res.json();
+  const parsed = LastVolumeSchema.safeParse(json);
 
   if (!parsed.success) {
     console.warn('LastVolume schema validation failed', parsed.error.issues);
     throw new Error(`Error validating last volume response: ${res.statusText}`);
   }
 
-  return parsed.data as StrapiLastVolume;
+  return parsed.data;
 }
