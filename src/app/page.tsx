@@ -12,16 +12,10 @@ export default async function HomePage() {
 
   return (
     <main className="mx-auto max-w-[350px] text-white xl:max-w-7xl">
-      <section className="pt-5 pb-0 xl:pt-20">
-        <Banner />
-      </section>
-
+      <Banner />
       <HeroSection carouselImages={carousel.first} />
-
       <VersionsSection volumes={VOLUMES_LIST} />
-
       <EventsSection carouselImages={carousel.second} />
-
       <ContactSection carouselImages={carousel.third} />
     </main>
   );
