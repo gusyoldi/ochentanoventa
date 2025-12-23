@@ -2,6 +2,7 @@ import getBanner from '../services/strapi/getBanner';
 
 const Banner = async () => {
   const banner = await getBanner();
+  if (!banner) return null;
   const { mobile, desktop } = banner;
 
   return (

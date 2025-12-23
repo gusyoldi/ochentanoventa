@@ -30,8 +30,8 @@ export const CarouselSchema = z.object({
 });
 
 export const BannerSchema = z.object({
-  desktop: StrapiImageSchema,
-  mobile: StrapiImageSchema,
+  desktop: StrapiImageSchema.nullable(),
+  mobile: StrapiImageSchema.nullable(),
 });
 
 export const LastVolumeSchema = z.object({

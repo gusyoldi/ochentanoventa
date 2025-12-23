@@ -3,7 +3,7 @@ import { BannerDTO } from './types';
 
 const { NEXT_PUBLIC_STRAPI_URL } = process.env;
 
-export default async function getBanner(): Promise<BannerDTO> {
+export default async function getBanner(): Promise<BannerDTO | null> {
   const res = await fetch(`${NEXT_PUBLIC_STRAPI_URL}/banner?populate=*`, {
     next: { revalidate: 60 },
   });
@@ -14,13 +14,23 @@ export default async function getBanner(): Promise<BannerDTO> {
 
   if (!parsed.success) {
     console.warn('Banner schema validation failed', parsed.error.issues);
-    throw new Error(`Error validating banner response: ${res.statusText}`);
+    return null;
   }
 
-  const banner = {
-    desktop: { src: parsed.data.desktop.url, alt: parsed.data.desktop.name },
-    mobile: { src: parsed.data.mobile.url, alt: parsed.data.mobile.name },
-  };
+  const { desktop, mobile } = parsed.data;
 
-  return banner;
+  if (!desktop || !mobile) {
+    return null;
+  }
+
+  return {
+    desktop: {
+      src: desktop.url,
+      alt: desktop.alternativeText ?? desktop.name,
+    },
+    mobile: {
+      src: mobile.url,
+      alt: mobile.alternativeText ?? mobile.name,
+    },
+  };
 }
