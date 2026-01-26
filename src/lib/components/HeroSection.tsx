@@ -19,7 +19,7 @@ export default function HeroSection({ carouselImages }: HeroSectionProps) {
       </div>
 
       <div className="mb-5 h-[350px] w-[350px] xl:order-first xl:row-span-6 xl:h-[590px] xl:w-[590px]">
-        <ImageCarousel images={carouselImages} />
+        <ImageCarousel images={carouselImages} priority />
       </div>
 
       <HeroDescription />
