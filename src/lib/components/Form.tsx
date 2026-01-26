@@ -29,19 +29,29 @@ const Form = ({ onCloseModal }: FormProps) => {
   const onSubmit = async () => {
     if (!formRef.current) return;
 
+    const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+    const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+
+    if (!serviceId || !templateId || !publicKey) {
+      console.error('EmailJS credentials not configured');
+      toast.error('Error de configuración. Por favor, contacta al administrador.');
+      return;
+    }
+
     try {
       await emailjs.sendForm(
-        'service_mtdmr5r',
-        'template_ntmq6rx',
+        serviceId,
+        templateId,
         formRef.current,
-        'm4-E800NJXGTBTwxH',
+        publicKey,
       );
 
       toast.success('Su consulta se envió correctamente!');
       reset();
       onCloseModal?.();
     } catch (error) {
-      console.log('Error al enviar el correo:', error);
+      console.error('Error al enviar el correo:', error);
       toast.error('No se pudo enviar su consulta, intente nuevamente.');
     }
   };

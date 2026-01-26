@@ -4,8 +4,8 @@ import EventsSection from '@/lib/components/EventsSection';
 import HeroSection from '@/lib/components/HeroSection';
 import VersionsSection from '@/lib/components/VersionsSection';
 
+import { VOLUMES_LIST } from '@/lib/constants';
 import getCarousel from '@/lib/services/strapi/getCarousel';
-import { VOLUMES_LIST } from './constants';
 
 export default async function HomePage() {
   const carousel = await getCarousel();
