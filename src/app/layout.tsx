@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 import { Montserrat, Roboto } from 'next/font/google';
-import Script from 'next/script';
 
 import Toaster from '@/lib/components/Toaster';
 import Footer from '../lib/components/Footer';
+import JsonLd from '../lib/components/JsonLd';
 import Navbar from '../lib/components/Navbar/Navbar';
 import './globals.css';
 
@@ -74,19 +74,7 @@ export default function RootLayout({
   return (
     <html lang="es">
       <head>
-        <Script
-          id="ld-json"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'Organization',
-              name: 'Ochenta Noventa (Sitio Oficial)',
-              url: 'https://www.ochentanoventa.com.ar',
-              logo: 'https://www.ochentanoventa.com.ar/logo.png',
-            }),
-          }}
-        />
+        <JsonLd />
       </head>
       <body
         className={`${robotoSans.variable} ${montserratSans.variable} antialiased`}

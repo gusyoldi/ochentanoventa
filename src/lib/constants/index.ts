@@ -7,3 +7,6 @@ export { VERSIONS_SECTION_CONTENT } from './versions';
 
 // Re-export VolumeType for backward compatibility
 export type { VolumeType } from '@/lib/types';
+
+export const BLUR_DATA_URL =
+  'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg==';
