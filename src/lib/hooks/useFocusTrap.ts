@@ -2,17 +2,13 @@ import { useEffect, useRef } from 'react';
 
 export function useFocusTrap(isActive: boolean) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const previousFocusRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
     if (isActive) {
-      // 1. Save current focus
-      previousFocusRef.current = document.activeElement as HTMLElement;
-
       const container = containerRef.current;
       if (!container) return;
 
-      // 2. Find all focusable elements
+      // 1. Find all focusable elements
       const focusableElements = container.querySelectorAll<HTMLElement>(
         'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
       );
@@ -37,23 +33,10 @@ export function useFocusTrap(isActive: boolean) {
         }
       };
 
-      const handleEsc = (e: KeyboardEvent) => {
-        if (e.key === 'Escape') {
-          // Close button trigger or logic will be handled by the modal context
-          // But we can let it bubble or handle it here if needed
-        }
-      };
-
       document.addEventListener('keydown', handleTab);
       
-      // Auto-focus the first element if none is auto-focused inside
-      // (Usually handled by autoFocus prop, but good as fallback)
-      // firstElement?.focus();
-
       return () => {
         document.removeEventListener('keydown', handleTab);
-        // 3. Return focus on cleanup
-        previousFocusRef.current?.focus();
       };
     }
   }, [isActive]);
