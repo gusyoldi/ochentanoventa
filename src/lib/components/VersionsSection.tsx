@@ -1,8 +1,5 @@
-import {
-  SPOTIFY_LINKS,
-  VERSIONS_SECTION_CONTENT,
-  VolumeType,
-} from '@/app/constants';
+import { SPOTIFY_LINKS, VERSIONS_SECTION_CONTENT } from '@/lib/constants';
+import { VolumeType } from '@/lib/types';
 import LatestVolume from './LatestVolume/LatestVolume';
 import SpotifyLink from './SpotifyLink';
 import TitleSection from './TitleSection';
