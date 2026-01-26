@@ -63,6 +63,7 @@ const Form = ({ onCloseModal }: FormProps) => {
           type="text"
           id="user_name"
           className="xl:p2 rounded-sm bg-white p-1 text-xs text-black xl:text-sm"
+          autoFocus
           {...register('user_name', { required: true })}
         />
         {errors.user_name && (
