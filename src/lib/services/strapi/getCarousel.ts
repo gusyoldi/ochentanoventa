@@ -6,8 +6,19 @@ import mapCarouselResponseToDTO from './utils';
 const { NEXT_PUBLIC_STRAPI_URL } = process.env;
 
 export default async function getCarousel(): Promise<CarouselDTO> {
+  const strapiUrl = process.env.NEXT_PUBLIC_STRAPI_URL;
+
+  if (!strapiUrl) {
+    console.warn('NEXT_PUBLIC_STRAPI_URL is not defined. Using fallback carousel images.');
+    return {
+      first: DEFAULT_CAROUSEL_IMAGES,
+      second: DEFAULT_CAROUSEL_IMAGES,
+      third: DEFAULT_CAROUSEL_IMAGES,
+    };
+  }
+
   try {
-    const res = await fetch(`${NEXT_PUBLIC_STRAPI_URL}/carousel?populate=*`, {
+    const res = await fetch(`${strapiUrl}/carousel?populate=*`, {
       next: { revalidate: 60 },
     });
 

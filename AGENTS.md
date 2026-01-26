@@ -9,6 +9,7 @@
 - **Lenguaje**: TypeScript 5
 - **Styling**: Tailwind CSS 4
 - **Package Manager**: **pnpm** (IMPORTANTE: usar siempre `pnpm`, NO `npm`)
+- **Deployment**: **Vercel** (Sitio oficial deployado en Vercel)
 
 ## 🏗️ Arquitectura del Proyecto
 
@@ -229,6 +230,7 @@ Para consultas sobre el proyecto, referirse a:
      - Formatos AVIF y WebP habilitados
      - Device sizes optimizados: [350, 590, 768, 1024, 1280, 1920]
      - Cache headers para assets estáticos (1 año)
+    - **Fix**: Agregado `"use client"` a `src/app/error.tsx` para evitar errores de compilación
 
 **Impacto:**
 - ✅ Mejor seguridad (credenciales en env vars)

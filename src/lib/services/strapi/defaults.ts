@@ -4,3 +4,11 @@ export const DEFAULT_CAROUSEL_IMAGES = [
 ];
 
 export const DEFAULT_BANNER = null; // Banner is optional, return null on error
+
+export const DEFAULT_LAST_VOLUME = {
+  songs: [],
+  volume: '',
+  title: '',
+  image: { url: '' },
+  link: '',
+};

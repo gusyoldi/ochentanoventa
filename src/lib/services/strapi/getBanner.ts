@@ -5,8 +5,15 @@ import { BannerDTO } from './types';
 const { NEXT_PUBLIC_STRAPI_URL } = process.env;
 
 export default async function getBanner(): Promise<BannerDTO | null> {
+  const strapiUrl = process.env.NEXT_PUBLIC_STRAPI_URL;
+
+  if (!strapiUrl) {
+    console.warn('NEXT_PUBLIC_STRAPI_URL is not defined. Using fallback banner.');
+    return DEFAULT_BANNER;
+  }
+
   try {
-    const res = await fetch(`${NEXT_PUBLIC_STRAPI_URL}/banner?populate=*`, {
+    const res = await fetch(`${strapiUrl}/banner?populate=*`, {
       next: { revalidate: 60 },
     });
 
