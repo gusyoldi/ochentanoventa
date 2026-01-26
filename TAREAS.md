@@ -28,9 +28,9 @@ Mejorar la visibilidad en buscadores y la presentación en redes sociales.
 - **Metadata Enriquecida**: Implementado Open Graph (Facebook/WhatsApp) y Twitter Cards en `layout.tsx`.
 - **Textos Alternativos**: Actualizados los `alt` de las imágenes en constantes para ser descriptivos y amigables para Google Images.
 - **Canonical URLs**: Configurado `metadataBase` para asegurar links canónicos correctos.
+- **Schema.org Enriquecido**: Implementado JSON-LD con tipos `MusicGroup` y `Service` para mejorar la visibilidad en buscadores.
 
 ### ⏳ Pendiente
-- **Schema.org Expandido**: Implementar tipos `MusicGroup`, `Service` (eventos) y `MusicRecording` para Rich Snippets.
 - **Keywords**: Refinar lista de palabras clave según tendencias.
 
 ---
@@ -56,10 +56,11 @@ Velocidad de carga y experiencia visual fluida.
 ### ✅ Hecho
 - **Formatos Modernos**: Habilitados AVIF y WebP en la configuración de Next.js.
 - **Imágenes Responsivas**: Configurados `deviceSizes` y optimizados `sizes` en carousels.
+- **LCP Optimization**: Priorización de carga para la primera imagen del HeroCarousel.
+- **Premium Loading (Skeleton)**: Implementado sistema de Shimmer y fade-in para evitar layout shifts y mejorar la percepción de velocidad.
 
 ### ⏳ Pendiente
-- **LCP Optimization**: Priorizar la carga de la primera imagen del Hero.
-- **Placeholders**: Agregar efecto de `blur` durante la carga de portadas de álbumes.
+- **Optimización de Bundle**: Analizar y reducir el tamaño del JS enviado al cliente.
 
 ---
 *Última actualización: 26 de Enero, 2026*
