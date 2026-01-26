@@ -48,3 +48,9 @@ body {
     background-position: 0% 50%;
   }
 }
+
+/* Accessibility: Clear focus indicator for keyboard users */
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 4px;
+}

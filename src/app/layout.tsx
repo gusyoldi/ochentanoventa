@@ -91,9 +91,10 @@ export default function RootLayout({
       <body
         className={`${robotoSans.variable} ${montserratSans.variable} antialiased`}
       >
+        <SkipNav />
         <Toaster />
 
-        <div className="grid h-dvh grid-rows-[auto_1fr_auto]">
+        <div id="main-content" className="grid h-dvh grid-rows-[auto_1fr_auto]">
           <Navbar />
           {children}
           <Footer />

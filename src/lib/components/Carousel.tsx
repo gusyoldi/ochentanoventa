@@ -1,9 +1,9 @@
 import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    CarouselNext,
+    CarouselPrevious,
 } from '@/lib/components/ui/carousel';
 import Image from 'next/image';
 
@@ -33,7 +33,11 @@ const ImageCarousel = ({
   ...props
 }: ImageCarouselProps) => {
   return (
-    <Carousel {...props}>
+    <Carousel
+      role="region"
+      aria-label="Galería de imágenes"
+      {...props}
+    >
       <CarouselContent>
         {images.map((img) => (
           <CarouselItem key={img.src}>
