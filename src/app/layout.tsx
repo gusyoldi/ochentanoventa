@@ -19,10 +19,46 @@ const montserratSans = Montserrat({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.ochentanoventa.com.ar'),
   title:
     'Ochenta Noventa - Clásicos del Rock Argentino para eventos en versiones propias',
   description:
     'La banda ofrece versiones únicas de clásicos del Rock Argentino para casamientos, cumpleaños y eventos corporativos en Buenos Aires.',
+  keywords: [
+    'Rock Argentino',
+    'Eventos',
+    'Casamientos',
+    'Banda en vivo',
+    'Buenos Aires',
+    'Covers',
+    'Country',
+    'Folk',
+  ],
+  authors: [{ name: 'Ochenta Noventa' }],
+  openGraph: {
+    title: 'Ochenta Noventa - Rock Argentino para tu evento',
+    description:
+      'Versiones únicas de clásicos del Rock Argentino para casamientos, cumpleaños y eventos corporativos.',
+    url: 'https://www.ochentanoventa.com.ar',
+    siteName: 'Ochenta Noventa',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Banda Ochenta Noventa tocando en vivo',
+      },
+    ],
+    locale: 'es_AR',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Ochenta Noventa - Rock Argentino para tu evento',
+    description:
+      'Versiones únicas de clásicos del Rock Argentino para casamientos, cumpleaños y eventos corporativos.',
+    images: ['/og-image.jpg'],
+  },
   icons: {
     icon: '/favicon.ico',
     shortcut: '/favicon.ico',
@@ -36,7 +72,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="es">
       <head>
         <Script
           id="ld-json"
