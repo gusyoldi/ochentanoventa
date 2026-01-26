@@ -1,4 +1,4 @@
-import { HERO_SECTION_CONTENT } from '@/app/constants';
+import { HERO_SECTION_CONTENT } from '@/lib/constants';
 import ImageCarousel from './Carousel';
 import HeroDescription from './HeroDescription';
 import TitleSection from './TitleSection';

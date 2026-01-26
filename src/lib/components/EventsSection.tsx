@@ -1,4 +1,4 @@
-import { EVENTS_SECTION_CONTENT } from '@/app/constants';
+import { EVENTS_SECTION_CONTENT } from '@/lib/constants';
 import ImageCarousel from './Carousel';
 import EventsDescription from './EventsDescription';
 import TitleSection from './TitleSection';

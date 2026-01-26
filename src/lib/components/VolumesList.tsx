@@ -1,4 +1,4 @@
-import { VolumeType } from '@/app/constants';
+import { VolumeType } from '@/lib/types';
 import Volume from './Volume';
 
 type VolumesListProps = {
