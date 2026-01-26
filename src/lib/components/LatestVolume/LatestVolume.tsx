@@ -1,6 +1,6 @@
-import Image from 'next/image';
 import getLastVolume from '../../services/strapi/getLastVolume';
 import LatestVolumeCard from './LatestVolumeCard';
+import LatestVolumeImage from './LatestVolumeImage';
 import { LINK, SONGS } from './constants';
 
 const LatestVolume = async () => {
@@ -14,15 +14,7 @@ const LatestVolume = async () => {
 
   return (
     <LatestVolumeCard link={link}>
-      <div className="relative h-[142px] w-[142px] overflow-hidden rounded-lg transition-transform duration-700 xl:h-[240px] xl:w-[240px]">
-        <Image
-          src={image.url}
-          alt="last-volume"
-          fill
-          className="object-cover"
-          sizes="(max-width: 768px) 142px, 240px"
-        />
-      </div>
+      <LatestVolumeImage src={image.url} alt="last-volume" />
 
       <div className="font-roboto z-10">
         <h3 className="text-body-md text-gold hover:text-gold mb-1.5 font-bold transition-colors duration-500 xl:mb-5 xl:text-3xl">
