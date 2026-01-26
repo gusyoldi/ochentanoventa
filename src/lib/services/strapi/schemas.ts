@@ -1,5 +1,10 @@
 import { z } from 'zod';
 
+export type StrapiImage = z.infer<typeof StrapiImageSchema>;
+export type StrapiCarousel = z.infer<typeof CarouselSchema>;
+export type StrapiBanner = z.infer<typeof BannerSchema>;
+export type StrapiLastVolume = z.infer<typeof LastVolumeSchema>;
+
 export const StrapiFormatSchema = z.object({
   url: z.string(),
   width: z.number().optional(),
@@ -42,14 +47,5 @@ export const LastVolumeSchema = z.object({
   link: z.string().optional(),
 });
 
-export type StrapiImage = z.infer<typeof StrapiImageSchema>;
-export type StrapiCarousel = z.infer<typeof CarouselSchema>;
-export type StrapiBanner = z.infer<typeof BannerSchema>;
-export type StrapiLastVolume = z.infer<typeof LastVolumeSchema>;
 
-export default {
-  StrapiImageSchema,
-  CarouselSchema,
-  BannerSchema,
-  LastVolumeSchema,
-};
+

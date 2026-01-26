@@ -5,7 +5,10 @@ import Logo from './Logo';
 
 const Navbar = () => {
   return (
-    <header className="border-divider relative flex items-center justify-center border-b py-10">
+    <header
+      aria-label="Navegación principal"
+      className="border-divider relative flex items-center justify-center border-b py-10"
+    >
       <Logo />
       <ContactButton />
     </header>
