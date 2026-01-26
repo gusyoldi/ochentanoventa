@@ -87,8 +87,8 @@ function Window({ children, name }: WindowProps) {
         ref={(el) => {
           // Merge refs manually since both hooks return refs
           if (el) {
-            (clickOutsideRef as any).current = el;
-            (focusTrapRef as any).current = el;
+            (clickOutsideRef as React.RefObject<HTMLDivElement | null>).current = el;
+            (focusTrapRef as React.RefObject<HTMLDivElement | null>).current = el;
           }
         }}
       >
