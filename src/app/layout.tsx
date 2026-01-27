@@ -19,7 +19,10 @@ const montserratSans = Montserrat({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.ochentanoventa.com.ar'),
+  metadataBase: new URL('https://ochentanoventa.com.ar'),
+  alternates: {
+    canonical: '/',
+  },
   title:
     'Ochenta Noventa - Clásicos del Rock Argentino para eventos en versiones propias',
   description:
@@ -39,7 +42,7 @@ export const metadata: Metadata = {
     title: 'Ochenta Noventa - Rock Argentino para tu evento',
     description:
       'Versiones únicas de clásicos del Rock Argentino para casamientos, cumpleaños y eventos corporativos.',
-    url: 'https://www.ochentanoventa.com.ar',
+    url: 'https://ochentanoventa.com.ar',
     siteName: 'Ochenta Noventa',
     images: [
       {
