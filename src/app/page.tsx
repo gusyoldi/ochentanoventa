@@ -1,11 +1,11 @@
-import Banner from '@/lib/components/Banner';
-import ContactSection from '@/lib/components/ContactSection';
-import EventsSection from '@/lib/components/EventsSection';
-import HeroSection from '@/lib/components/HeroSection';
-import VersionsSection from '@/lib/components/VersionsSection';
+import ContactSection from '@/components/sections/Contact/ContactSection';
+import EventsSection from '@/components/sections/Events/EventsSection';
+import HeroSection from '@/components/sections/Hero/HeroSection';
+import VersionsSection from '@/components/sections/Versions/VersionsSection';
+import Banner from '@/components/ui/Banner';
 
-import { VOLUMES_LIST } from '@/lib/constants';
-import getCarousel from '@/lib/services/strapi/getCarousel';
+import { VOLUMES_LIST } from '@/constants';
+import getCarousel from '@/services/strapi/getCarousel';
 
 export default async function HomePage() {
   const carousel = await getCarousel();

@@ -1,18 +1,17 @@
 'use client';
 
 import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from '@/lib/components/ui/carousel';
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    CarouselNext,
+    CarouselPrevious,
+} from '@/components/ui/carousel';
+import { Skeleton } from '@/components/ui/skeleton';
+import { cn } from '@/utils';
+import { cva } from 'class-variance-authority';
 import Image from 'next/image';
 import { useState } from 'react';
-
-import { cva } from 'class-variance-authority';
-import { cn } from '../utils';
-import { Skeleton } from './ui/skeleton';
 
 const imageContainerVariants = cva('relative overflow-hidden', {
   variants: {

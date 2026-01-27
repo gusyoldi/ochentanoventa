@@ -1,8 +1,8 @@
-import { SPOTIFY_LINKS, VERSIONS_SECTION_CONTENT } from '@/lib/constants';
-import { VolumeType } from '@/lib/types';
-import LatestVolume from './LatestVolume/LatestVolume';
-import SpotifyLink from './SpotifyLink';
-import TitleSection from './TitleSection';
+import SpotifyLink from '@/components/layout/Footer/SpotifyLink';
+import TitleSection from '@/components/ui/TitleSection';
+import { SPOTIFY_LINKS, VERSIONS_SECTION_CONTENT } from '@/constants';
+import { VolumeType } from '@/types';
+import LatestVolume from '../LatestVolume/LatestVolume';
 import VersionsDescription from './VersionsDescription';
 import VolumesList from './VolumesList';
 

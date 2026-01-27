@@ -1,5 +1,5 @@
-import ImageCarousel from './Carousel';
-import Form from './Form';
+import Form from '@/components/ui/Form';
+import ImageCarousel from '@/components/ui/ImageCarousel';
 
 type ContactSectionProps = {
   carouselImages: Array<{ src: string; alt: string }>;

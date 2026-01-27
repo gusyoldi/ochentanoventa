@@ -1,4 +1,4 @@
-import type { SectionContent } from '@/lib/types';
+import type { SectionContent } from '@/types';
 
 export const EVENTS_SECTION_CONTENT: SectionContent = {
   title: 'Eventos',

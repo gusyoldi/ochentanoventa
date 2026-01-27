@@ -1,4 +1,4 @@
-import getBanner from '../services/strapi/getBanner';
+import getBanner from '@/services/strapi/getBanner';
 
 const Banner = async () => {
   const banner = await getBanner();

@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
 import { Montserrat, Roboto } from 'next/font/google';
 
-import Toaster from '@/lib/components/Toaster';
-import Footer from '../lib/components/Footer';
-import JsonLd from '../lib/components/JsonLd';
-import Navbar from '../lib/components/Navbar/Navbar';
+import Footer from '@/components/layout/Footer/Footer';
+import Navbar from '@/components/layout/Navbar/Navbar';
+import JsonLd from '@/components/ui/JsonLd';
+import Toaster from '@/components/ui/Toaster';
 import './globals.css';
 
 const robotoSans = Roboto({

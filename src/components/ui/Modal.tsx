@@ -1,18 +1,18 @@
 'use client';
 
+import { useClickOutside } from '@/hooks/useClickOutside';
+import { useFocusTrap } from '@/hooks/useFocusTrap';
 import { XIcon } from 'lucide-react';
 import {
-  cloneElement,
-  createContext,
-  ReactElement,
-  ReactNode,
-  useContext,
-  useEffect,
-  useState,
+    cloneElement,
+    createContext,
+    ReactElement,
+    ReactNode,
+    useContext,
+    useEffect,
+    useState,
 } from 'react';
 import { createPortal } from 'react-dom';
-import { useClickOutside } from '../hooks/useClickOutside';
-import { useFocusTrap } from '../hooks/useFocusTrap';
 
 interface ModalProps {
   children: ReactNode;

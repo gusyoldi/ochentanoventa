@@ -1,4 +1,4 @@
-import type { HeroSectionContent } from '@/lib/types';
+import type { HeroSectionContent } from '@/types';
 
 export const HERO_SECTION_CONTENT: HeroSectionContent = {
   title: 'Rock argentino',

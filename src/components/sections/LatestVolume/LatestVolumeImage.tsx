@@ -1,9 +1,9 @@
 'use client';
 
-import { cn } from '@/lib/utils';
+import { Skeleton } from '@/components/ui/skeleton';
+import { cn } from '@/utils';
 import Image from 'next/image';
 import { useState } from 'react';
-import { Skeleton } from '../ui/skeleton';
 
 interface LatestVolumeImageProps {
   src: string;

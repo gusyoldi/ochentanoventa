@@ -1,4 +1,4 @@
-import type { SectionContent } from '@/lib/types';
+import type { SectionContent } from '@/types';
 
 export const VERSIONS_SECTION_CONTENT: SectionContent & {
   spotifyText: string;

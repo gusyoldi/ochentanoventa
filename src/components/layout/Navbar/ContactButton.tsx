@@ -1,5 +1,5 @@
-import Form from '../Form';
-import Modal from '../Modal';
+import Form from '@/components/ui/Form';
+import Modal from '@/components/ui/Modal';
 
 const ContactButton = () => {
   return (

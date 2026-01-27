@@ -1,4 +1,4 @@
-import getLastVolume from '../../services/strapi/getLastVolume';
+import getLastVolume from '@/services/strapi/getLastVolume';
 import LatestVolumeCard from './LatestVolumeCard';
 import LatestVolumeImage from './LatestVolumeImage';
 import { LINK, SONGS } from './constants';

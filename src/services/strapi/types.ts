@@ -12,5 +12,5 @@ export type StrapiBanner = SchemaStrapiBanner;
 export type StrapiLastVolume = SchemaStrapiLastVolume;
 
 // Re-export DTOs from centralized location
-export type { BannerDTO, CarouselDTO, Image } from '@/lib/types';
+export type { BannerDTO, CarouselDTO, Image } from '@/types';
 

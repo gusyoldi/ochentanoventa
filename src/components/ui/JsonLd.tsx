@@ -1,4 +1,4 @@
-import { SITE_CONFIG } from '../config/site';
+import { SITE_CONFIG } from '@/config/site';
 
 const JsonLd = () => {
   const musicGroupSchema = {

@@ -1,7 +1,7 @@
-import { HERO_SECTION_CONTENT } from '@/lib/constants';
-import ImageCarousel from './Carousel';
+import ImageCarousel from '@/components/ui/ImageCarousel';
+import TitleSection from '@/components/ui/TitleSection';
+import { HERO_SECTION_CONTENT } from '@/constants';
 import HeroDescription from './HeroDescription';
-import TitleSection from './TitleSection';
 
 type HeroSectionProps = {
   carouselImages: Array<{ src: string; alt: string }>;

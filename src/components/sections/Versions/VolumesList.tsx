@@ -1,4 +1,4 @@
-import { VolumeType } from '@/lib/types';
+import { VolumeType } from '@/types';
 import Volume from './Volume';
 
 type VolumesListProps = {

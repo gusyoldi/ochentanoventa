@@ -1,4 +1,4 @@
-import type { Image, VolumeType } from '@/lib/types';
+import type { Image, VolumeType } from '@/types';
 
 export const VOLUMES_LIST: VolumeType[] = [
   {
