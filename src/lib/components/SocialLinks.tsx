@@ -33,7 +33,7 @@ export default function SocialLinks() {
           href={social.href}
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:opacity-80"
+          className="hover:opacity-80 rounded-2xl p-1"
         >
           <Image src={social.logo} alt={social.name} width={25} height={28} />
         </a>

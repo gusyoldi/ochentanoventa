@@ -185,7 +185,7 @@ function CarouselPrevious({
       variant={variant}
       size={size}
       className={cn(
-        'bg-grey/80 absolute cursor-pointer rounded-full border-0 transition-colors duration-300 xl:size-10',
+        'bg-grey/80 absolute cursor-pointer rounded-full border-0 transition-colors duration-300 xl:size-10 focus-visible:rounded-3xl focus-visible:outline-none focus-visible:outline-2  focus-visible:ring-2 focus-visible:ring-gold',
         'hover:bg-zinc-400/80',
         orientation === 'horizontal'
           ? 'top-1/2 -left-12 -translate-y-1/2'
@@ -216,7 +216,7 @@ function CarouselNext({
       variant={variant}
       size={size}
       className={cn(
-        'bg-grey/80 absolute cursor-pointer rounded-full border-0 transition-colors duration-300 xl:size-10',
+        'bg-grey/80 absolute cursor-pointer rounded-full border-0 transition-colors duration-300 xl:size-10 focus-visible:rounded-3xl focus-visible:outline-none focus-visible:outline-2  focus-visible:ring-2 focus-visible:ring-gold',
         'hover:bg-zinc-400/80',
         orientation === 'horizontal'
           ? 'top-1/2 -right-12 -translate-y-1/2'
@@ -239,5 +239,6 @@ export {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-  type CarouselApi,
+  type CarouselApi
 };
+
