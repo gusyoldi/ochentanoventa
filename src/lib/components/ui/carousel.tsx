@@ -185,8 +185,8 @@ function CarouselPrevious({
       variant={variant}
       size={size}
       className={cn(
-        'bg-grey/80 absolute cursor-pointer rounded-full border-0 transition-colors duration-300 xl:size-10 focus-visible:rounded-3xl focus-visible:outline-none focus-visible:outline-2  focus-visible:ring-2 focus-visible:ring-gold',
-        'hover:bg-zinc-400/80',
+        'bg-zinc-900/80 absolute cursor-pointer rounded-full border-0 transition-all duration-300 xl:size-10 focus-visible:rounded-3xl focus-visible:outline-none focus-visible:outline-2 focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-8 focus-visible:ring-offset-black active:ring-2 active:ring-black active:ring-offset-8 active:ring-offset-black',
+        'hover:bg-zinc-800',
         orientation === 'horizontal'
           ? 'top-1/2 -left-12 -translate-y-1/2'
           : '-top-12 left-1/2 -translate-x-1/2 rotate-90',
@@ -196,7 +196,7 @@ function CarouselPrevious({
       onClick={scrollPrev}
       {...props}
     >
-      <ChevronLeft className="text-white xl:size-10" />
+      <ChevronLeft className="text-gold xl:size-10" />
       <span className="sr-only">Previous slide</span>
     </Button>
   );
@@ -216,8 +216,8 @@ function CarouselNext({
       variant={variant}
       size={size}
       className={cn(
-        'bg-grey/80 absolute cursor-pointer rounded-full border-0 transition-colors duration-300 xl:size-10 focus-visible:rounded-3xl focus-visible:outline-none focus-visible:outline-2  focus-visible:ring-2 focus-visible:ring-gold',
-        'hover:bg-zinc-400/80',
+        'bg-zinc-900/80 absolute cursor-pointer rounded-full border-0 transition-all duration-300 xl:size-10 focus-visible:rounded-3xl focus-visible:outline-none focus-visible:outline-2 focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-8 focus-visible:ring-offset-black active:ring-2 active:ring-black active:ring-offset-8 active:ring-offset-black',
+        'hover:bg-zinc-800',
         orientation === 'horizontal'
           ? 'top-1/2 -right-12 -translate-y-1/2'
           : '-bottom-12 left-1/2 -translate-x-1/2 rotate-90',
@@ -227,7 +227,7 @@ function CarouselNext({
       onClick={scrollNext}
       {...props}
     >
-      <ChevronRight className="text-white xl:size-10" />
+      <ChevronRight className="text-gold xl:size-10" />
       <span className="sr-only">Next slide</span>
     </Button>
   );
