@@ -45,6 +45,9 @@ ochentanoventa-v2/
    - **Focus Trap** en modales.
 
 ## ✅ Mejoras Implementadas (Enero 2026)
+- **SEO**: Configuración de URL canónica y estandarización de dominio (non-www).
+- **Animaciones**: Optimización de duraciones y propiedades para mayor fluidez.
+- **Accesibilidad**: Mejora de contraste en botones de Carousel y visibilidad de foco.
 - **Arquitectura**: Migración a constantes modulares y tipos centralizados.
 - **Resiliencia**: Manejo de errores Strapi con fallbacks.
 - **Estabilidad**: Solución de errores de build por tipos `any`.
@@ -56,6 +59,7 @@ pnpm dev          # Desarrollo
 pnpm run build    # Build de producción
 pnpm ts-check     # Verificación de tipos
 pnpm lint         # Linting
+pnpm test         # Ejecutar tests (Vitest)
 ```
 
 ---

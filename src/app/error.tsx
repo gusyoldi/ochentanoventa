@@ -1,3 +1,3 @@
 'use client';
 
-export { default } from '@/lib/components/ErrorBoundary';
+export { default } from '@/components/ui/ErrorBoundary';
