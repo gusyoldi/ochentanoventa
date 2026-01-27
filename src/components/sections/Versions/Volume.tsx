@@ -1,25 +1,29 @@
+import type { VolumeType } from '@/types';
 import Image from 'next/image';
 
 interface VolumeProps {
-  volume: {
-    src: string;
-    alt: string;
-    title: string;
-    year: string;
-    aditional?: string;
-    format?: string;
-    songs?: string[];
-  };
+  volume: VolumeType;
 }
 
 const Volume = ({ volume }: VolumeProps) => {
-  const { src, alt, title, year, aditional, format, songs } = volume;
+  const { src, alt, title, year, aditional, format, songs, spotifyUrl } = volume;
+
+  const Wrapper = spotifyUrl ? 'a' : 'div';
 
   return (
-    <div className="max-w-[180px] shrink-0">
+    <Wrapper
+      {...(spotifyUrl
+        ? { 
+            href: spotifyUrl,
+            target: '_blank',
+            rel: 'noopener noreferrer',
+          }
+        : {})}
+      className="group max-w-[180px] shrink-0 cursor-pointer transition-transform duration-300 ease-out xl:hover:scale-[1.03]"
+    >
       <Image src={src} alt={alt} width={180} height={180} />
 
-      <div className="mt-3 leading-5">
+      <div className="mt-3 leading-5 transition-colors duration-300 group-hover:text-gold">
         {!songs ? (
           <>
             <h6 className="font-bold">{title}</h6>
@@ -40,7 +44,7 @@ const Volume = ({ volume }: VolumeProps) => {
           </>
         )}
       </div>
-    </div>
+    </Wrapper>
   );
 };
 

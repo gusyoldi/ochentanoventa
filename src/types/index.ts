@@ -26,6 +26,7 @@ export interface VolumeType {
   aditional?: string;
   format?: string;
   songs?: string[];
+  spotifyUrl?: string;
 }
 
 // Content section types
