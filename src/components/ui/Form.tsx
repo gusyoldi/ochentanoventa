@@ -11,6 +11,7 @@ interface FormData {
   phone: string;
   location: string;
   message: string;
+  _honey: string; // Honeypot field for spam protection
 }
 
 interface FormProps {
@@ -26,8 +27,14 @@ const Form = ({ onCloseModal }: FormProps) => {
     formState: { errors },
   } = useForm<FormData>();
 
-  const onSubmit = async () => {
+  const onSubmit = async (data: FormData) => {
     if (!formRef.current) return;
+
+    // Honeypot check: if field is filled, it's a bot
+    if (data._honey) {
+      console.warn('Bot detected via honeypot');
+      return;
+    }
 
     const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
     const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
@@ -89,10 +96,18 @@ const Form = ({ onCloseModal }: FormProps) => {
           type="email"
           id="user_email"
           className="xl:p2 rounded-sm bg-white p-1 text-xs text-black xl:text-sm"
-          {...register('user_email', { required: true })}
+          {...register('user_email', {
+            required: 'Es necesario un email',
+            pattern: {
+              value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+              message: 'Email inválido',
+            },
+          })}
         />
         {errors.user_email && (
-          <span className="text-xs text-red-700">Es necesario un email</span>
+          <span className="text-xs text-red-700">
+            {errors.user_email.message}
+          </span>
         )}
       </div>
 
@@ -101,15 +116,34 @@ const Form = ({ onCloseModal }: FormProps) => {
           Celular <span className="text-red-700">*</span>{' '}
         </label>
         <input
-          type="number"
+          type="tel"
           id="phone"
           className="xl:p2 rounded-sm bg-white p-1 text-xs text-black xl:text-sm"
-          {...register('phone', { required: true })}
+          {...register('phone', {
+            required: 'Es necesario un número',
+            minLength: {
+              value: 8,
+              message: 'Mínimo 8 dígitos',
+            },
+            pattern: {
+              value: /^[0-9+]+$/,
+              message: 'Solo números',
+            },
+          })}
         />
         {errors.phone && (
-          <span className="text-xs text-red-700">Es necesario un número</span>
+          <span className="text-xs text-red-700">{errors.phone.message}</span>
         )}
       </div>
+
+      {/* Honeypot field - hidden from users */}
+      <input
+        type="text"
+        className="hidden"
+        tabIndex={-1}
+        autoComplete="off"
+        {...register('_honey')}
+      />
 
       <div className="flex flex-col gap-1 xl:col-span-2">
         <label className="text-xs">
