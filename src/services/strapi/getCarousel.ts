@@ -1,4 +1,8 @@
-import { DEFAULT_CAROUSEL_IMAGES } from './defaults';
+import {
+  DEFAULT_CAROUSEL_1_IMAGES,
+  DEFAULT_CAROUSEL_2_IMAGES,
+  DEFAULT_CAROUSEL_3_IMAGES,
+} from './defaults';
 import { CarouselSchema } from './schemas';
 import { CarouselDTO } from './types';
 import mapCarouselResponseToDTO from './utils';
@@ -9,11 +13,13 @@ export default async function getCarousel(): Promise<CarouselDTO> {
   const strapiUrl = process.env.NEXT_PUBLIC_STRAPI_URL;
 
   if (!strapiUrl) {
-    console.warn('NEXT_PUBLIC_STRAPI_URL is not defined. Using fallback carousel images.');
+    console.warn(
+      'NEXT_PUBLIC_STRAPI_URL is not defined. Using fallback carousel images.',
+    );
     return {
-      first: DEFAULT_CAROUSEL_IMAGES,
-      second: DEFAULT_CAROUSEL_IMAGES,
-      third: DEFAULT_CAROUSEL_IMAGES,
+      first: DEFAULT_CAROUSEL_1_IMAGES,
+      second: DEFAULT_CAROUSEL_2_IMAGES,
+      third: DEFAULT_CAROUSEL_3_IMAGES,
     };
   }
 
@@ -42,9 +48,9 @@ export default async function getCarousel(): Promise<CarouselDTO> {
     console.error('Error fetching carousel from Strapi:', error);
     // Return fallback images
     return {
-      first: DEFAULT_CAROUSEL_IMAGES,
-      second: DEFAULT_CAROUSEL_IMAGES,
-      third: DEFAULT_CAROUSEL_IMAGES,
+      first: DEFAULT_CAROUSEL_1_IMAGES,
+      second: DEFAULT_CAROUSEL_2_IMAGES,
+      third: DEFAULT_CAROUSEL_3_IMAGES,
     };
   }
 }

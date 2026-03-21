@@ -6,7 +6,9 @@ export default async function getLastVolume(): Promise<StrapiLastVolume> {
   const strapiUrl = process.env.NEXT_PUBLIC_STRAPI_URL;
 
   if (!strapiUrl) {
-    console.warn('NEXT_PUBLIC_STRAPI_URL is not defined. Using fallback last volume.');
+    console.warn(
+      'NEXT_PUBLIC_STRAPI_URL is not defined. Using fallback last volume.',
+    );
     return DEFAULT_LAST_VOLUME;
   }
 

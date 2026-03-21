@@ -31,14 +31,12 @@ Sitio web oficial de **Ochenta Noventa**, una banda de Buenos Aires dedicada a r
 ### Instalación
 
 1. Clonar el repositorio:
-
    ```bash
    git clone <url-del-repo>
    cd ochentanoventa-v2
    ```
 
 2. Instalar dependencias:
-
    ```bash
    pnpm install
    ```
@@ -47,7 +45,6 @@ Sitio web oficial de **Ochenta Noventa**, una banda de Buenos Aires dedicada a r
    Crear un archivo `.env.local` en la raíz del proyecto y configurar las variables necesarias (API URLs, keys de EmailJS, etc.).
 
 4. Iniciar el servidor de desarrollo:
-
    ```bash
    pnpm dev
    ```
