@@ -1,7 +1,7 @@
-import ContactSection from '@/components/sections/Contact/ContactSection';
-import EventsSection from '@/components/sections/Events/EventsSection';
-import HeroSection from '@/components/sections/Hero/HeroSection';
-import VersionsSection from '@/components/sections/Versions/VersionsSection';
+import ContactSection from '@/components/sections/contact/ContactSection';
+import EventsSection from '@/components/sections/events/EventsSection';
+import HeroSection from '@/components/sections/hero/HeroSection';
+import VersionsSection from '@/components/sections/versions/VersionsSection';
 import Banner from '@/components/ui/Banner';
 
 import { VOLUMES_LIST } from '@/constants';

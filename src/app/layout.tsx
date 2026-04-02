@@ -1,73 +1,12 @@
-import type { Metadata } from 'next';
-import { Montserrat, Roboto } from 'next/font/google';
-
 import Footer from '@/components/layout/Footer/Footer';
 import Navbar from '@/components/layout/Navbar/Navbar';
-import JsonLd from '@/components/ui/JsonLd';
 import Toaster from '@/components/ui/Toaster';
+import { montserratSans, robotoSans } from '@/lib/fonts/fonts';
+import JsonLd from '@/lib/seo/JsonLd';
 import './globals.css';
+import { layoutMetadata } from './metadata';
 
-const robotoSans = Roboto({
-  variable: '--font-roboto',
-  subsets: ['latin'],
-  weight: ['700', '400', '100'],
-});
-const montserratSans = Montserrat({
-  variable: '--font-montserrat',
-  subsets: ['latin'],
-  weight: ['800', '700'],
-});
-
-export const metadata: Metadata = {
-  metadataBase: new URL('https://ochentanoventa.com.ar'),
-  alternates: {
-    canonical: '/',
-  },
-  title:
-    'Ochenta Noventa - Clásicos del Rock Argentino para eventos en versiones propias',
-  description:
-    'La banda ofrece versiones únicas de clásicos del Rock Argentino para casamientos, cumpleaños y eventos corporativos en Buenos Aires.',
-  keywords: [
-    'Rock Argentino',
-    'Eventos',
-    'Casamientos',
-    'Banda en vivo',
-    'Buenos Aires',
-    'Covers',
-    'Country',
-    'Folk',
-  ],
-  authors: [{ name: 'Ochenta Noventa' }],
-  openGraph: {
-    title: 'Ochenta Noventa - Rock Argentino para tu evento',
-    description:
-      'Versiones únicas de clásicos del Rock Argentino para casamientos, cumpleaños y eventos corporativos.',
-    url: 'https://ochentanoventa.com.ar',
-    siteName: 'Ochenta Noventa',
-    images: [
-      {
-        url: '/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Banda Ochenta Noventa tocando en vivo',
-      },
-    ],
-    locale: 'es_AR',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Ochenta Noventa - Rock Argentino para tu evento',
-    description:
-      'Versiones únicas de clásicos del Rock Argentino para casamientos, cumpleaños y eventos corporativos.',
-    images: ['/og-image.jpg'],
-  },
-  icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon.ico',
-    apple: '/logo.png',
-  },
-};
+export const metadata = layoutMetadata;
 
 export default function RootLayout({
   children,
