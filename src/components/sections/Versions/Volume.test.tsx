@@ -1,11 +1,14 @@
-import { render, screen, fireEvent } from '@testing-library/react';
-import { describe, expect, it, vi } from 'vitest';
-import type React from 'react';
 import type { VolumeType } from '@/types';
+import { fireEvent, render, screen } from '@testing-library/react';
+import type React from 'react';
+import { describe, expect, it, vi } from 'vitest';
 import Volume from './Volume';
 
 vi.mock('next/image', () => {
-  type MockImageProps = Omit<React.ImgHTMLAttributes<HTMLImageElement>, 'src'> & {
+  type MockImageProps = Omit<
+    React.ImgHTMLAttributes<HTMLImageElement>,
+    'src'
+  > & {
     src: string;
     alt: string;
     width?: number;

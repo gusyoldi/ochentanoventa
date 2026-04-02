@@ -1,13 +1,4 @@
-'use client';
-
-import {
-    Carousel,
-    CarouselContent,
-    CarouselItem,
-    CarouselNext,
-    CarouselPrevious,
-} from '@/components/ui/carousel';
-import { Skeleton } from '@/components/ui/skeleton';
+import { Skeleton } from '@/lib/components/skeleton';
 import { cn } from '@/utils';
 import { cva } from 'class-variance-authority';
 import Image from 'next/image';
@@ -24,12 +15,6 @@ const imageContainerVariants = cva('relative overflow-hidden', {
     size: 'sm',
   },
 });
-
-type ImageCarouselProps = React.ComponentProps<typeof Carousel> & {
-  images: { src: string; alt: string }[];
-  size?: 'sm' | 'lg';
-  priority?: boolean;
-};
 
 const CarouselImage = ({
   src,
@@ -52,7 +37,7 @@ const CarouselImage = ({
         alt={alt}
         className={cn(
           'object-cover transition-opacity duration-1000',
-          isLoading ? 'opacity-0' : 'opacity-100'
+          isLoading ? 'opacity-0' : 'opacity-100',
         )}
         fill
         sizes={
@@ -67,30 +52,4 @@ const CarouselImage = ({
   );
 };
 
-const ImageCarousel = ({
-  images,
-  size = 'sm',
-  priority = false,
-  ...props
-}: ImageCarouselProps) => {
-  return (
-    <Carousel role="region" aria-label="Galería de imágenes" {...props}>
-      <CarouselContent>
-        {images.map((img, index) => (
-          <CarouselItem key={img.src}>
-            <CarouselImage
-              src={img.src}
-              alt={img.alt}
-              size={size}
-              priority={priority && index === 0}
-            />
-          </CarouselItem>
-        ))}
-      </CarouselContent>
-      <CarouselPrevious className="left-2" />
-      <CarouselNext className="right-2" />
-    </Carousel>
-  );
-};
-
-export default ImageCarousel;
+export default CarouselImage;

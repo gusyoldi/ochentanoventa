@@ -4,7 +4,7 @@ type TitleSectionProps = {
   variant?: 'default' | 'compact';
 };
 
-export default function TitleSection({
+export default function Title({
   title,
   subtitle,
   variant = 'default',

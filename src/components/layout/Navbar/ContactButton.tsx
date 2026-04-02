@@ -1,13 +1,13 @@
 import Form from '@/components/ui/Form';
-import Modal from '@/components/ui/Modal';
+import Modal from '@/lib/components/modal';
 
 const ContactButton = () => {
   return (
-    <div className="absolute right-8 hidden sm:block ">
+    <div className="absolute right-8 hidden sm:block">
       <Modal>
         <Modal.Open opens="floating-form">
-          <button className="hover:text-gold focus-visible:rounded-3xl cursor-pointer text-neutral-300 transition p-2">
-            <span className=''>Contacto</span>
+          <button className="hover:text-gold cursor-pointer p-2 text-neutral-300 transition focus-visible:rounded-3xl">
+            <span className="">Contacto</span>
           </button>
         </Modal.Open>
         <Modal.Window name="floating-form">

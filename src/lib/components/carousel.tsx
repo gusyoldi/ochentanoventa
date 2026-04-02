@@ -1,12 +1,12 @@
 'use client';
 
 import useEmblaCarousel, {
-    type UseEmblaCarouselType,
+  type UseEmblaCarouselType,
 } from 'embla-carousel-react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import * as React from 'react';
 
-import { Button } from '@/components/ui/button';
+import { Button } from '@/lib/components/button';
 import { cn } from '@/utils';
 
 type CarouselApi = UseEmblaCarouselType[1];
@@ -185,7 +185,7 @@ function CarouselPrevious({
       variant={variant}
       size={size}
       className={cn(
-        'bg-zinc-900/80 absolute cursor-pointer rounded-full border-0 transition-all duration-300 xl:size-10 focus-visible:rounded-3xl focus-visible:outline-none focus-visible:outline-2 focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-8 focus-visible:ring-offset-black active:ring-2 active:ring-black active:ring-offset-8 active:ring-offset-black',
+        'absolute cursor-pointer rounded-full border-0 bg-zinc-900/80 transition-all duration-300 focus-visible:rounded-3xl focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-8 focus-visible:ring-offset-black focus-visible:outline-2 focus-visible:outline-none active:ring-2 active:ring-black active:ring-offset-8 active:ring-offset-black xl:size-10',
         'hover:bg-zinc-800',
         orientation === 'horizontal'
           ? 'top-1/2 -left-12 -translate-y-1/2'
@@ -216,7 +216,7 @@ function CarouselNext({
       variant={variant}
       size={size}
       className={cn(
-        'bg-zinc-900/80 absolute cursor-pointer rounded-full border-0 transition-all duration-300 xl:size-10 focus-visible:rounded-3xl focus-visible:outline-none focus-visible:outline-2 focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-8 focus-visible:ring-offset-black active:ring-2 active:ring-black active:ring-offset-8 active:ring-offset-black',
+        'absolute cursor-pointer rounded-full border-0 bg-zinc-900/80 transition-all duration-300 focus-visible:rounded-3xl focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-8 focus-visible:ring-offset-black focus-visible:outline-2 focus-visible:outline-none active:ring-2 active:ring-black active:ring-offset-8 active:ring-offset-black xl:size-10',
         'hover:bg-zinc-800',
         orientation === 'horizontal'
           ? 'top-1/2 -right-12 -translate-y-1/2'
@@ -234,11 +234,10 @@ function CarouselNext({
 }
 
 export {
-    Carousel,
-    CarouselContent,
-    CarouselItem,
-    CarouselNext,
-    CarouselPrevious,
-    type CarouselApi
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+  type CarouselApi,
 };
-

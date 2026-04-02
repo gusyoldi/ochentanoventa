@@ -1,5 +1,5 @@
+import CarouselWrapper from '@/components/ui/Carousel/CarouselWrapper';
 import Form from '@/components/ui/Form';
-import ImageCarousel from '@/components/ui/ImageCarousel';
 
 type ContactSectionProps = {
   carouselImages: Array<{ src: string; alt: string }>;
@@ -14,7 +14,7 @@ export default function ContactSection({
         <Form />
       </div>
       <div className="mx-auto h-[350px] w-[350px] xl:order-first xl:row-span-6 xl:h-[800px] xl:w-[1280px]">
-        <ImageCarousel images={carouselImages} size="lg" />
+        <CarouselWrapper images={carouselImages} size="lg" />
       </div>
     </section>
   );

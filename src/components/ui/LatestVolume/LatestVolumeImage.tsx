@@ -1,6 +1,6 @@
 'use client';
 
-import { Skeleton } from '@/components/ui/skeleton';
+import { Skeleton } from '@/lib/components/skeleton';
 import { cn } from '@/utils';
 import Image from 'next/image';
 import { useState } from 'react';
@@ -10,7 +10,10 @@ interface LatestVolumeImageProps {
   alt: string;
 }
 
-export default function LatestVolumeImage({ src, alt }: LatestVolumeImageProps) {
+export default function LatestVolumeImage({
+  src,
+  alt,
+}: LatestVolumeImageProps) {
   const [isLoading, setIsLoading] = useState(true);
 
   return (
@@ -22,7 +25,7 @@ export default function LatestVolumeImage({ src, alt }: LatestVolumeImageProps) 
         fill
         className={cn(
           'object-cover transition-opacity duration-1000',
-          isLoading ? 'opacity-0' : 'opacity-100'
+          isLoading ? 'opacity-0' : 'opacity-100',
         )}
         sizes="(max-width: 768px) 142px, 240px"
         onLoad={() => setIsLoading(false)}
