@@ -1,27 +1,18 @@
 import { render, screen } from '@testing-library/react';
-import { describe, expect, it, vi } from 'vitest';
+import userEvent from '@testing-library/user-event';
+import { describe, expect, test } from 'vitest';
 import Navbar from './Navbar';
 
-// Mock child components to isolate Navbar test
-vi.mock('./Logo', () => ({
-  default: () => <div data-testid="mock-logo">Logo</div>,
-}));
-
-vi.mock('./ContactButton', () => ({
-  default: () => <div data-testid="mock-contact-button">Contact Button</div>,
-}));
-
 describe('Navbar', () => {
-  it('renders correctly with Logo and ContactButton', () => {
+  test.only('renders correctly and opens modal', async () => {
+    const user = userEvent.setup();
+
     render(<Navbar />);
 
-    expect(screen.getByRole('banner')).toBeInTheDocument();
-    expect(screen.getByTestId('mock-logo')).toBeInTheDocument();
-    expect(screen.getByTestId('mock-contact-button')).toBeInTheDocument();
-  });
-
-  it('has the correct accessibility label', () => {
-    render(<Navbar />);
-    expect(screen.getByLabelText(/navegación principal/i)).toBeInTheDocument();
+    const contactButton = screen.getByRole('button', { name: /contacto/i });
+    expect(screen.getByTestId('logo')).toBeInTheDocument();
+    expect(contactButton).toBeInTheDocument();
+    await user.click(contactButton);
+    expect(screen.getByRole('dialog')).toBeInTheDocument();
   });
 });

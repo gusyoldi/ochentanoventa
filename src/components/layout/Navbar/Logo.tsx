@@ -1,9 +1,10 @@
 import Image from 'next/image';
 
-const Logo = () => {
+const Logo = ({ ['datatest-id']: dataTestId = 'logo' }) => {
   return (
     <div className="absolute left-1/2 -translate-x-1/2">
       <Image
+        data-testid={dataTestId}
         src="/images/header/logo.svg"
         alt="logo"
         width={154}

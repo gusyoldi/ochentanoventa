@@ -4,13 +4,13 @@ import { useClickOutside } from '@/hooks/useClickOutside';
 import { useFocusTrap } from '@/hooks/useFocusTrap';
 import { XIcon } from 'lucide-react';
 import {
-    cloneElement,
-    createContext,
-    ReactElement,
-    ReactNode,
-    useContext,
-    useEffect,
-    useState,
+  cloneElement,
+  createContext,
+  ReactElement,
+  ReactNode,
+  useContext,
+  useEffect,
+  useState,
 } from 'react';
 import { createPortal } from 'react-dom';
 
@@ -81,14 +81,21 @@ function Window({ children, name }: WindowProps) {
   if (!isOpen) return null;
 
   return createPortal(
-    <div className="h-100dvh fixed top-0 left-0 z-50 h-full w-full backdrop-blur-sm transition-all">
+    <div
+      role="dialog"
+      aria-modal={true}
+      className="h-100dvh fixed top-0 left-0 z-50 h-full w-full backdrop-blur-sm transition-all"
+    >
       <div
         className="fixed top-1/2 left-1/2 max-h-[90vh] w-full max-w-lg translate-x-[-50%] translate-y-[-50%] rounded-lg border bg-neutral-900 p-6 text-white shadow-lg xl:max-w-3xl xl:p-10"
         ref={(el) => {
           // Merge refs manually since both hooks return refs
           if (el) {
-            (clickOutsideRef as React.RefObject<HTMLDivElement | null>).current = el;
-            (focusTrapRef as React.RefObject<HTMLDivElement | null>).current = el;
+            (
+              clickOutsideRef as React.RefObject<HTMLDivElement | null>
+            ).current = el;
+            (focusTrapRef as React.RefObject<HTMLDivElement | null>).current =
+              el;
           }
         }}
       >
