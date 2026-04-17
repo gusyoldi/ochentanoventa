@@ -7,8 +7,6 @@ import { CarouselSchema } from './schemas';
 import { CarouselDTO } from './types';
 import mapCarouselResponseToDTO from './utils';
 
-const { NEXT_PUBLIC_STRAPI_URL } = process.env;
-
 export default async function getCarousel(): Promise<CarouselDTO> {
   const strapiUrl = process.env.NEXT_PUBLIC_STRAPI_URL;
 

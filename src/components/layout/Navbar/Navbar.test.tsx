@@ -4,7 +4,7 @@ import { describe, expect, test } from 'vitest';
 import Navbar from './Navbar';
 
 describe('Navbar', () => {
-  test.only('renders correctly and opens modal', async () => {
+  test('renders correctly and opens modal', async () => {
     const user = userEvent.setup();
 
     render(<Navbar />);

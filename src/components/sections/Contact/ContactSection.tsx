@@ -1,5 +1,5 @@
 import CarouselWrapper from '@/components/ui/Carousel/CarouselWrapper';
-import Form from '@/components/ui/Form';
+import Form from '@/components/ui/Form/Form';
 
 type ContactSectionProps = {
   carouselImages: Array<{ src: string; alt: string }>;

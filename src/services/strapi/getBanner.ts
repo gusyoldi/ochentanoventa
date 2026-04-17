@@ -2,7 +2,6 @@ import { DEFAULT_BANNER } from './defaults';
 import { BannerSchema } from './schemas';
 import { BannerDTO } from './types';
 
-const { NEXT_PUBLIC_STRAPI_URL } = process.env;
 
 export default async function getBanner(): Promise<BannerDTO | null> {
   const strapiUrl = process.env.NEXT_PUBLIC_STRAPI_URL;
