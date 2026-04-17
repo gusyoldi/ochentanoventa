@@ -173,8 +173,7 @@ function CarouselItem({ className, ...props }: React.ComponentProps<'div'>) {
 
 function CarouselPrevious({
   className,
-  variant = 'outline',
-  size = 'icon',
+
   ...props
 }: React.ComponentProps<typeof Button>) {
   const { orientation, scrollPrev, canScrollPrev } = useCarousel();
@@ -182,8 +181,6 @@ function CarouselPrevious({
   return (
     <Button
       data-slot="carousel-previous"
-      variant={variant}
-      size={size}
       className={cn(
         'absolute cursor-pointer rounded-full border-0 bg-zinc-900/80 transition-all duration-300 focus-visible:rounded-3xl focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-8 focus-visible:ring-offset-black focus-visible:outline-2 focus-visible:outline-none active:ring-2 active:ring-black active:ring-offset-8 active:ring-offset-black xl:size-10',
         'hover:bg-zinc-800',
@@ -204,8 +201,6 @@ function CarouselPrevious({
 
 function CarouselNext({
   className,
-  variant = 'outline',
-  size = 'icon',
   ...props
 }: React.ComponentProps<typeof Button>) {
   const { orientation, scrollNext, canScrollNext } = useCarousel();
@@ -213,8 +208,6 @@ function CarouselNext({
   return (
     <Button
       data-slot="carousel-next"
-      variant={variant}
-      size={size}
       className={cn(
         'absolute cursor-pointer rounded-full border-0 bg-zinc-900/80 transition-all duration-300 focus-visible:rounded-3xl focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-8 focus-visible:ring-offset-black focus-visible:outline-2 focus-visible:outline-none active:ring-2 active:ring-black active:ring-offset-8 active:ring-offset-black xl:size-10',
         'hover:bg-zinc-800',

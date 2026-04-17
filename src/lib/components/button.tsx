@@ -11,26 +11,26 @@ const buttonVariants = cva('cursor-pointer', {
       form: 'hover:text-gold mt-2 uppercase transition-colors duration-100 ease-in-out hover:font-bold xl:col-span-full disabled:text-gray-500 disabled:cursor-not-allowed disabled:hover:font-normal',
     },
     size: {
-      default: 'h-9 px-4 py-2 has-[>svg]:px-3',
+      default: '',
       sm: 'text-sm',
-      lg: '',
-      icon: '',
     },
   },
   defaultVariants: {
     variant: 'default',
-    size: 'default',
+    size: 'sm',
   },
 });
 
-interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof buttonVariants> {
+type ButtonVariants = VariantProps<typeof buttonVariants>;
+
+type ButtonProps = React.ComponentProps<'button'> & {
+  variant?: ButtonVariants['variant'];
+  size?: 'sm';
   asChild?: boolean;
   ['data-testid']?: string;
   isDisabled?: boolean;
   isLoading?: boolean;
-}
+};
 
 function Button({
   children,
