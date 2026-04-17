@@ -7,7 +7,7 @@ type HeroSectionProps = {
   carouselImages: Array<{ src: string; alt: string }>;
 };
 
-export default function HeroSection({ carouselImages }: HeroSectionProps) {
+const HeroSection = ({ carouselImages }: HeroSectionProps) => {
   const { title, subtitle, seoTitle } = HERO_SECTION_CONTENT;
 
   return (
@@ -25,4 +25,6 @@ export default function HeroSection({ carouselImages }: HeroSectionProps) {
       <HeroDescription />
     </section>
   );
-}
+};
+
+export default HeroSection;

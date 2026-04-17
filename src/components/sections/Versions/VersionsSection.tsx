@@ -11,7 +11,7 @@ type VersionsSectionProps = {
   volumes: VolumeType[];
 };
 
-export default function VersionsSection({ volumes }: VersionsSectionProps) {
+const VersionsSection = ({ volumes }: VersionsSectionProps) => {
   const { title, subtitle, spotifyText } = VERSIONS_SECTION_CONTENT;
 
   return (
@@ -26,4 +26,6 @@ export default function VersionsSection({ volumes }: VersionsSectionProps) {
       <SpotifyLink href={SPOTIFY_LINKS.ARTIST} text={spotifyText} />
     </section>
   );
-}
+};
+
+export default VersionsSection;

@@ -6,7 +6,7 @@ type EventsSectionProps = {
   carouselImages: Array<{ src: string; alt: string }>;
 };
 
-export default function EventsSection({ carouselImages }: EventsSectionProps) {
+const EventsSection = ({ carouselImages }: EventsSectionProps) => {
   const { title, subtitle } = EVENTS_SECTION_CONTENT;
 
   return (
@@ -22,4 +22,6 @@ export default function EventsSection({ carouselImages }: EventsSectionProps) {
       <EventsDescription />
     </section>
   );
-}
+};
+
+export default EventsSection;

@@ -5,9 +5,7 @@ type ContactSectionProps = {
   carouselImages: Array<{ src: string; alt: string }>;
 };
 
-export default function ContactSection({
-  carouselImages,
-}: ContactSectionProps) {
+const ContactSection = ({ carouselImages }: ContactSectionProps) => {
   return (
     <section className="pb-10 xl:pb-20">
       <div className="bg-secondary mx-auto mb-10 rounded-md sm:hidden xl:mb-20 xl:max-w-[874px]">
@@ -18,4 +16,6 @@ export default function ContactSection({
       </div>
     </section>
   );
-}
+};
+
+export default ContactSection;
