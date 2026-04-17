@@ -4,8 +4,9 @@ import Title from '@/lib/components/title';
 import { VolumeType } from '@/types';
 
 import LatestVolume from '@/components/ui/LatestVolume/LatestVolume';
+
 import VersionsDescription from './VersionsDescription';
-import VolumesList from './volume/VolumesList';
+import VolumesList from './Volumes/VolumesList';
 
 type VersionsSectionProps = {
   volumes: VolumeType[];

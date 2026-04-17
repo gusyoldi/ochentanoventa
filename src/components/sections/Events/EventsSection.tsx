@@ -2,6 +2,7 @@ import CarouselWrapper from '@/components/ui/Carousel/CarouselWrapper';
 import { EVENTS_SECTION_CONTENT } from '@/constants';
 import Title from '@/lib/components/title';
 import EventsDescription from './EventsDescription';
+
 type EventsSectionProps = {
   carouselImages: Array<{ src: string; alt: string }>;
 };
