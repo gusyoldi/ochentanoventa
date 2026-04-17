@@ -3,7 +3,6 @@ import EventsSection from '@/components/sections/events/EventsSection';
 import HeroSection from '@/components/sections/hero/HeroSection';
 import VersionsSection from '@/components/sections/versions/VersionsSection';
 import Banner from '@/components/ui/Banner';
-
 import { VOLUMES_LIST } from '@/constants';
 import getCarousel from '@/services/strapi/getCarousel';
 
