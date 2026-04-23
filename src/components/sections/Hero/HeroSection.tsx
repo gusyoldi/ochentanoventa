@@ -1,6 +1,6 @@
+import Title from '@/app/_lib/components/title';
+import { HERO_SECTION_CONTENT } from '@/app/_lib/constants';
 import CarouselWrapper from '@/components/ui/Carousel/CarouselWrapper';
-import { HERO_SECTION_CONTENT } from '@/constants';
-import Title from '@/lib/components/title';
 import HeroDescription from './HeroDescription';
 
 type HeroSectionProps = {

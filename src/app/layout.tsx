@@ -1,10 +1,10 @@
+import { montserratSans, robotoSans } from '@/app/_lib/fonts/fonts';
+import JsonLd from '@/app/_lib/seo/JsonLd';
 import Footer from '@/components/layout/Footer/Footer';
 import Navbar from '@/components/layout/Navbar/Navbar';
 import Toaster from '@/components/ui/Toaster';
-import { montserratSans, robotoSans } from '@/lib/fonts/fonts';
-import JsonLd from '@/lib/seo/JsonLd';
-import './globals.css';
-import { layoutMetadata } from './metadata';
+import { layoutMetadata } from './_lib/seo/metadata';
+import './_styles/globals.css';
 
 export const metadata = layoutMetadata;
 

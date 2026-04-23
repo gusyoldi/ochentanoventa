@@ -1,4 +1,4 @@
-import { Skeleton } from '@/lib/components/skeleton';
+import { Skeleton } from '@/app/_lib/components/skeleton';
 import { cn } from '@/utils';
 import { cva } from 'class-variance-authority';
 import Image from 'next/image';

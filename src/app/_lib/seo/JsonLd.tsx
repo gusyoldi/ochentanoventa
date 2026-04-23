@@ -1,4 +1,4 @@
-import { SITE_CONFIG } from '@/config/site';
+import { SITE_CONFIG } from '@/app/_lib/config/site';
 
 const JsonLd = () => {
   const musicGroupSchema = {
@@ -29,7 +29,8 @@ const JsonLd = () => {
       '@type': 'City',
       name: 'Buenos Aires',
     },
-    description: 'Show de clásicos del rock argentino versionados para eventos sociales y corporativos.',
+    description:
+      'Show de clásicos del rock argentino versionados para eventos sociales y corporativos.',
   };
 
   return (

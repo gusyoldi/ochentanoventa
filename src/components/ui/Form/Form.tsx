@@ -1,6 +1,6 @@
 'use client';
 
-import { Button } from '@/lib/components/button';
+import { Button } from '@/app/_lib/components/button';
 import { TOAST_MESSAGES } from '@/services/toast/constants';
 import { showToast } from '@/services/toast/toast';
 import { zodResolver } from '@hookform/resolvers/zod';

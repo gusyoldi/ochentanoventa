@@ -6,7 +6,7 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from '@/lib/components/carousel';
+} from '@/app/_lib/components/carousel';
 import CarouselImage from './CarouselImage';
 
 type ImageCarouselProps = React.ComponentProps<typeof Carousel> & {

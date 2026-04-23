@@ -1,7 +1,7 @@
 'use client';
 
-import { useClickOutside } from '@/hooks/useClickOutside';
-import { useFocusTrap } from '@/hooks/useFocusTrap';
+import { useClickOutside } from '@/app/_lib/hooks/useClickOutside';
+import { useFocusTrap } from '@/app/_lib/hooks/useFocusTrap';
 import { XIcon } from 'lucide-react';
 import {
   cloneElement,
