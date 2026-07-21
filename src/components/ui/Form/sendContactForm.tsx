@@ -1,10 +1,6 @@
 import { FormData } from './Form';
 
 export async function sendContactForm(formData: FormData) {
-  if (formData._honey) {
-    throw new Error('Bot detected via honeypot');
-  }
-
   const res = await fetch('/api/contact', {
     method: 'POST',
     headers: {

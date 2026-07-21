@@ -25,6 +25,11 @@ const Form = ({ onCloseModal }: FormProps) => {
   } = useForm<FormData>({ resolver: zodResolver(FormSchema) });
 
   const onSubmit = async (data: FormData) => {
+    if (data._honey) {
+      console.warn('Bot detected via honeypot');
+      return;
+    }
+
     try {
       await sendContactForm(data);
 
