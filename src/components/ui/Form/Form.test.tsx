@@ -101,4 +101,25 @@ describe('Form component', () => {
     expect(mockedToast.success).not.toHaveBeenCalled();
     expect(mockedToast.error).not.toHaveBeenCalled();
   });
+
+  it('muestra toast.success cuando el envío es exitoso', async () => {
+    mockedSendContactForm.mockResolvedValue({});
+
+    const user = userEvent.setup();
+
+    render(<Form />);
+
+    await fillForm(user);
+
+    await user.click(screen.getByRole('button', { name: /enviar consulta/i }));
+
+    await waitFor(() => {
+      expect(mockedSendContactForm).toBeCalled();
+      expect(mockedToast.success).toHaveBeenCalledWith(
+        TOAST_MESSAGES.contactSuccess,
+      );
+    });
+
+    expect(mockedToast.error).not.toHaveBeenCalled();
+  });
 });
